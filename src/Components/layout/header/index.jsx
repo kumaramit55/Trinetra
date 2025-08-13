@@ -27,7 +27,7 @@ const navLinks = [
   },
   {
     title: "Talk To Us",
-    path: "/talk-to-us", // Simple link
+    path: "/talkto-us", // Simple link
   },
   {
     title: "Job Opportunity",

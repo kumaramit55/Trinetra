@@ -1,0 +1,81 @@
+/* Payroll Operations Section */
+.payroll-operations {
+  max-width: 1200px;
+  margin: auto;
+  padding: 30px 20px;
+  font-family: 'Segoe UI', sans-serif;
+}
+
+.payroll-operations h1 {
+  text-align: center;
+  font-size: 2rem;
+  color: #2c3e50;
+  margin-bottom: 40px;
+}
+
+/* Operations Layout */
+.operations-wrapper {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 20px;
+}
+
+/* Operation Card */
+.operation-card {
+  background: #fff;
+  border-radius: 8px;
+  padding: 25px 20px;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.08);
+  position: relative;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.operation-card:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 6px 14px rgba(0,0,0,0.12);
+}
+
+/* Step Number Circle */
+.step-number {
+  position: absolute;
+  top: -15px;
+  left: 20px;
+  width: 35px;
+  height: 35px;
+  border-radius: 50%;
+  background: #002452;
+  color: white;
+  font-weight: bold;
+  font-size: 1rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.15);
+}
+
+/* Card Heading & Text */
+.operation-card h3 {
+  margin-top: 20px;
+  font-size: 1.1rem;
+  color: #34495e;
+}
+
+.operation-card p {
+  font-size: 0.95rem;
+  color: #555;
+  margin-top: 10px;
+  line-height: 1.5;
+}
+
+/* Responsive tweak for mobile */
+@media (max-width: 500px) {
+  .operation-card {
+    text-align: center;
+    padding-top: 40px;
+  }
+
+  .step-number {
+    top: -10px;
+    left: calc(50% - 17.5px);
+  }
+}

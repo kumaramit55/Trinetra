@@ -6,6 +6,7 @@ import PayrollOperationSvg from "../../assets/images/payroll operations.svg"
 import BankingSvg from "../../assets/images/banking.svg"
 import MediaPNG from "../../assets/images/Media.png"
 import RealEstateSvg from "../../assets/images/search-real-estate.svg"
+import InfoSections from "./infoSection";
 
 
 function Payroll() {
@@ -106,72 +107,7 @@ function Payroll() {
         </div>
       </section>
 
-      <div className="d-flex gap-2 py-2">
-        <div className="bg-dark p-4 rounded" >
-          <h6 className="text-center">Solution we provide</h6>
-          
-          <InfoBox
-            alt="Staffing"
-            image={payrollSvgUrl}
-            title="Staffing"
-          />
-          <InfoBox
-            alt="Recurtment"
-            image={RecurtmentSvg}
-            title="Recurtment"
-          />
-
-          <InfoBox
-            alt="Payroll Operation"
-            image={PayrollOperationSvg}
-            title="Payroll Operation"
-          />
-           
-           
-
-        </div>
-          <div className="bg-dark p-4 rounded" >
-           <h6 className="text-center">Industry we serve</h6>
-          <InfoBox
-            alt="Banking and Finance"
-            image={BankingSvg}
-            title="Banking and Finance"
-          />
-          <InfoBox
-            alt="Construction and Real State"
-            image={RealEstateSvg}
-            title="Construction and Real State"
-          />
-
-          <InfoBox
-            alt="Media and Entertainment"
-            image={MediaPNG}
-            title="Staffing"
-          />
-        </div>
-
-         <div className="bg-dark p-4 rounded" >
-           <h6 className="text-center">Role we hire</h6>
-          <InfoBox
-            alt="Python Devloper"
-            image={BankingSvg}
-            title="Python Devloper"
-          />
-          <InfoBox
-            alt="Web Developer"
-            image={RealEstateSvg}
-            title="Web Developer"
-          />
-
-          <InfoBox
-            alt="Cloud Engineer"
-            image={MediaPNG}
-            title="Cloud Engineer"
-          />
-        </div>
-      
-      
-      </div>
+       <InfoSections/>
 
       
     </div>

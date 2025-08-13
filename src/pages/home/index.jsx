@@ -13,7 +13,7 @@ function Home() {
         {/* image section */}
 
         <img
-          src="https://images.unsplash.com/photo-1749740616597-90f471c24580?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDF8MHxmZWF0dXJlZC1waG90b3MtZmVlZHwyMXx8fGVufDB8fHx8fA%3D%3D"
+          src="src\assets\images\IT SOLUTIONS.webp"
           alt=""
           className="img-style"
         />
@@ -46,13 +46,13 @@ function Home() {
 
       <h1 className="custom-heading">Our Services</h1>
       <div className="grid-container">
-        <div class="card" data-aos="fade-left">
+        <div className="card" data-aos="fade-left">
           <img
             src="src\assets\images\cardbox (1).jpg"
             className="card-img-top img-dimension"
             alt="..."
           />
-          <div class="card-body">
+          <div className="card-body">
             <h5 class="card-title">Card title</h5>
             <p class="card-text">
               Some quick example text to build on the card title and make up the

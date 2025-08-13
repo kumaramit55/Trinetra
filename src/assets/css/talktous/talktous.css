@@ -1,0 +1,72 @@
+
+.talk-container {
+  font-family: system-ui, sans-serif;
+  padding: 3rem 1rem;
+  background: #f9fafb;
+}
+
+.talk-heading {
+  font-weight: 700;
+  font-size: 2.5rem;
+  color: #f37021;
+}
+
+.talk-subtext {
+  font-size: 1.2rem;
+  line-height: 1.6;
+  color: #444;
+}
+
+.talk-grid {
+  margin-top: 2rem;
+  align-items: flex-start;
+}
+
+.contact-info {
+  background: white;
+  padding: 1.5rem;
+  border-radius: 10px;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.08);
+}
+
+.info-item {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  font-size: 1rem;
+  margin-bottom: 1rem;
+  color: #333;
+}
+
+.info-icon {
+  font-size: 1.2rem;
+  color: #f37021;
+}
+
+.talk-form {
+  background: white;
+  padding: 1.5rem;
+  border-radius: 10px;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.07);
+}
+
+.talk-form .form-label {
+  font-weight: 600;
+  color: #333;
+}
+
+.talk-form .form-control {
+  border-radius: 8px;
+  padding: 0.75rem;
+  font-size: 1rem;
+}
+
+@media (max-width: 768px) {
+  .talk-heading {
+    font-size: 2rem;
+  }
+  .contact-info, .talk-form {
+    margin-bottom: 2rem;
+  }
+}
+

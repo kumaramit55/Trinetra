@@ -1,28 +1,18 @@
 
 import { FaBullseye, FaSearch, FaDollarSign, FaGlobe, FaIndustry, FaUser, FaLaptopCode } from "react-icons/fa";
 import InfoBox from "../../Components/elements/infobox";
+import { BsBank2 } from "react-icons/bs";
+import { RiBankLine } from "react-icons/ri";
+import { TbBuildingEstate } from "react-icons/tb";
 
-export default function InfoSections() {
+export default function OurOffering() {
   const sections = [
-    {
-      title: "Solutions we provide",
-      items: [
-        { IconComponent: FaBullseye, title: "Staffing" },
-        { IconComponent: FaSearch, title: "Recruitment" },
-        { IconComponent: FaDollarSign, title: "Payroll & Operations" }
-      ],
-      subTitle: "Geographies we serve",
-      flags: [
-        { IconComponent: FaGlobe, title: "India" },
-        { IconComponent: FaGlobe, title: "GCC" },
-        { IconComponent: FaGlobe, title: "Europe" }
-      ]
-    },
+    
     {
       title: "Industries we serve",
       items: [
-        { IconComponent: FaIndustry, title: "Banking & Finance" },
-        { IconComponent: FaIndustry, title: "Construction & Real Estate" },
+        { IconComponent: RiBankLine, title: "Banking & Finance" },
+        { IconComponent: TbBuildingEstate, title: "Construction & Real Estate" },
         { IconComponent: FaIndustry, title: "Consumer Products & Goods" },
         { IconComponent: FaIndustry, title: "Healthcare & Pharmaceutical" },
         { IconComponent: FaIndustry, title: "Industrial & Manufacturing" },

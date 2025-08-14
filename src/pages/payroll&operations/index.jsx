@@ -1,11 +1,4 @@
 import React from "react";
-import InfoBox from "../../Components/elements/infobox";
-import payrollSvgUrl from '../../assets/images/payroll.svg';
-import RecurtmentSvg from "../../assets/images/recruitment.svg"
-import PayrollOperationSvg from "../../assets/images/payroll operations.svg"
-import BankingSvg from "../../assets/images/banking.svg"
-import MediaPNG from "../../assets/images/Media.png"
-import RealEstateSvg from "../../assets/images/search-real-estate.svg"
 import InfoSections from "./infoSection";
 
 

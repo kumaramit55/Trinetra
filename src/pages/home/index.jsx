@@ -13,7 +13,7 @@ function Home() {
         {/* image section */}
 
         <img
-          src="/assets/images/IT SOLUTIONS.webp"
+          src="/images/IT SOLUTIONS.webp"
           alt=""
           className="img-style"
         />
@@ -48,7 +48,7 @@ function Home() {
       <div className="grid-container">
         <div className="card" data-aos="fade-left">
           <img
-            src="/assets/images/cardbox (1).jpg"
+            src="\images\cardbox (1).jpg"
             className="card-img-top img-dimension"
             alt="..."
           />
@@ -65,7 +65,7 @@ function Home() {
         </div>
         <div className="card" data-aos="fade-in">
           <img
-            src="src\assets\images\cardbox1 (1).jpg"
+            src="\images\cardbox1 (1).jpg"
             className="card-img-top img-dimension"
             alt="..."
           />
@@ -82,7 +82,7 @@ function Home() {
         </div>
         <div className="card" data-aos="fade-right">
           <img
-            src="src\assets\images\cardbox1 (2).jpg"
+            src="\images\cardbox1 (2).jpg"
             className="card-img-top img-dimension"
             alt="..."
           />
@@ -99,7 +99,7 @@ function Home() {
         </div>
         <div className="card" data-aos="fade-left">
           <img
-            src="src\assets\images\cardbox1 (3).jpg"
+            src="\images\cardbox1 (3).jpg"
             className="card-img-top img-dimension"
             alt="..."
           />
@@ -116,7 +116,7 @@ function Home() {
         </div>
         <div className="card" data-aos="fade-in">
           <img
-            src="src\assets\images\cardbox1 (4).jpg"
+            src="\images\cardbox1 (4).jpg"
             className="card-img-top img-dimension"
             alt="..."
           />
@@ -133,7 +133,7 @@ function Home() {
         </div>
         <div className="card" data-aos="fade-right">
           <img
-            src="src\assets\images\cardbox1 (2).jpg"
+            src="\images\cardbox1 (2).jpg"
             className="card-img-top img-dimension"
             alt="..."
           />

@@ -10,7 +10,7 @@ function ITSTAFFINGS() {
           {/* image section */}
 
           <img
-            src="src\assets\images\IT SOLUTIONS.jpg"
+            src="\images\IT SOLUTIONS.jpg"
             alt=""
             className="img-style"
           />
@@ -145,10 +145,10 @@ function ITSTAFFINGS() {
       <div>
         <h1 className="custom-heading">Why to Choose Trinetra</h1>
         <div className="d-flex " style={{width:"80%", margin:'auto'}}>
-          <ImageCard title="Proven Expertise" alt="proven Expertise" src="src\assets\images\cardbox (2).jpg" />
-          <ImageCard title="Customer Support" alt="proven Expertise" src="src\assets\images\cardbox (2).jpg" />
-          <ImageCard title="Payroll & Compliance Support" alt="proven Expertise" src="src\assets\images\cardbox (2).jpg" />
-          <ImageCard title="Visa & Immigration Support" alt="proven Expertise" src="src\assets\images\cardbox (2).jpg" />
+          <ImageCard title="Proven Expertise" alt="proven Expertise" src="\images\cardbox (2).jpg" />
+          <ImageCard title="Customer Support" alt="proven Expertise" src="\images\cardbox (2).jpg" />
+          <ImageCard title="Payroll & Compliance Support" alt="proven Expertise" src="\images\cardbox (2).jpg" />
+          <ImageCard title="Visa & Immigration Support" alt="proven Expertise" src="\images\cardbox (2).jpg" />
           
 
         </div>

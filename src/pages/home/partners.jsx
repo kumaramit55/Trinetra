@@ -9,76 +9,76 @@ function Partnerns() {
       <div className="logo-tray-container">
         <div className="logo-tray">
           <img
-            src="src\assets\images\download.jpg"
+            src="\images\download.jpg"
             alt=""
             className="logo-dimension"
           />
           <img
-            src="src\assets\images\download.png"
+            src="\images\download.png"
             alt=""
             className="logo-dimension"
           />
           
            
           <img
-            src="src\assets\images\download (1).png"
+            src="\images\download (1).png"
             alt=""
             className="logo-dimension"
           />
           <img
-            src="src\assets\images\download (1).jpg"
+            src="\images\download (1).jpg"
             alt=""
             className="logo-dimension"
           />
           <img
-            src="src\assets\images\images (1).png"
+            src="\images\images (1).png"
             alt=""
             className="logo-dimension"
           />
           <img
-            src="src\assets\images\images (2).png"
+            src="\images\images (2).png"
             alt=""
             className="logo-dimension"
           />
           <img
-            src="src\assets\images\images.png"
+            src="\images\images.png"
             alt=""
             className="logo-dimension"
           />
         </div>
          <div className="logo-tray">
           <img
-            src="src\assets\images\download.jpg"
+            src="\images\download.jpg"
             alt=""
             className="logo-dimension"
           />
           <img
-            src="src\assets\images\download.png"
+            src="\images\download.png"
             alt=""
             className="logo-dimension"
           />
           <img
-            src="src\assets\images\download (1).png"
+            src="\images\download (1).png"
             alt=""
             className="logo-dimension"
           />
           <img
-            src="src\assets\images\download (1).jpg"
+            src="\images\download (1).jpg"
             alt=""
             className="logo-dimension"
           />
           <img
-            src="src\assets\images\images (1).png"
+            src="\images\images (1).png"
             alt=""
             className="logo-dimension"
           />
           <img
-            src="src\assets\images\images (2).png"
+            src="\images\images (2).png"
             alt=""
             className="logo-dimension"
           />
           <img
-            src="src\assets\images\images.png"
+            src="\images\images.png"
             alt=""
             className="logo-dimension"
           />

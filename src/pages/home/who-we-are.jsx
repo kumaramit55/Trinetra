@@ -20,7 +20,7 @@ function Whoweare() {
       <h1 className="customHeading">Who we are</h1>
       <div className="dFlex">
         <img 
-          src="src/assets/images/who we are.jpg" 
+          src="/images/who we are.jpg" 
           alt="who we are"  
           loading="lazy" 
         />

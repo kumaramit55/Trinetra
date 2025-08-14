@@ -13,7 +13,7 @@ function Home() {
         {/* image section */}
 
         <img
-          src="/assets/images/IT SOLUTIONS.webp"
+          src="\assets\images\IT SOLUTIONS.webp"
           alt=""
           className="img-style"
         />

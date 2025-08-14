@@ -48,7 +48,7 @@ function Home() {
       <div className="grid-container">
         <div className="card" data-aos="fade-left">
           <img
-            src="src\assets\images\cardbox (1).jpg"
+            src="/assets/images/cardbox (1).jpg"
             className="card-img-top img-dimension"
             alt="..."
           />

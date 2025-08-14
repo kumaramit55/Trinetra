@@ -1,10 +1,10 @@
 import React from "react";
 import { Row, Col } from "react-bootstrap";
 import Partnerns from "./partners";
-
 import Tray3DSlider from "./certification";
 import AnimatedCounter from "./animateCounter";
 import Whoweare from "./who-we-are";
+import CustomButton from "../../Components/elements/button";
 
 function Home() {
   return (
@@ -20,10 +20,10 @@ function Home() {
 
         {/* content section */}
         <div className="content">
-          <h1 className="">
-            The Right <span className="gradient-text">People</span> <br />
+          <h1>
+            The Right <span className="gradient-text">People</span> 
             with the Right <span className="gradient-text">Skill</span>
-            <br /> at the Right <span className="gradient-text">Time</span>
+            at the Right <span className="gradient-text">Time</span>
           </h1>
           <p className="p-tag">
             Recruitment, Payroll, Staffing & Tech Solutions to take your
@@ -31,8 +31,8 @@ function Home() {
           </p>
           {/* <span className="text-muted ">Want to talk?</span> */}
           <div className="d-flex gap-2">
-            <button className="button">Talk to us</button>
-            <button className="button ">Apply Here</button>
+            <CustomButton >Talk to us</CustomButton>
+            <CustomButton>Apply Here</CustomButton>
           </div>
         </div>
       </div>
@@ -53,14 +53,14 @@ function Home() {
             alt="..."
           />
           <div className="card-body">
-            <h5 class="card-title">Card title</h5>
-            <p class="card-text">
+            <h5 className="card-title">Card title</h5>
+            <p className="card-text">
               Some quick example text to build on the card title and make up the
               bulk of the card’s content.
             </p>
-            <a href="#" class="btn btn-primary">
+            <CustomButton variant="primary" >
               Go somewhere
-            </a>
+            </CustomButton>
           </div>
         </div>
         <div className="card" data-aos="fade-in">

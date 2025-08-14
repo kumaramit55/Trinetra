@@ -16,11 +16,11 @@ const whoWeArePoints = [
 
 function Whoweare() {
   return (
-    <div>
+    <div className='mt-4'>
       <h1 className="customHeading">Who we are</h1>
       <div className="dFlex">
         <img 
-          src="src/assets/images/who we are (2).jpg" 
+          src="src/assets/images/who we are.jpg" 
           alt="who we are"  
           loading="lazy" 
         />

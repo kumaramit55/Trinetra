@@ -142,17 +142,48 @@ function ITSTAFFINGS() {
         <script></script>
       </div>
       <InfoSections />
-      <div>
-        <h1 className="custom-heading">Why to Choose Trinetra</h1>
-        <div className="d-flex " style={{width:"80%", margin:'auto'}}>
-          <ImageCard title="Proven Expertise" alt="proven Expertise" src="\images\cardbox (2).jpg" />
-          <ImageCard title="Customer Support" alt="proven Expertise" src="\images\cardbox (2).jpg" />
-          <ImageCard title="Payroll & Compliance Support" alt="proven Expertise" src="\images\cardbox (2).jpg" />
-          <ImageCard title="Visa & Immigration Support" alt="proven Expertise" src="\images\cardbox (2).jpg" />
-          
-
-        </div>
+     <div className="why-choose-section py-5 text-center">
+  <h1 className="custom-heading mb-4">Why Choose Trinetra</h1>
+  
+  <div className="container">
+    <div className="row g-4">
+      
+      <div className="col-12 col-sm-6 col-lg-3">
+        <ImageCard 
+          title="Proven Expertise" 
+          alt="proven Expertise" 
+          src="/images/cardbox (2).jpg" 
+        />
       </div>
+      
+      <div className="col-12 col-sm-6 col-lg-3">
+        <ImageCard 
+          title="Customer Support" 
+          alt="customer support" 
+          src="/images/cardbox (2).jpg" 
+        />
+      </div>
+
+      <div className="col-12 col-sm-6 col-lg-3">
+        <ImageCard 
+          title="Payroll & Compliance Support" 
+          alt="payroll support" 
+          src="/images/cardbox (2).jpg" 
+        />
+      </div>
+      
+      <div className="col-12 col-sm-6 col-lg-3">
+        <ImageCard 
+          title="Visa & Immigration Support" 
+          alt="visa support" 
+          src="/images/cardbox (2).jpg" 
+        />
+      </div>
+      
+    </div>
+  </div>
+</div>
+
     </div>
   );
 }

@@ -5,8 +5,12 @@ import Tray3DSlider from "./certification";
 import AnimatedCounter from "./animateCounter";
 import Whoweare from "./who-we-are";
 import CustomButton from "../../Components/elements/button";
+import { Link, NavLink, useNavigate } from 'react-router-dom';
+
 
 function Home() {
+   const navigate = useNavigate();
+   
   return (
     <>
       <div className="homepage-container">
@@ -47,21 +51,25 @@ function Home() {
       <h1 className="custom-heading">Our Services</h1>
       <div className="grid-container">
         <div className="card" data-aos="fade-left">
+        
           <img
             src="\images\cardbox (1).jpg"
             className="card-img-top img-dimension"
             alt="..."
           />
           <div className="card-body">
-            <h5 className="card-title">Card title</h5>
+            <h5 className="card-title">IT STAFF SOLUTION</h5>
             <p className="card-text">
               Some quick example text to build on the card title and make up the
               bulk of the card’s content.
             </p>
-            <CustomButton variant="primary" >
-              Go somewhere
-            </CustomButton>
+            <CustomButton variant="primary" onClick={() => {navigate('it-staffing-solutions');
+      }}>
+        Know More
+    </CustomButton>
+    
           </div>
+       
         </div>
         <div className="card" data-aos="fade-in">
           <img
@@ -69,15 +77,16 @@ function Home() {
             className="card-img-top img-dimension"
             alt="..."
           />
-          <div class="card-body">
-            <h5 class="card-title">Card title</h5>
-            <p class="card-text">
+          <div className="card-body">
+            <h5 className="card-title">Payroll Mangement</h5>
+            <p className="card-text">
               Some quick example text to build on the card title and make up the
               bulk of the card’s content.
             </p>
-            <a href="#" class="btn btn-primary">
-              Go somewhere
-            </a>
+            <CustomButton variant="primary" onClick={() => {navigate('payroll-and-operations');
+      }}>
+        Know More
+    </CustomButton>
           </div>
         </div>
         <div className="card" data-aos="fade-right">
@@ -87,14 +96,15 @@ function Home() {
             alt="..."
           />
           <div className="card-body">
-            <h5 className="card-title">Card title</h5>
+            <h5 className="card-title">Recruitment</h5>
             <p className="card-text">
               Some quick example text to build on the card title and make up the
               bulk of the card’s content.
             </p>
-            <a href="#" className="btn btn-primary">
-              Go somewhere
-            </a>
+           <CustomButton variant="primary" onClick={() => {navigate('recruitment');
+      }}>
+        Know More
+    </CustomButton>
           </div>
         </div>
         <div className="card" data-aos="fade-left">

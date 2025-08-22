@@ -2,7 +2,7 @@ import React from "react";
 import InfoSections from "./infosetion";
 import ImageCard from "../home/imageCard";
 
-function ITSTAFFINGS() {
+function ItStaffings() {
   return (
     <div>
       <div>
@@ -188,4 +188,4 @@ function ITSTAFFINGS() {
   );
 }
 
-export default ITSTAFFINGS;
+export default ItStaffings;

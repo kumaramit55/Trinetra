@@ -1,10 +1,7 @@
 import React, { useState } from "react";
 import { NavLink } from "react-router-dom";
-import Navbar from "react-bootstrap/Navbar";
-import Nav from "react-bootstrap/Nav";
-import Container from "react-bootstrap/Container";
-import NavDropdown from "react-bootstrap/NavDropdown";
-import { FaBars, FaTimes } from "react-icons/fa"; // Icons
+import { RxHamburgerMenu } from "react-icons/rx";
+import { FaHamburger } from "react-icons/fa";
 
 const navLinks = [
   {
@@ -46,12 +43,14 @@ const Header = () => {
   <div className="container-fluid">
     <a className="navbar-brand text-white" href="">Trinetra</a>
     <button className="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-      <span className="navbar-toggler-icon"></span>
+       
+       <RxHamburgerMenu className="" />
+     
     </button>
     <div className="collapse navbar-collapse" id="navbarSupportedContent">
       <ul className="navbar-nav m-auto mb-2 mb-lg-0 gap-4  ">
         <li className="nav-item ">
-          <NavLink className="nav-link active" aria-current="page" to="/">Home</NavLink>
+          <NavLink className="nav-link active" aria-current="page" to="">Home</NavLink>
         </li>
         <li className="nav-item dropdown">
           <a className="nav-link dropdown-toggle" role="button" data-bs-toggle="dropdown" aria-expanded="false" href="#">Staffing</a>
@@ -62,7 +61,9 @@ const Header = () => {
               <li>
               <NavLink className="dropdown-item" to="payroll-and-operations">Payroll and Operation</NavLink>
               </li>
-         
+              <li>
+              <NavLink className="dropdown-item" to="recruitment">Recruitment</NavLink>
+              </li>
          
           
           </ul>

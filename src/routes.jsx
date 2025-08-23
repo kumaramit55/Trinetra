@@ -13,6 +13,7 @@ import BlueCollarStaffing from "./pages/contracting/bluecollar";
 import ConsultationAudit from "./pages/compliance&aduit";
 import Licensing from "./pages/licensing";
 import JobOpportunities from "./pages/jobs";
+import Resources from "./pages/resources";
 
 const routes = createBrowserRouter([
   {
@@ -30,6 +31,7 @@ const routes = createBrowserRouter([
       { path: "/consultation-audit", element: <ConsultationAudit /> },
       { path: "/licensing", element: <Licensing /> },
       { path: "/jobOpportunities", element: <JobOpportunities /> },
+      { path: "/resources", element: <Resources/> },
 
       { path: "about-us", element: <AboutUs /> },
       { path: "talkto-us", element: <TalktoUs /> },

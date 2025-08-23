@@ -62,6 +62,11 @@ const Header = () => {
                 Home
               </NavLink>
             </li>
+            {/* <li className="nav-item ">
+              <NavLink className="nav-link active" aria-current="page" to="softaware-solution">
+                Software Solutions
+              </NavLink>
+            </li> */}
             <li className="nav-item dropdown">
               <a
                 className="nav-link dropdown-toggle"
@@ -77,6 +82,18 @@ const Header = () => {
                   <NavLink className="dropdown-item" to="it-staffing-solutions">
                     {" "}
                     IT Staffing Solution
+                  </NavLink>
+                </li>
+                 <li>
+                  <NavLink className="dropdown-item" to="consultation-audit">
+                    {" "}
+                    Aduit & Compliance Sevices
+                  </NavLink>
+                </li>
+                <li>
+                  <NavLink className="dropdown-item" to="licensing">
+                    {" "}
+                    Licensing
                   </NavLink>
                 </li>
                 <li>
@@ -165,7 +182,12 @@ const Header = () => {
               </ul>
               <ul></ul>
             </li>
-            <li className="nav-item dropdown">
+             <li className="nav-item">
+              <NavLink className="nav-link" to="jobOpportunities">
+                Job Oppurnity
+              </NavLink>
+            </li>
+            {/* <li className="nav-item dropdown">
               <a
                 className="nav-link dropdown-toggle"
                 href="#"
@@ -195,7 +217,7 @@ const Header = () => {
                   </NavLink>
                 </li>
               </ul>
-            </li>
+            </li> */}
             <li className="nav-item">
               <NavLink className="nav-link " to="about-us">
                 About us

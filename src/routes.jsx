@@ -10,6 +10,9 @@ import TemporaryRecruitment from "./pages/recruitment/tempory";
 import PermanentRecruitment from "./pages/recruitment/permanent";
 import WhiteCollarStaffing from "./pages/contracting/whitecolor";
 import BlueCollarStaffing from "./pages/contracting/bluecollar";
+import ConsultationAudit from "./pages/compliance&aduit";
+import Licensing from "./pages/licensing";
+import JobOpportunities from "./pages/jobs";
 
 const routes = createBrowserRouter([
   {
@@ -23,7 +26,11 @@ const routes = createBrowserRouter([
       { path: "recruitment/temp-staff", element: <TemporaryRecruitment /> },
       { path: "recruitment/perm-staff", element: <PermanentRecruitment /> },
       { path: "contracting/white-color", element: <WhiteCollarStaffing /> },
-       { path: "contracting/blue-color", element: <BlueCollarStaffing /> },
+      { path: "contracting/blue-color", element: <BlueCollarStaffing /> },
+      { path: "/consultation-audit", element: <ConsultationAudit /> },
+      { path: "/licensing", element: <Licensing /> },
+      { path: "/jobOpportunities", element: <JobOpportunities /> },
+
       { path: "about-us", element: <AboutUs /> },
       { path: "talkto-us", element: <TalktoUs /> },
     ],

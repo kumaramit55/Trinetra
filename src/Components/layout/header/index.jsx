@@ -1,49 +1,15 @@
-import React, { useState } from "react";
 import { NavLink } from "react-router-dom";
 import { RxHamburgerMenu } from "react-icons/rx";
-import { FaHamburger } from "react-icons/fa";
-
-const navLinks = [
-  {
-    title: "Staffing",
-    path: "/staffing",
-    children: [
-      { path: "it-staffing-solutions", title: "IT Staffing Solution" },
-      { path: "payroll-and-operations", title: "Payroll and Operation" },
-      { path: "/staffing/opt2", title: "Contract Staffing Solution" },
-      { path: "/staffing/opt2", title: "Compliance Services" },
-    ],
-  },
-  {
-    title: "e-Library",
-    path: "/elibrary",
-    children: [
-      { path: "/elibrary/opt1", title: "e-Library Option 1" },
-      { path: "/elibrary/opt2", title: "e-Library Option 2" },
-    ],
-  },
-  { title: "About Us", path: "/about-us" },
-  { title: "Talk To Us", path: "/talkto-us" },
-  {
-    title: "Job Opportunity",
-    path: "/job-opportunity",
-    children: [
-      { path: "/job-opportunity/opt", title: "Job Opportunity 1" },
-      { path: "/job-opportunity/opt1", title: "Job Opportunity 2" },
-      { path: "/job-opportunity/opt2", title: "Job Opportunity 3" },
-    ],
-  },
-];
 
 const Header = () => {
-  const [expanded, setExpanded] = useState(false);
+  const getNavLinkClass = ({ isActive }) => (isActive ? "nav-link active" : "nav-link");
 
   return (
-    <nav className="navbar navbar-expand-lg ">
+    <nav className="navbar navbar-expand-lg">
       <div className="container-fluid">
-        <a className="navbar-brand text-white" href="">
+        <NavLink className="navbar-brand text-white" to="/">
           Trinetra
-        </a>
+        </NavLink>
         <button
           className="navbar-toggler"
           type="button"
@@ -53,20 +19,16 @@ const Header = () => {
           aria-expanded="false"
           aria-label="Toggle navigation"
         >
-          <RxHamburgerMenu className="" />
+          <RxHamburgerMenu />
         </button>
         <div className="collapse navbar-collapse" id="navbarSupportedContent">
-          <ul className="navbar-nav m-auto mb-2 mb-lg-0 gap-4  ">
-            <li className="nav-item ">
-              <NavLink className="nav-link active" aria-current="page" to="">
+          <ul className="navbar-nav m-auto mb-2 mb-lg-0 gap-4">
+            <li className="nav-item">
+              <NavLink className={getNavLinkClass} to="/">
                 Home
               </NavLink>
             </li>
-            {/* <li className="nav-item ">
-              <NavLink className="nav-link active" aria-current="page" to="softaware-solution">
-                Software Solutions
-              </NavLink>
-            </li> */}
+
             <li className="nav-item dropdown">
               <a
                 className="nav-link dropdown-toggle"
@@ -80,27 +42,21 @@ const Header = () => {
               <ul className="dropdown-menu">
                 <li>
                   <NavLink className="dropdown-item" to="it-staffing-solutions">
-                    {" "}
                     IT Staffing Solution
                   </NavLink>
                 </li>
-                 <li>
+                <li>
                   <NavLink className="dropdown-item" to="consultation-audit">
-                    {" "}
-                    Aduit & Compliance Sevices
+                    Audit & Compliance Services
                   </NavLink>
                 </li>
                 <li>
                   <NavLink className="dropdown-item" to="licensing">
-                    {" "}
                     Licensing
                   </NavLink>
                 </li>
                 <li>
-                  <NavLink
-                    className="dropdown-item"
-                    to="payroll-and-operations"
-                  >
+                  <NavLink className="dropdown-item" to="payroll-and-operations">
                     Payroll and Operation
                   </NavLink>
                 </li>
@@ -116,32 +72,17 @@ const Header = () => {
                   </NavLink>
                   <ul className="dropdown-menu">
                     <li>
-                      <NavLink
-                        className="dropdown-item"
-                        to="/recruitment/temp-staff"
-                      >
+                      <NavLink className="dropdown-item" to="recruitment/temp-staff">
                         Temporary Staff
                       </NavLink>
                     </li>
                     <li>
-                      <NavLink
-                        className="dropdown-item"
-                        to="/recruitment/perm-staff"
-                      >
+                      <NavLink className="dropdown-item" to="recruitment/perm-staff">
                         Permanent Staff
-                      </NavLink>
-                    </li>
-                    <li>
-                      <NavLink
-                        className="dropdown-item"
-                        to="/contracting/apprenticeship"
-                      >
-                        Apprenticeship Programs
                       </NavLink>
                     </li>
                   </ul>
                 </li>
-
                 <li className="dropdown-submenu">
                   <NavLink
                     to="contracting"
@@ -154,83 +95,41 @@ const Header = () => {
                   </NavLink>
                   <ul className="dropdown-menu">
                     <li>
-                      <NavLink
-                        className="dropdown-item"
-                        to="/contracting/blue-color"
-                      >
+                      <NavLink className="dropdown-item" to="contracting/blue-color">
                         Blue Color Staffing
                       </NavLink>
                     </li>
                     <li>
-                      <NavLink
-                        className="dropdown-item"
-                        to="/contracting/white-color"
-                      >
+                      <NavLink className="dropdown-item" to="contracting/white-color">
                         White Color Staffing
-                      </NavLink>
-                    </li>
-                    <li>
-                      <NavLink
-                        className="dropdown-item"
-                        to="/contracting/apprenticeship"
-                      >
-                        Gray Color Staffing
                       </NavLink>
                     </li>
                   </ul>
                 </li>
               </ul>
-              <ul></ul>
             </li>
-             <li className="nav-item">
-              <NavLink className="nav-link" to="jobOpportunities">
-                Job Oppurnity
+
+            <li className="nav-item">
+              <NavLink className={getNavLinkClass} to="job-opportunities">
+                Job Opportunity
               </NavLink>
             </li>
-            {/* <li className="nav-item dropdown">
-              <a
-                className="nav-link dropdown-toggle"
-                href="#"
-                role="button"
-                data-bs-toggle="dropdown"
-                aria-expanded="false"
-              >
-                e-Library
-              </a>
-              <ul className="dropdown-menu">
-                <li>
-                  <NavLink className="dropdown-item" to="">
-                    Action
-                  </NavLink>
-                </li>
-                <li>
-                  <NavLink className="dropdown-item" to="">
-                    Another action
-                  </NavLink>
-                </li>
-                <li>
-                  <hr className="dropdown-divider" />
-                </li>
-                <li>
-                  <NavLink className="dropdown-item" to="">
-                    Something else here
-                  </NavLink>
-                </li>
-              </ul>
-            </li> */}
+
             <li className="nav-item">
-              <NavLink className="nav-link " to="resources">
+              <NavLink className={getNavLinkClass} to="resources">
                 Resources
               </NavLink>
             </li>
+
             <li className="nav-item">
-              <NavLink className="nav-link " to="about-us">
-                About us
+              <NavLink className={getNavLinkClass} to="about-us">
+                About Us
               </NavLink>
             </li>
+
             <li className="nav-item">
-              <NavLink className="nav-link" to="talkto-us">
-                Talk to us
+              <NavLink className={getNavLinkClass} to="talk-to-us">
+                Talk to Us
               </NavLink>
             </li>
           </ul>

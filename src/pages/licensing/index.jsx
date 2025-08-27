@@ -1,77 +1,92 @@
-import React from "react";
+
 
 export default function Licensing() {
   return (
-    <div className="container my-5">
-      {/* Header */}
-      <div className="row align-items-center mb-5 g-4">
+    <div className="container my-5 px-3">
+      {/* Header with Intro */}
+      <section className="row align-items-center gy-5">
         <div className="col-lg-6">
-          <h1 className="display-5 fw-bold text-primary mb-3">
+          <h1 className="display-4 fw-bold text-primary mb-3">
             Licensing & Accreditation
           </h1>
-          <p className="fs-5 text-secondary mb-2">
-            We operate as a fully licensed and accredited manpower solutions provider. 
-            Our credentials demonstrate our commitment to regulatory compliance and best practices in staffing and business operations.
+          <p >
+            Trinetra operates as a fully licensed and accredited manpower solutions provider committed to the highest standards of legal compliance, ethical business practices, and operational transparency. Our licenses and certifications affirm our dedication to serving clients with integrity and professionalism.
           </p>
-          <ul className="list-unstyled fs-5 mt-3">
-            <li className="mb-2">
-              <span className="fw-bold text-dark">Business Registration:</span> 
-              <span className="ms-2 text-muted">Govt. of India | Reg No. <span className="text-primary">123456789</span></span>
+
+          {/* Credentials List */}
+          <ul className="list-unstyled fs-5 lh-lg mb-4">
+            <li>
+              <strong className="text-dark">Business Registration:</strong>{" "}
+              <span className="text-muted ms-2">
+                Govt. of India | Reg No.{" "}
+                <span className="text-primary">123456789</span>
+              </span>
             </li>
-            <li className="mb-2">
-              <span className="fw-bold text-dark">Agency License:</span> 
-              <span className="ms-2 text-muted">Manpower License <span className="text-primary">MSL-2025-9876</span></span>
+            <li>
+              <strong className="text-dark">Agency License:</strong>{" "}
+              <span className="text-muted ms-2">
+                Manpower License <span className="text-primary">MSL-2025-9876</span>
+              </span>
             </li>
-            <li className="mb-2">
-              <span className="fw-bold text-dark">ISO Certification:</span> 
-              <span className="ms-2 text-muted">ISO 9001:2015 (QMS)</span>
+            <li>
+              <strong className="text-dark">ISO Certification:</strong>{" "}
+              <span className="text-muted ms-2">ISO 9001:2015 (QMS)</span>
             </li>
-            <li className="mb-2">
-              <span className="fw-bold text-dark">GSTIN:</span> 
-              <span className="ms-2 text-muted">29ABCDE1234F1Z5</span>
+            <li>
+              <strong className="text-dark">GSTIN:</strong>{" "}
+              <span className="text-muted ms-2">29ABCDE1234F1Z5</span>
             </li>
-            <li className="mb-2">
-              <span className="fw-bold text-dark">Labor Board Approval:</span> 
-              <span className="ms-2 text-muted">Labor Board LB-778899</span>
+            <li>
+              <strong className="text-dark">Labor Board Approval:</strong>{" "}
+              <span className="text-muted ms-2">Labor Board LB-778899</span>
             </li>
           </ul>
-          <div className="mt-4">
-            <a 
-              href="/docs/license-certificate.pdf" 
-              className="btn btn-outline-primary btn-lg"
-              download
-            >
-              Download License Certificate
-            </a>
-          </div>
-        </div>
-        <div className="col-lg-6 d-flex justify-content-lg-end mt-4 mt-lg-0">
-          <div className="card border-0 shadow-lg rounded-4 w-100">
-            <img
-              src="public\images\adam-winger-0NFDoeXGJso-unsplash.jpg"
-              alt="Licensing Certificate"
-              className="img-fluid rounded-4"
-              style={{ maxHeight: "320px", objectFit: "cover" }}
-            />
-          </div>
-        </div>
-      </div>
 
-      {/* Compliance Disclosure */}
-      <div className="bg-light border rounded-4 p-4 mt-5">
-        <h4 className="fw-semibold text-primary mb-3">
-          Regulatory Disclosure & Code of Ethics
-        </h4>
-        <p className="mb-2 text-dark">
-          As a manpower and compliance provider, our services strictly conform to all applicable local, state, and federal labor laws. We continuously update our legal documentation and credentials to guarantee full transparency and client peace of mind. Copies of our key certificates are always available on request.
+          <a
+            href="/docs/license-certificate.pdf"
+            className="btn btn-outline-primary btn-lg"
+            download
+          >
+            Download License Certificate
+          </a>
+        </div>
+
+        <div className="col-lg-6 text-center">
+          <img
+            src="/images/adam-winger-0NFDoeXGJso-unsplash.jpg"
+            alt="Licensing Certificate"
+            className="img-fluid rounded shadow"
+            style={{ maxHeight: "360px", objectFit: "cover" }}
+            loading="lazy"
+          />
+        </div>
+      </section>
+
+      {/* Transparency & Trust Section */}
+      <section className="bg-white shadow rounded-4 p-5 my-5">
+        <h2 className="text-primary mb-4">Our Commitment to Transparency & Ethics</h2>
+        <p className="fs-5 mb-3">
+          We understand that trust is foundational to any successful partnership. That's why we maintain comprehensive transparency about our credentials, processes, and compliance. Our clients benefit from:
         </p>
-        <ul className="text-secondary">
-          <li>Regular third-party audits</li>
-          <li>Data privacy and protection protocols</li>
-          <li>Strict adherence to anti-discrimination and fair labor practices</li>
-          <li>Clear complaints and escalation procedures</li>
+        <ul className="fs-5 list-group list-group-flush mb-4" style={{ maxWidth: "720px", margin: "auto" }}>
+          <li className="list-group-item">
+            <strong>Regular Independent Audits:</strong> Third-party audits verify our adherence to labor laws and operational standards.
+          </li>
+          <li className="list-group-item">
+            <strong>Robust Data Privacy Measures:</strong> We implement strict protocols to protect client and candidate information.
+          </li>
+          <li className="list-group-item">
+            <strong>Equal Opportunity & Fair Labor:</strong> We strictly follow anti-discrimination policies and promote equitable hiring.
+          </li>
+          <li className="list-group-item">
+            <strong>Clear Complaint Resolution:</strong> Simple and transparent procedures to address any grievances swiftly.
+          </li>
         </ul>
-      </div>
+
+        <p className="fs-5" style={{ maxWidth: "720px", margin: "auto" }}>
+          Our ongoing investment in compliance and ethical standards ensures that your business is supported by a reliable, principled, and legally sound staffing partner — building lasting peace of mind and long-term value.
+        </p>
+      </section>
     </div>
   );
 }

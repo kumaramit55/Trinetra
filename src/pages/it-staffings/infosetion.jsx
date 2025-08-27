@@ -1,6 +1,7 @@
-
 import { FaBullseye, FaSearch, FaDollarSign, FaGlobe, FaIndustry, FaUser, FaLaptopCode } from "react-icons/fa";
-import InfoBox from "../../Components/elements/infobox";
+import InfoCard from "../../Components/elements/infocard";
+import CustomSvgImage from '../../Components/elements/customsvgImage'
+
 
 export default function InfoSections() {
   const sections = [
@@ -40,7 +41,7 @@ export default function InfoSections() {
         { IconComponent: FaLaptopCode, title: "JavaScript Developer" },
         { IconComponent: FaUser, title: "Back End Support" }
       ],
-      more: "& more..."
+     
     }
   ];
 
@@ -49,32 +50,7 @@ export default function InfoSections() {
       <div className="row g-4">
         {sections.map((sec, i) => (
           <div key={i} className="col-md-4">
-            <div className="custom-card h-100 p-4">
-              <h5 className="fw-bold mb-3">{sec.title}</h5>
-
-              <div className="d-flex flex-column gap-2">
-                {sec.items.map((item, idx) => (
-                  <InfoBox key={idx} IconComponent={item.IconComponent} title={item.title} />
-                ))}
-              </div>
-
-              {sec.subTitle && (
-                <>
-                  <h6 className="fw-bold mt-4">{sec.subTitle}</h6>
-                  <div className="d-flex flex-column gap-2">
-                    {sec.flags.map((flag, idx) => (
-                      <InfoBox key={idx} IconComponent={flag.IconComponent} title={flag.title} />
-                    ))}
-                  </div>
-                </>
-              )}
-
-              {sec.more && (
-                <p className="mt-3 text-danger" style={{ cursor: "pointer" }}>
-                  {sec.more}
-                </p>
-              )}
-            </div>
+            <InfoCard {...sec} />
           </div>
         ))}
       </div>

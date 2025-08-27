@@ -1,110 +1,160 @@
-import React from "react";
 
-import { FaUserTie, FaLaptopCode, FaGlobe, FaFileInvoiceDollar, FaCogs } from "react-icons/fa";
-import InfoBox from "../../Components/elements/infobox";
+import { FaBullseye, FaSearch, FaDollarSign, FaGlobe, FaIndustry, FaUser, FaLaptopCode } from "react-icons/fa";
+import InfoCard from "../../Components/elements/infocard";
 
-function AboutUs() {
+
+  function InfoSections() {
+  const sections = [
+    {
+      title: "Solutions we provide",
+      items: [
+        { IconComponent: FaBullseye, title: "Staffing" },
+        { IconComponent: FaSearch, title: "Recruitment" },
+        { IconComponent: FaDollarSign, title: "Payroll & Operations" }
+      ],
+      subTitle: "Geographies we serve",
+      flags: [
+        { IconComponent: FaGlobe, title: "India" },
+        { IconComponent: FaGlobe, title: "GCC" },
+        { IconComponent: FaGlobe, title: "Europe" }
+      ]
+    },
+    {
+      title: "Industries we serve",
+      items: [
+        { IconComponent: FaIndustry, title: "Banking & Finance" },
+        { IconComponent: FaIndustry, title: "Construction & Real Estate" },
+        { IconComponent: FaIndustry, title: "Consumer Products & Goods" },
+        { IconComponent: FaIndustry, title: "Healthcare & Pharmaceutical" },
+        { IconComponent: FaIndustry, title: "Industrial & Manufacturing" },
+        { IconComponent: FaIndustry, title: "Logistics & Transportation" },
+        { IconComponent: FaIndustry, title: "Media & Entertainment" }
+      ]
+    },
+    {
+      title: "Roles we hire",
+      items: [
+        { IconComponent: FaLaptopCode, title: "Software Developer" },
+        { IconComponent: FaLaptopCode, title: "Cloud Engineer" },
+        { IconComponent: FaUser, title: "Business Analyst" },
+        { IconComponent: FaLaptopCode, title: "Web Developer" },
+        { IconComponent: FaLaptopCode, title: "JavaScript Developer" },
+        { IconComponent: FaUser, title: "Back End Support" }
+      ],
+      more: "& more..."
+    }
+  ];
+
   return (
-    <div className="aboutus-container bg-light">
-
-      {/* Quote & intro section */}
-      <section className="container py-5">
-        <div className="row align-items-center gy-4">
-          <div className="col-12 col-md-6">
-            <blockquote className="aboutus-quote p-4 mb-3 fs-5">
-              <span style={{ fontStyle: "italic", fontWeight: "500" }}>
-                “It takes 20 years to build a reputation and five minutes to ruin it. If you think about that, You’ll do things differently.”
-              </span>
-            </blockquote>
+    <div className="container my-5">
+      <div className="row g-4">
+        {sections.map((sec, i) => (
+          <div key={i} className="col-md-4">
+            <InfoCard {...sec} />
           </div>
-          <div className="col-12 col-md-6 d-flex justify-content-center">
-            <img
-              src="/images/about-us.jpg"
-              alt="About Us"
-              className="aboutus-img img-fluid rounded shadow"
-              style={{ maxWidth: "410px", width: "100%" }}
-            />
-          </div>
-        </div>
-      </section>
-
-      {/* Company mission/history */}
-      <section className="container py-4">
-        <div className="row align-items-center gy-3">
-          <div className="col-12 col-lg-5 text-center text-lg-start">
-            <img
-              src="/images/about-us.jpg"
-              alt=""
-              className="aboutus-img-large img-fluid rounded shadow"
-            />
-          </div>
-          <div className="col-12 col-lg-7">
-            <h3 className="aboutus-heading fw-bold mb-3">
-              Connecting Businesses with Exceptional Talent
-            </h3>
-            <p className="aboutus-text fs-6">
-              For over 2 decades, Buzzworks has been instrumental in changing lives and transforming businesses by connecting the right people with the right job opportunities. With a focus on advancing human capital, we help global companies find the right people, enhance their productivity and thereby improve profitability.
-            </p>
-          </div>
-        </div>
-      </section>
-
-      {/* Certifications & journey */}
-      <section className="container py-4">
-        <div className="row justify-content-center align-items-center gy-3">
-          <div className="col-12 col-md-5 d-flex justify-content-center mb-3 mb-md-0">
-            <img
-              src="/images/cerficaties.png"
-              alt=""
-              className="aboutus-cert-img img-fluid rounded"
-              style={{ maxWidth: "280px" }}
-            />
-          </div>
-          <div className="col-12 col-md-7">
-            <p className="aboutus-cert-text mb-0 fs-6">
-              Our journey began with a simple yet profound belief: People are the heart and soul of every organization. In an ever-evolving job market, finding the right talent can be a challenge but it is also the key to success. With this belief as our guiding star, we set out to create a company to bridge the gap between businesses and talent. With a humble beginning in 2001 from a small office in Chennai, today, we are an ISO 9001:2015 certified company, with offices across Chennai, Mumbai, Bengaluru, Hyderabad, Gurugram, Navi Mumbai, Kochi, Coimbatore and an international hub in Dubai. With a current turnover of 450cr+, we aim to reach 1000 cr+ turnover in the coming 3 years. All our businesses have defined processes and a responsive and performance-driven team to back up our clients & help them reach their business goals.
-            </p>
-          </div>
-        </div>
-      </section>
-
-      {/* Offerings */}
-      <section className="container py-4">
-        <div className="row align-items-center gy-3">
-          <div className="col-12 col-lg-5 d-flex justify-content-center mb-3 mb-lg-0">
-            <img
-              src="/images/cardbox1 (1).jpg"
-              alt=""
-              className="aboutus-offering-img img-fluid rounded shadow"
-              style={{ maxWidth: "320px" }}
-            />
-          </div>
-          <div className="col-10 col-lg-7">
-            <div className=" custom-card  p-4 rounded shadow">
-              <h3 className="aboutus-main-title fw-bold mb-3">Our Offering</h3>
-              <div className="row gy-3 ">
-                <div className="col-12 col-md-6">
-                  <InfoBox IconComponent={FaUserTie} title="Contract Staffing (Blue collar, white collar)" />
-                </div>
-                <div className="col-12 col-md-6">
-                  <InfoBox IconComponent={FaLaptopCode} title="IT Staffing" />
-                </div>
-                <div className="col-12 col-md-6">
-                  <InfoBox IconComponent={FaGlobe} title="Global Placements" />
-                </div>
-                <div className="col-12 col-md-6">
-                  <InfoBox IconComponent={FaFileInvoiceDollar} title="Payroll Operation" />
-                </div>
-                <div className="col-12">
-                  <InfoBox IconComponent={FaCogs} title="Software Solutions" />
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
+        ))}
+      </div>
     </div>
   );
 }
 
-export default AboutUs;
+export default function AboutPage() {
+  return (
+    <div className="aboutus-page bg-light py-5">
+      {/* Quote Section */}
+      <section className="container mb-5">
+        <div className="row gy-4 align-items-center">
+          <div className="col-12 col-md-6 order-md-2 d-flex justify-content-center">
+            <img
+              src="/images/about-us.jpg"
+              alt="About Us"
+              className="img-fluid rounded shadow-lg"
+              style={{ maxWidth: "550px", width: "100%" }}
+            />
+          </div>
+          <div className="col-12 col-md-6 order-md-1 d-flex align-items-center">
+            <blockquote className="border-start border-5 border-primary ps-4 fst-italic fs-4 text-secondary">
+              “It takes 20 years to build a reputation and five minutes to ruin
+              it. If you think about that, you’ll do things differently.”
+            </blockquote>
+          </div>
+        </div>
+      </section>
+
+      {/* Company Story & Journey */}
+      <section className="container mb-5">
+        <div className="row gy-3 align-items-center">
+          <div className="col-12 col-lg-6 text-center text-lg-start mb-4 mb-lg-0">
+            <img
+              src="/images/about-us.jpg"
+              alt="Company Story"
+              className="img-fluid rounded shadow-lg"
+              style={{ maxWidth: "550px", width: "100%" }}
+            />
+          </div>
+          <div className="col-12 col-lg-6">
+            <h2 className="fw-bold mb-4 text-primary">
+              Connecting Businesses with Exceptional Talent
+            </h2>
+            <p className="fs-5 text-muted mb-3">
+              For over 2 decades, Buzzworks has been instrumental in changing
+              lives and transforming businesses by connecting the right people
+              with the right job opportunities. With a focus on advancing human
+              capital, we help global companies find the right people, enhance
+              their productivity and thereby improve profitability.
+            </p>
+            <p className="fs-5 text-muted mb-3">
+              Our journey began with a simple yet profound belief: People are
+              the heart and soul of every organization. In an ever-evolving job
+              market, finding the right talent can be a challenge but it is also
+              the key to success. With this belief as our guiding star, we set
+              out to create a company to bridge the gap between businesses and
+              talent.
+            </p>
+            <p className="fs-5 text-muted mb-3">
+              Established in 2001 from a small office in Chennai, we are now an
+              ISO 9001:2015 certified company with offices across India and
+              Dubai. Our turnover is 450cr+ with aims to reach 1000cr+ over the
+              next 3 years, backed by defined processes and performance-driven
+              teams.
+            </p>
+            <p className="fs-6 fst-italic text-primary">
+              Proudly aligned with UN’s Sustainable Development Goal 8: to
+              promote sustained, inclusive and sustainable economic growth, full
+              and productive employment and decent work for all.
+            </p>
+          </div>
+        </div>
+      </section>
+
+      {/* Vision & Mission */}
+      <section className="container mb-5">
+        <div className="row gy-4 text-center text-md-start">
+          <div className="col-md-6">
+            <div className="p-5 bg-white rounded shadow h-100 border-start border-4 border-primary">
+              <h3 className="fw-bold mb-3 text-primary">Our Vision</h3>
+              <p className="fs-5">
+                Drive Economic Productivity and Enterprise Profitability by
+                Matching Employment Opportunities to the Right People with the
+                Right Skills at the Right Time.
+              </p>
+            </div>
+          </div>
+          <div className="col-md-6">
+            <div className="p-5 bg-white rounded shadow h-100 border-start border-4 border-primary">
+              <h3 className="fw-bold mb-3 text-primary">Our Mission</h3>
+              <p className="fs-5">
+                Empower 100,000 people annually across India, GCC and Europe to
+                find meaningful work on a contract basis with fair remuneration
+                as per their skills by FY 2025.
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Our Offerings */}
+        <InfoSections/>
+    </div>
+  );
+}

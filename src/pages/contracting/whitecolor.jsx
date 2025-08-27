@@ -1,67 +1,182 @@
 import React from "react";
+import {
+  FaUserTie,
+  FaBriefcase,
+  FaUserCheck,
+  FaRegClock,
+  FaChartLine,
+  FaLaptopCode,
+} from "react-icons/fa";
 
 export default function WhiteCollarStaffing() {
   return (
-    <div className="container my-5">
-      <h1 className="mb-4 fw-bold text-primary">White Collar Staffing Solutions</h1>
-
-      <p className="fs-5 text-secondary mb-4">
-        Our White Collar Staffing services connect your business with skilled professionals in administrative, managerial, and technical roles. We specialize in matching qualified candidates who bring expertise, professionalism, and a commitment to your company’s success.
-      </p>
-
-      <div className="row g-4 align-items-center">
-        <div className="col-md-6">
-          <img
-            src="/images/white-collar-staffing.jpg"
-            alt="White collar professionals at work"
-            className="img-fluid rounded shadow"
-            style={{ objectFit: "cover", minHeight: "300px", width: "100%" }}
-          />
+    <div className="white-collar-page">
+      {/* Hero Section */}
+      <div
+        className="hero-banner d-flex align-items-center text-white"
+        style={{
+          background: "url('/images/white-collar-hero.jpg') center/cover no-repeat",
+          minHeight: "60vh",
+          position: "relative",
+        }}
+      >
+        <div className="container text-center" style={{ position: "relative", zIndex: 2 }}>
+          <h1 className="fw-bold display-4">White Collar Staffing Solutions</h1>
+          <p className="fs-5 mt-3 mb-4">
+            Helping organizations hire skilled professionals across finance, HR, 
+            IT, engineering, healthcare, and management — ensuring the right 
+            talent drives your company’s success.
+          </p>
+          <button className="btn btn-light btn-lg px-5 fw-semibold">
+            Find Your Next Hire
+          </button>
         </div>
-        <div className="col-md-6">
-          <h3 className="mb-3">Why Choose Our White Collar Staffing?</h3>
-          <ul className="list-group list-group-flush fs-5">
-            <li className="list-group-item">
-              <strong>Expert Talent Pool:</strong> Access candidates experienced in business, finance, IT, marketing, HR, and more.
-            </li>
-            <li className="list-group-item">
-              <strong>Thorough Screening:</strong> We ensure alignment of skills, experience, and cultural fit for lasting hires.
-            </li>
-            <li className="list-group-item">
-              <strong>Tailored Staffing Solutions:</strong> Flexible contract, temp-to-perm, and permanent placement options to match your needs.
-            </li>
-            <li className="list-group-item">
-              <strong>Efficient Process:</strong> Save time and resources with our streamlined recruitment and onboarding services.
-            </li>
-            <li className="list-group-item">
-              <strong>Industry Expertise:</strong> Recruiters specialized by sector ensure quality candidate matches.
-            </li>
-          </ul>
-        </div>
+        <div
+          style={{
+            position: "absolute",
+            inset: 0,
+            background: "rgba(0, 30, 65, 0.65)",
+          }}
+        ></div>
       </div>
 
-      <section className="mt-5">
-        <h3 className="mb-3">Industries We Serve</h3>
-        <p>
-          We provide white collar staffing solutions across sectors such as finance, healthcare, technology, education, legal services, and corporate services, helping you build a strong and capable workforce.
-        </p>
+      {/* Key Benefits Section */}
+      <section className="container my-5">
+        <h2 className="text-center fw-bold mb-5">
+          Why Partner With Us?
+        </h2>
+        <div className="row g-4">
+          {[
+            {
+              icon: <FaUserTie />,
+              title: "Expert Professionals",
+              text: "Access top talent in business, finance, IT, HR, legal, and operations management.",
+            },
+            {
+              icon: <FaUserCheck />,
+              title: "Rigorous Screening",
+              text: "We assess skills, qualifications, and culture-fit for high retention and long-term impact.",
+            },
+            {
+              icon: <FaRegClock />,
+              title: "Faster Hiring",
+              text: "Streamlined recruitment reduces time-to-hire and ensures seamless onboarding.",
+            },
+            {
+              icon: <FaBriefcase />,
+              title: "Flexible Solutions",
+              text: "Temporary, contract-to-hire, or permanent positions designed around your needs.",
+            },
+          ].map((item, idx) => (
+            <div className="col-md-6 col-lg-3" key={idx}>
+              <div className="card h-100 shadow-sm border-0 text-center p-4">
+                <div className="text-primary mb-3" style={{ fontSize: "2.5rem" }}>
+                  {item.icon}
+                </div>
+                <h5 className="fw-semibold mb-2">{item.title}</h5>
+                <p className="text-secondary">{item.text}</p>
+              </div>
+            </div>
+          ))}
+        </div>
       </section>
 
-      <section className="mt-4">
-        <h3 className="mb-3">Our Staffing Process</h3>
-        <ol className="fs-5">
-          <li><strong>Requirement Gathering:</strong> Understanding your position needs, qualification requirements, and company culture.</li>
-          <li><strong>Candidate Sourcing:</strong> Utilizing a broad network and sourcing channels to find qualified applicants.</li>
-          <li><strong>Assessment & Interviewing:</strong> Detailed screening to evaluate skills, experience, and fit.</li>
-          <li><strong>Placement & Follow-up:</strong> Coordinating offers and onboarding, with ongoing support to ensure success.</li>
-        </ol>
+      {/* About + Process (Alternating layout) */}
+      <section className="container my-5">
+        <div className="row align-items-center mb-5">
+          <div className="col-md-6">
+            <img
+              src="/images/whitecollar1.jpg"
+              alt="Corporate professionals"
+              className="img-fluid rounded shadow"
+            />
+          </div>
+          <div className="col-md-6 ps-md-5 mt-4 mt-md-0">
+            <h3 className="fw-bold">Recruiting the Right Leaders & Talent</h3>
+            <p className="text-secondary fs-5">
+              White collar roles demand not only skill but also leadership qualities,
+              problem-solving ability, and cultural alignment. Our recruiters 
+              specialize in sourcing candidates who align with your organization’s 
+              goals and environment.
+            </p>
+          </div>
+        </div>
+
+        <div className="row align-items-center">
+          <div className="col-md-6 order-md-2">
+            <img
+              src="/images/whitecollar2.jpg"
+              alt="Recruitment process"
+              className="img-fluid rounded shadow"
+            />
+          </div>
+          <div className="col-md-6 pe-md-5 mt-4 mt-md-0 order-md-1">
+            <h3 className="fw-bold">Our Staffing Process</h3>
+            <ol className="list-group list-group-numbered">
+              <li className="list-group-item p-3">
+                <strong>Requirement Gathering:</strong> Understand your job role, 
+                qualifications, and organizational culture.
+              </li>
+              <li className="list-group-item p-3">
+                <strong>Targeted Sourcing:</strong> Use networks, platforms, and 
+                headhunting to reach the right candidates.
+              </li>
+              <li className="list-group-item p-3">
+                <strong>Evaluation & Interviewing:</strong> Assess technical skills, 
+                experience, leadership quality, and communication.
+              </li>
+              <li className="list-group-item p-3">
+                <strong>Offer & Onboarding:</strong> Smooth transition from hire 
+                to integration, with follow-ups post-hiring.
+              </li>
+            </ol>
+          </div>
+        </div>
       </section>
 
-      <div className="text-center mt-5">
-        <button className="btn btn-primary btn-lg px-5">
-          Contact Us for White Collar Staffing
-        </button>
-      </div>
+      {/* Industries Section */}
+      <section className="bg-light py-5">
+        <div className="container">
+          <h2 className="text-center fw-bold mb-4">Industries We Serve</h2>
+          <div className="d-flex flex-wrap justify-content-center gap-3">
+            {[
+              "Finance & Banking",
+              "Healthcare",
+              "Technology & IT",
+              "Education",
+              "Legal Services",
+              "Corporate Services",
+              "Consulting",
+            ].map((industry, idx) => (
+              <span
+                key={idx}
+                className="badge rounded-pill bg-primary fs-6 px-4 py-2 shadow-sm"
+              >
+                {industry}
+              </span>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* CTA Section */}
+      <section
+        className="text-white text-center py-5 mt-5"
+        style={{
+          background: "linear-gradient(90deg, #002b80, #0047b3)",
+        }}
+      >
+        <div className="container">
+          <h2 className="fw-bold mb-3">Hire the Right Talent with Confidence</h2>
+          <p className="fs-5 mb-4">
+            Let us help you build a high-performing team of professionals 
+            who add real value to your organization.
+          </p>
+          <button className="btn btn-light btn-lg px-5 fw-semibold">
+            Talk to Our Recruiters
+          </button>
+        </div>
+      </section>
     </div>
   );
 }

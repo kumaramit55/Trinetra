@@ -30,15 +30,22 @@ margin: 0px 10px;
     
 }
 .nav-item > a {
-  color: white;
+   
+     color: #FFFFFF;
   font-weight:600;
   text-decoration: none;
 }
 .nav-item > a:hover {
-  color: orange;
+  color: #A6C8FF;
   font-weight:600;
   text-decoration:double;
 }
+.navbar .nav-link.active{
+  color:#FFB800;
+  font-weight:600;
+  text-decoration:double;
+}
+
 
 .navbar-toggler{
   background-color: beige;

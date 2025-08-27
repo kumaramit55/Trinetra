@@ -20,7 +20,7 @@ const routes = createBrowserRouter([
     path: "/",
     element: <Layout />,
     children: [
-      { path: "", element: <Home /> },
+      { index: true, element: <Home /> },  // Default route at "/"
       { path: "it-staffing-solutions", element: <ItStaffings /> },
       { path: "payroll-and-operations", element: <Payroll /> },
       { path: "recruitment", element: <Recruitment /> },
@@ -28,15 +28,15 @@ const routes = createBrowserRouter([
       { path: "recruitment/perm-staff", element: <PermanentRecruitment /> },
       { path: "contracting/white-color", element: <WhiteCollarStaffing /> },
       { path: "contracting/blue-color", element: <BlueCollarStaffing /> },
-      { path: "/consultation-audit", element: <ConsultationAudit /> },
-      { path: "/licensing", element: <Licensing /> },
-      { path: "/jobOpportunities", element: <JobOpportunities /> },
-      { path: "/resources", element: <Resources/> },
-
+      { path: "consultation-audit", element: <ConsultationAudit /> },
+      { path: "licensing", element: <Licensing /> },
+      { path: "job-opportunities", element: <JobOpportunities /> },
+      { path: "resources", element: <Resources /> },
       { path: "about-us", element: <AboutUs /> },
-      { path: "talkto-us", element: <TalktoUs /> },
+      { path: "talk-to-us", element: <TalktoUs /> },
     ],
   },
 ]);
 
 export default routes;
+

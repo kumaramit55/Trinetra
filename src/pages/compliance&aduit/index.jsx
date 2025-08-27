@@ -1,74 +1,153 @@
 import React from "react";
 
 export default function ConsultationAudit() {
+  const benefits = [
+    {
+      icon: "🛡️",
+      title: "Regulatory Compliance",
+      description:
+        "Avoid costly penalties by ensuring your HR and payroll processes meet all current labor laws and regulations.",
+    },
+    {
+      icon: "⚠️",
+      title: "Risk Assessment",
+      description:
+        "Identify and address compliance gaps and operational risks to safeguard your workforce management.",
+    },
+    {
+      icon: "⚙️",
+      title: "Process Optimization",
+      description:
+        "Streamline recruitment, onboarding, and payroll workflows for enhanced organizational efficiency.",
+    },
+    {
+      icon: "📊",
+      title: "Tailored Audits",
+      description:
+        "Receive customized audits designed specifically for your industry and company size.",
+    },
+    {
+      icon: "💡",
+      title: "Expert Guidance",
+      description:
+        "Leverage actionable insights from experienced auditors to continuously improve your operations.",
+    },
+  ];
+
+  const services = [
+    {
+      title: "HR Policy Review",
+      desc: "Comprehensive assessment of your HR policies to ensure compliance and effectiveness.",
+    },
+    {
+      title: "Payroll Compliance",
+      desc: "Detailed payroll audits to ensure accurate tax calculations and labor law adherence.",
+    },
+    {
+      title: "Employee Records",
+      desc: "Verification of contracts, onboarding, and documentation for regulatory alignment.",
+    },
+    {
+      title: "Risk & Gap Analysis",
+      desc: "Identify gaps in compliance and provide actionable solutions.",
+    },
+  ];
+
+  const steps = [
+    { step: "01", title: "Initial Consultation", desc: "We discuss your requirements and outline the audit scope." },
+    { step: "02", title: "Data Collection", desc: "Gather HR, payroll, and compliance documentation." },
+    { step: "03", title: "Audit & Analysis", desc: "Detailed review of policies, records, and processes." },
+    { step: "04", title: "Action Plan", desc: "Provide a report with findings, risks, and recommendations." },
+    { step: "05", title: "Follow-Up", desc: "Support in implementing improvements and ongoing compliance." },
+  ];
+
   return (
-    <div className="container my-5">
-      <h1 className="mb-4 fw-bold text-primary">Consultation & Audit Services</h1>
-
-      <p className="fs-5 text-secondary mb-4">
-        Our expert Consultation and Audit services help your organization navigate complex labor regulations, manage compliance risks, and optimize workforce processes. Whether you’re looking to review your current practices or proactively improve operations, our experienced compliance consultants and auditors deliver actionable insights for sustained business success.
-      </p>
-
-      <div className="row g-4 align-items-center">
-        <div className="col-md-6">
-          <img
-            src="public\images\scott-graham-5fNmWej4tAA-unsplash.jpg"
-            alt="Workplace consultation and audit discussion"
-            className="img-fluid rounded shadow"
-            style={{ objectFit: "cover", minHeight: "300px", width: "100%" }}
-          />
+    <div className="container my-5 px-3 px-md-5">
+      {/* Hero Section */}
+      <section className="hero-section mb-5 rounded-4 shadow-lg overflow-hidden position-relative">
+        <img
+          src="/images/scott-graham-5fNmWej4tAA-unsplash.jpg"
+          alt="Consultation and Audit"
+          className="w-100 h-100 object-fit-cover hero-img"
+        />
+        <div className="hero-overlay d-flex flex-column justify-content-center align-items-center text-center text-white px-4 px-md-5">
+          <h1 className="display-4 fw-bold mb-4">
+            Consultation & Audit{" "}
+            <span className="text-primary">Services</span>
+          </h1>
+          <p className="lead mb-4 fw-normal">
+            Navigate complex labor regulations, manage compliance risks, and
+            optimize workforce processes with our expert consultation and audit
+            tailored for sustained success.
+          </p>
+          <button className="btn btn-primary btn-lg px-5 rounded-pill shadow">
+            Book Now
+          </button>
         </div>
-        <div className="col-md-6">
-          <h3 className="mb-3">Why Choose Our Consultation & Audit Services?</h3>
-          <ul className="list-group list-group-flush fs-5">
-            <li className="list-group-item">
-              <strong>Regulatory Compliance:</strong> Ensure adherence to labor laws, payroll standards, and workplace regulations.
-            </li>
-            <li className="list-group-item">
-              <strong>Risk Assessment:</strong> Identify gaps, potential risks, and non-compliance areas in your HR and staffing systems.
-            </li>
-            <li className="list-group-item">
-              <strong>Process Optimization:</strong> Refine your recruitment, onboarding, payroll, and workforce management processes for efficiency.
-            </li>
-            <li className="list-group-item">
-              <strong>Tailored Audits:</strong> Get customized audits addressing sector-specific and company-specific requirements.
-            </li>
-            <li className="list-group-item">
-              <strong>Expert Guidance:</strong> Benefit from actionable recommendations and step-by-step compliance roadmaps.
-            </li>
-          </ul>
-        </div>
-      </div>
-
-      <section className="mt-5">
-        <h3 className="mb-3">Our Consultation & Audit Services Include:</h3>
-        <ul className="fs-5">
-          <li>Labor Law Compliance Reviews</li>
-          <li>Payroll System Audits</li>
-          <li>Contract Employee Documentation Checks</li>
-          <li>HR Policy Evaluation</li>
-          <li>Industrial Relations & Legal Consultation</li>
-          <li>Employee Benefits & Statutory Filings</li>
-          <li>Process Improvement Consulting</li>
-        </ul>
       </section>
 
-      <section className="mt-4">
-        <h3 className="mb-3">How We Work</h3>
-        <ol className="fs-5">
-          <li><strong>Initial Assessment:</strong> Understand your current compliance and operational status.</li>
-          <li><strong>Onsite/Remote Audit:</strong> Conduct rigorous reviews of processes, documents, and systems.</li>
-          <li><strong>Gap Analysis:</strong> Identify areas for improvement or correction.</li>
-          <li><strong>Actionable Report:</strong> Deliver clear findings and recommend corrective actions.</li>
-          <li><strong>Follow-up Consultation:</strong> Support you through implementation and future compliance updates.</li>
-        </ol>
+      {/* Benefits Section */}
+      <section className="mb-5">
+        <h2 className="text-center fw-bold mb-5 display-6">
+          What Sets Us Apart
+        </h2>
+        <div className="row g-4">
+          {benefits.map(({ icon, title, description }, idx) => (
+            <div key={idx} className="col-md-6 col-lg-4">
+              <div className="card benefit-card h-100 border-0 rounded-4 shadow-sm text-center p-4">
+                <div className="benefit-icon mb-3">{icon}</div>
+                <h5 className="fw-bold mb-3">{title}</h5>
+                <p className="text-muted">{description}</p>
+              </div>
+            </div>
+          ))}
+        </div>
       </section>
 
-      <div className="text-center mt-5">
-        <button className="btn btn-primary btn-lg px-5">
-          Book a Consultation or Audit
+      {/* Services Section */}
+      <section className="mb-5">
+        <h2 className="text-center fw-bold mb-5 display-6">
+          Our Services Include
+        </h2>
+        <div className="row g-4">
+          {services.map((s, idx) => (
+            <div key={idx} className="col-md-6 col-lg-3">
+              <div className="card h-100 service-card text-center p-4 shadow-sm border-0 rounded-4">
+                <h5 className="fw-bold mb-3 text-primary">{s.title}</h5>
+                <p className="text-muted">{s.desc}</p>
+              </div>
+            </div>
+          ))}
+        </div>
+      </section>
+
+      {/* How We Work Section */}
+      <section className="mb-5">
+        <h2 className="text-center fw-bold mb-5 display-6">How We Work</h2>
+        <div className="timeline">
+          {steps.map((s, idx) => (
+            <div key={idx} className="timeline-step">
+              <div className="timeline-number">{s.step}</div>
+              <div className="timeline-content">
+                <h5 className="fw-bold">{s.title}</h5>
+                <p className="text-muted">{s.desc}</p>
+              </div>
+            </div>
+          ))}
+        </div>
+      </section>
+
+      {/* Call to Action */}
+      <section className="text-center py-5 bg-primary text-white rounded-4 shadow-lg">
+        <h2 className="fw-bold mb-3">Ready to Get Started?</h2>
+        <p className="mb-4">
+          Contact us today to book your consultation and take the first step
+          towards hassle-free compliance and optimized HR processes.
+        </p>
+        <button className="btn btn-light btn-lg px-5 rounded-pill shadow">
+          Contact Us
         </button>
-      </div>
+      </section>
     </div>
   );
 }

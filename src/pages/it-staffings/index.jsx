@@ -6,10 +6,10 @@ const InfoSections = lazy(() => import("./infosetion"));
 
 function WhyChooseSection() {
   const cardsData = [
-    { title: "Proven Expertise", alt: "Proven Expertise", src: "/images/cardbox (2).jpg" },
-    { title: "Customer Support", alt: "Customer Support", src: "/images/cardbox (2).jpg" },
-    { title: "Payroll & Compliance Support", alt: "Payroll Support", src: "/images/cardbox (2).jpg" },
-    { title: "Visa & Immigration Support", alt: "Visa Support", src: "/images/cardbox (2).jpg" }
+    { title: "Proven Expertise", alt: "Proven Expertise", src: "images/cardbox (2).webp" },
+    { title: "Customer Support", alt: "Customer Support", src: "images/customer support.webp" },
+    { title: "Payroll & Compliance Support", alt: "Payroll Support", src: "images/payroll support.webp" },
+    { title: "Visa & Immigration Support", alt: "Visa Support", src: "images/visa support.webp" }
   ];
 
   return (
@@ -19,11 +19,11 @@ function WhyChooseSection() {
           <Col key={title}>
             <Suspense fallback={<div>Loading card...</div>}>
               <Card className="h-100">
-                {/* You can replace this with your ImageCard or keep this */}
-                <Card.Img variant="top" src={src} alt={alt} loading="lazy" />
+            
+                <Card.Img variant="top" src={src} alt={alt} loading="lazy" height="200px" />
                 <Card.Body>
                   <Card.Title>{title}</Card.Title>
-                  {/* Add Card.Text if you have description */}
+                
                 </Card.Body>
               </Card>
             </Suspense>

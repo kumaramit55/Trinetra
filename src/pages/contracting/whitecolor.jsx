@@ -15,8 +15,8 @@ export default function WhiteCollarStaffing() {
       <div
         className="hero-banner d-flex align-items-center text-white"
         style={{
-          background: "url('/images/white-collar-hero.jpg') center/cover no-repeat",
-          minHeight: "60vh",
+          background: "url('/images/white collar job  (1).webp') center/cover no-repeat",
+          minHeight: "100vh",
           position: "relative",
         }}
       >
@@ -86,8 +86,9 @@ export default function WhiteCollarStaffing() {
         <div className="row align-items-center mb-5">
           <div className="col-md-6">
             <img
-              src="/images/whitecollar1.jpg"
+              src="/images/pexels-rebrand-cities-581004-1367276.jpg"
               alt="Corporate professionals"
+              
               className="img-fluid rounded shadow"
             />
           </div>
@@ -105,7 +106,7 @@ export default function WhiteCollarStaffing() {
         <div className="row align-items-center">
           <div className="col-md-6 order-md-2">
             <img
-              src="/images/whitecollar2.jpg"
+              src="/images/pexels-tima-miroshnichenko-5439371.jpg"
               alt="Recruitment process"
               className="img-fluid rounded shadow"
             />
@@ -134,7 +135,7 @@ export default function WhiteCollarStaffing() {
         </div>
       </section>
 
-      {/* Industries Section */}
+   
       <section className="bg-light py-5">
         <div className="container">
           <h2 className="text-center fw-bold mb-4">Industries We Serve</h2>
@@ -159,7 +160,6 @@ export default function WhiteCollarStaffing() {
         </div>
       </section>
 
-      {/* CTA Section */}
       <section
         className="text-white text-center py-5 mt-5"
         style={{

@@ -53,7 +53,7 @@ export default function Licensing() {
 
         <div className="col-lg-6 text-center">
           <img
-            src="/images/adam-winger-0NFDoeXGJso-unsplash.jpg"
+            src="images/adam-winger-0NFDoeXGJso-unsplash.webp"
             alt="Licensing Certificate"
             className="img-fluid rounded shadow"
             style={{ maxHeight: "360px", objectFit: "cover" }}

@@ -66,10 +66,10 @@ export default function AboutPage() {
         <div className="row gy-4 align-items-center">
           <div className="col-12 col-md-6 order-md-2 d-flex justify-content-center">
             <img
-              src="/images/about-us.jpg"
+              src="images/about us.webp"
               alt="About Us"
               className="img-fluid rounded shadow-lg"
-              style={{ maxWidth: "550px", width: "100%" }}
+              style={{ maxWidth: "550px", width: "80%",  height:"300px"}}
             />
           </div>
           <div className="col-12 col-md-6 order-md-1 d-flex align-items-center">

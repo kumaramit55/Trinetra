@@ -1,4 +1,5 @@
 import React from "react";
+import { NavLink } from "react-router-dom";
 
 export default function ConsultationAudit() {
   const benefits = [
@@ -80,9 +81,11 @@ export default function ConsultationAudit() {
             optimize workforce processes with our expert consultation and audit
             tailored for sustained success.
           </p>
+          <NavLink to="/talk-to-us">
           <button className="btn btn-primary btn-lg px-5 rounded-pill shadow">
             Book Now
           </button>
+          </NavLink>
         </div>
       </section>
 
@@ -144,9 +147,11 @@ export default function ConsultationAudit() {
           Contact us today to book your consultation and take the first step
           towards hassle-free compliance and optimized HR processes.
         </p>
+        <NavLink to="/talk-to-us">
         <button className="btn btn-light btn-lg px-5 rounded-pill shadow">
           Contact Us
         </button>
+        </NavLink>
       </section>
     </div>
   );

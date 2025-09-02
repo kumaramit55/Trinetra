@@ -1,5 +1,6 @@
 import React from "react";
 import { FaBolt, FaDollarSign, FaUsers, FaClipboardCheck, FaCogs } from "react-icons/fa";
+import { NavLink } from "react-router-dom";
 
 export default function TemporaryRecruitment() {
   return (
@@ -10,7 +11,11 @@ export default function TemporaryRecruitment() {
         <p className="lead mb-4 text-secondary">
           Speed, flexibility, and quality are essential to meet your short-term staffing needs. Our Temporary Recruitment services connect you with skilled professionals, available immediately to support your project deadlines, seasonal spikes, or unexpected requirements.
         </p>
-        <button className="btn btn-primary btn-lg px-5">Contact Us Today</button>
+       <NavLink to="/talk-to-us">
+        <button type="button" className="btn btn-primary btn-lg px-5">
+          Contact Us Today
+        </button>
+        </NavLink>
       </section>
 
       {/* Why Choose Us with Icons */}
@@ -59,7 +64,7 @@ export default function TemporaryRecruitment() {
       <section className="mt-5 row align-items-center g-4">
         <div className="col-md-6">
           <img
-            src="/images/workforce.jpg"
+            src="/images/temporary employee.webp"
             alt="Temporary workforce at work"
             className="img-fluid rounded shadow"
             style={{ objectFit: "cover", minHeight: 300, width: "100%" }}
@@ -84,9 +89,11 @@ export default function TemporaryRecruitment() {
 
       {/* Final CTA */}
       <div className="text-center mt-5 mb-5">
+        <NavLink to="/talk-to-us">
         <button type="button" className="btn btn-primary btn-lg px-5">
           Contact Us to Hire Temporary Staff
         </button>
+        </NavLink>
       </div>
     </div>
   );

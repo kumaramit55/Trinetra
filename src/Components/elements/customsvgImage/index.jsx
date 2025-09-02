@@ -7,6 +7,7 @@ const CustomSvgImage = ({
   alt = "",
   title = "",
   className = "",
+  color = "currentColor",
   style = {},
   role = "img",
   onClick,
@@ -26,6 +27,7 @@ const CustomSvgImage = ({
     const SvgComponent = src;
     return (
       <SvgComponent
+       fill={color} 
         {...commonProps}
         aria-hidden={ariaHidden ?? (!alt && !title)}
       >

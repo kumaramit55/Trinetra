@@ -8,9 +8,11 @@ export default function BlueCollarStaffing() {
       <div
         className="hero-banner d-flex align-items-center text-white"
         style={{
-          background: "url('/images/bluecollar-hero.jpg') center/cover no-repeat",
-          minHeight: "60vh",
+          background: "url('/images/pexels-sergey-sergeev-2153675005-32845692.jpg') center/cover no-repeat",
+          minHeight: "100vh",
           position: "relative",
+          padding:"100px"
+        
         }}
       >
         <div className="container text-center" style={{ position: "relative", zIndex: 2 }}>
@@ -29,7 +31,7 @@ export default function BlueCollarStaffing() {
           style={{
             position: "absolute",
             inset: 0,
-            background: "rgba(0, 38, 77, 0.65)",
+            background: "rgba(0, 38, 77, 0.75)",
           }}
         ></div>
       </div>
@@ -78,8 +80,9 @@ export default function BlueCollarStaffing() {
         <div className="row align-items-center mb-5">
           <div className="col-md-6">
             <img
-              src="/images/workforce1.jpg"
+              src="/images/blue collar job.webp"
               alt="Workers at site"
+              height="300px"
               className="img-fluid rounded shadow"
             />
           </div>
@@ -96,7 +99,7 @@ export default function BlueCollarStaffing() {
         <div className="row align-items-center">
           <div className="col-md-6 order-md-2">
             <img
-              src="/images/workforce2.jpg"
+              src="/images/pexels-edmond-dantes-4344860.jpg"
               alt="Industrial staffing"
               className="img-fluid rounded shadow"
             />

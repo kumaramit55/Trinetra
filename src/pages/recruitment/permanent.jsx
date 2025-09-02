@@ -1,5 +1,6 @@
 import React from "react";
 import { FaBullseye, FaSearch, FaIndustry, FaUser } from "react-icons/fa";
+import { NavLink } from "react-router-dom";
 
 export default function PermanentRecruitment() {
   return (
@@ -14,7 +15,11 @@ export default function PermanentRecruitment() {
           Our Permanent Recruitment services connect you with top-tier talent
           perfectly aligned with your company’s vision and culture.
         </p>
-        <button className="btn btn-primary btn-lg px-5">Get Started</button>
+      <NavLink to="/talk-to-us">
+        <button type="button" className="btn btn-primary btn-lg px-5">
+          Contact Us Today
+        </button>
+        </NavLink>
       </section>
 
       {/* Benefits Section */}
@@ -58,7 +63,7 @@ export default function PermanentRecruitment() {
       <section className="mt-5 row align-items-center g-4">
         <div className="col-md-6 order-md-2">
           <img
-            src="/images/workforce.jpg"
+            src="/images/permanent job.webp"
             alt="Professional interview"
             className="img-fluid rounded shadow"
             style={{ objectFit: "cover", minHeight: 300, width: "100%" }}
@@ -159,9 +164,11 @@ export default function PermanentRecruitment() {
 
       {/* Contact Call To Action */}
       <div className="text-center mt-5 pb-5">
+        <NavLink to="/talk-to-us">
         <button className="btn btn-primary btn-lg px-5">
           Reach Out for Permanent Hiring
         </button>
+        </NavLink>
       </div>
     </div>
   );

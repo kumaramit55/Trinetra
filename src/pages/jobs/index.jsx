@@ -1,69 +1,10 @@
-import React, { useState } from "react";
-
-const JOBS = [
-  {
-    id: 1,
-    title: "Project Manager",
-    category: "Management",
-    description:
-      "Lead cross-functional teams, manage project timelines, budgets, and ensure effective communication.",
-    location: "Bangalore",
-    contractMonths: 10,
-    experience: "Senior",
-    jobType: "Full-Time",
-    salaryRange: "₹12,00,000 - ₹18,00,000 per annum",
-  },
-  {
-    id: 2,
-    title: "Software Developer",
-    category: "IT",
-    description:
-      "Develop and maintain scalable web applications using React, Node.js, and RESTful APIs.",
-    location: "Mumbai",
-    contractMonths: 12,
-    experience: "Mid",
-    jobType: "Full-Time",
-    salaryRange: "₹8,00,000 - ₹12,00,000 per annum",
-  },
-  {
-    id: 3,
-    title: "QA Engineer",
-    category: "IT",
-    description:
-      "Execute automated and manual tests, identify defects, and work closely with development teams.",
-    location: "Hyderabad",
-    contractMonths: 8,
-    experience: "Mid",
-    jobType: "Contract",
-    salaryRange: "₹6,00,000 - ₹9,00,000 per annum",
-  },
-  {
-    id: 4,
-    title: "HR Assistant",
-    category: "HR",
-    description:
-      "Assist with recruitment drives, employee onboarding, and maintaining records.",
-    location: "Delhi",
-    contractMonths: 6,
-    experience: "Junior",
-    jobType: "Temporary",
-    salaryRange: "₹3,00,000 - ₹5,00,000 per annum",
-  },
-  {
-    id: 5,
-    title: "Field Technician",
-    category: "Technical",
-    description:
-      "Provide technical support and maintenance services at client locations.",
-    location: "Chennai",
-    contractMonths: 9,
-    experience: "Mid",
-    jobType: "Full-Time",
-    salaryRange: "₹4,00,000 - ₹7,00,000 per annum",
-  },
-];
+import React, { useEffect, useState } from "react";
+import Papa from "papaparse";
 
 export default function JobOpportunities() {
+
+  const [JOBS, SETJOBS] = useState([]);
+
   const [filters, setFilters] = useState({
     location: "",
     contractMonths: "",
@@ -77,15 +18,45 @@ export default function JobOpportunities() {
     setFilters((prev) => ({ ...prev, [name]: value }));
   };
 
-  const filteredJobs = JOBS.filter((job) => {
-    return (
-      (filters.location ? job.location === filters.location : true) &&
-      (filters.contractMonths ? job.contractMonths === parseInt(filters.contractMonths) : true) &&
-      (filters.category ? job.category === filters.category : true) &&
-      (filters.experience ? job.experience === filters.experience : true) &&
-      (filters.jobType ? job.jobType === filters.jobType : true)
-    );
-  });
+ const filteredJobs = JOBS.filter((job) => {
+  const jobDate = new Date(job.postedDate);
+  const filterMonth = filters.postedMonth ? new Date(filters.postedMonth) : null; // expect filters.postedMonth like '2025-08'
+
+  const matchesMonth = filterMonth
+    ? jobDate.getFullYear() === filterMonth.getFullYear() &&
+      jobDate.getMonth() === filterMonth.getMonth()
+    : true;
+
+  return (
+    (filters.location ? job.location === filters.location : true) &&
+    (filters.contractMonths ? job.contractMonths === parseInt(filters.contractMonths) : true) &&
+    (filters.category ? job.category === filters.category : true) &&
+    (filters.experience ? job.experience === filters.experience : true) &&
+    (filters.jobType ? job.jobType === filters.jobType : true) &&
+    matchesMonth
+  );
+});
+
+
+
+
+  const CSV_URL="https://docs.google.com/spreadsheets/d/e/2PACX-1vQLjafSpiOkVW5bzWyhfHTD530qh33CSLOM6IlhTHidELlvl4M2cTOW4jLONWPWVVmh6EZ3Yk3ECn0D/pub?gid=0&single=true&output=csv"
+
+useEffect(() => {
+    fetch(CSV_URL)
+      .then((response) => response.text())
+      .then((csvText) => {
+        const parsed = Papa.parse(csvText, {
+          header: true,
+          skipEmptyLines: true,
+          dynamicTyping: true, // auto-convert numbers
+        });
+        SETJOBS(parsed.data);
+      })
+      .catch((error) => {
+        console.error("Error fetching or parsing CSV:", error);
+      });
+  }, []);
 
   return (
     <div className="container my-5">
@@ -196,6 +167,9 @@ export default function JobOpportunities() {
                   </p>
                   <p className="text-muted mb-3">
                     <strong>Job Type:</strong> {job.jobType}
+                  </p>
+                   <p className="text-muted mb-3">
+                    <strong>Post Date:</strong> {job.postedDate}
                   </p>
                   <p className="card-text flex-grow-1" style={{ fontSize: "0.95rem", color: "#555" }}>
                     {job.description}

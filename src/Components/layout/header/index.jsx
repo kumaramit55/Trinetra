@@ -4,6 +4,7 @@ import { RxHamburgerMenu } from "react-icons/rx";
 const Header = () => {
   const getNavLinkClass = ({ isActive }) => (isActive ? "nav-link active" : "nav-link");
 
+  
   return (
     <nav className="navbar navbar-expand-lg">
       <div className="container-fluid">
@@ -112,12 +113,6 @@ const Header = () => {
             <li className="nav-item">
               <NavLink className={getNavLinkClass} to="job-opportunities">
                 Job Opportunity
-              </NavLink>
-            </li>
-
-            <li className="nav-item">
-              <NavLink className={getNavLinkClass} to="resources">
-                Resources
               </NavLink>
             </li>
 

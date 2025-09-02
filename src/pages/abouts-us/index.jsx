@@ -1,50 +1,61 @@
 
 import { FaBullseye, FaSearch, FaDollarSign, FaGlobe, FaIndustry, FaUser, FaLaptopCode } from "react-icons/fa";
 import InfoCard from "../../Components/elements/infocard";
+import BullseyeIcon from '../../assets/icons/bullseye.svg?react';
+import DollarIcon from '../../assets/icons/dollar.svg?react';
+import SearchIcon from "../../assets/icons/search.svg?react";
+import GlobbeIcon from "../../assets/icons/globbe.svg?react";
+import LaptopCode from '../../assets/icons/laptopcode.svg?react'
+import UserIcon from '../../assets/icons/user.svg?react'
+import BankingIcon from '../../assets/icons/banking.svg?react'
 
 
-  function InfoSections() {
+
+
+
+ function InfoSections() {
   const sections = [
     {
       title: "Solutions we provide",
       items: [
-        { IconComponent: FaBullseye, title: "Staffing" },
-        { IconComponent: FaSearch, title: "Recruitment" },
-        { IconComponent: FaDollarSign, title: "Payroll & Operations" }
+        { IconComponent:BullseyeIcon, title: "Staffing",color:"black" },
+        { IconComponent: SearchIcon, title: "Recruitment" },
+        { IconComponent: DollarIcon, title: "Payroll & Operations" }
       ],
       subTitle: "Geographies we serve",
       flags: [
-        { IconComponent: FaGlobe, title: "India" },
-        { IconComponent: FaGlobe, title: "GCC" },
-        { IconComponent: FaGlobe, title: "Europe" }
+        { IconComponent: GlobbeIcon, title: "India", color:"black" },
+        { IconComponent: GlobbeIcon, title: "GCC" },
+        { IconComponent: GlobbeIcon, title: "Europe" }
       ]
     },
     {
       title: "Industries we serve",
       items: [
-        { IconComponent: FaIndustry, title: "Banking & Finance" },
-        { IconComponent: FaIndustry, title: "Construction & Real Estate" },
-        { IconComponent: FaIndustry, title: "Consumer Products & Goods" },
-        { IconComponent: FaIndustry, title: "Healthcare & Pharmaceutical" },
-        { IconComponent: FaIndustry, title: "Industrial & Manufacturing" },
-        { IconComponent: FaIndustry, title: "Logistics & Transportation" },
-        { IconComponent: FaIndustry, title: "Media & Entertainment" }
+        { IconComponent: BankingIcon, title: "Banking & Finance" },
+        { IconComponent: BankingIcon, title: "Construction & Real Estate" },
+        { IconComponent: BankingIcon, title: "Consumer Products & Goods" },
+        { IconComponent: BankingIcon, title: "Healthcare & Pharmaceutical" },
+        { IconComponent: BankingIcon, title: "Industrial & Manufacturing" },
+        { IconComponent: BankingIcon, title: "Logistics & Transportation" },
+        { IconComponent: BankingIcon, title: "Media & Entertainment" }
       ]
     },
     {
       title: "Roles we hire",
       items: [
-        { IconComponent: FaLaptopCode, title: "Software Developer" },
-        { IconComponent: FaLaptopCode, title: "Cloud Engineer" },
-        { IconComponent: FaUser, title: "Business Analyst" },
-        { IconComponent: FaLaptopCode, title: "Web Developer" },
-        { IconComponent: FaLaptopCode, title: "JavaScript Developer" },
-        { IconComponent: FaUser, title: "Back End Support" }
+        { IconComponent: LaptopCode, title: "Software Developer" },
+        { IconComponent: LaptopCode, title: "Cloud Engineer" },
+        { IconComponent: UserIcon, title: "Business Analyst" },
+        { IconComponent: LaptopCode, title: "Web Developer" },
+        { IconComponent: LaptopCode, title: "JavaScript Developer" },
+        { IconComponent: UserIcon, title: "Back End Support" }
       ],
-      more: "& more..."
+     
     }
   ];
-
+  
+  console.log(sections)
   return (
     <div className="container my-5">
       <div className="row g-4">
@@ -54,9 +65,11 @@ import InfoCard from "../../Components/elements/infocard";
           </div>
         ))}
       </div>
+     
     </div>
   );
 }
+
 
 export default function AboutPage() {
   return (
@@ -66,10 +79,10 @@ export default function AboutPage() {
         <div className="row gy-4 align-items-center">
           <div className="col-12 col-md-6 order-md-2 d-flex justify-content-center">
             <img
-              src="images/about us.webp"
+              src="images/vitaly-gariev-3EUgUg4e3nE-unsplash.webp"
               alt="About Us"
               className="img-fluid rounded shadow-lg"
-              style={{ maxWidth: "550px", width: "80%",  height:"300px"}}
+              style={{ width: "100%"}}
             />
           </div>
           <div className="col-12 col-md-6 order-md-1 d-flex align-items-center">
@@ -86,7 +99,7 @@ export default function AboutPage() {
         <div className="row gy-3 align-items-center">
           <div className="col-12 col-lg-6 text-center text-lg-start mb-4 mb-lg-0">
             <img
-              src="/images/about-us.jpg"
+              src="images/campaign-creators-gMsnXqILjp4-unsplash.webp"
               alt="Company Story"
               className="img-fluid rounded shadow-lg"
               style={{ maxWidth: "550px", width: "100%" }}

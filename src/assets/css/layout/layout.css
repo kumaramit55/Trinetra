@@ -1,66 +1,64 @@
-.layout-container{
-    overflow: hidden;
-    display: flex;
-    flex-direction: column;
-    min-height: 100vh;
+.layout-container {
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
 }
-.layout-main{
-    flex:1;
-    background-color: #f8f9fa;
+.layout-main {
+  flex: 1;
+  background-color: #f8f9fa;
 }
 
-.layout-header,.layout-footer{
-    background-color: #002452;
-    color: white;
-    padding: 1rem;
+.layout-header,
+.layout-footer {
+  background-color: #002452;
+  color: white;
+  padding: 1rem;
 }
- 
+
 /* navbar */
-.header-container{
-    display: flex; 
-    justify-content: space-between;
-    align-items: center;
-    min-width: auto;
-
+.header-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  min-width: auto;
 }
 
-.nav-item{
-margin: 0px 10px;
-
-    
+.nav-item {
+  margin: 0px 10px;
 }
+
 .nav-item > a {
-   
-     color: #FFFFFF;
-  font-weight:600;
+  color: #ffffff;
+  font-weight: 600;
   text-decoration: none;
 }
+
 .nav-item > a:hover {
-  color: #A6C8FF;
-  font-weight:600;
-  text-decoration:double;
-}
-.navbar .nav-link.active{
-  color:#FFB800;
-  font-weight:600;
-  text-decoration:double;
+  color: #a6c8ff;
+  font-weight: 600;
+  text-decoration: double;
 }
 
 
-.navbar-toggler{
-  background-color: beige;
-  border:2px solid black;
-  border-radius: 4px;
+.navbar .nav-link.active {
+  color: #ffb800;
+  font-weight: 600;
+  text-decoration: double;
+}
+
+.navbar-toggler {
+  color: white;
+  border: none;
+  outline: none;
   cursor: pointer;
   padding: 2px;
-  
 }
 
-.navbar-toggler:focus{
+
+.navbar-toggler:focus {
   box-shadow: none;
-
 }
-
 
 
 .dropdown-submenu {
@@ -70,7 +68,6 @@ margin: 0px 10px;
 .dropdown-submenu > .dropdown-menu {
   top: 0;
   left: 100%;
-
   display: none;
   position: absolute;
   z-index: 1000;
@@ -79,9 +76,30 @@ margin: 0px 10px;
 .dropdown-submenu:hover > .dropdown-menu,
 .dropdown-submenu:focus-within > .dropdown-menu {
   display: block;
- 
 }
 
-.show{
+.show {
   display: block;
+}
+
+
+/* For mobile, override the default dropend/right-opening style */
+@media (max-width: 991.98px) {
+  .dropdown-submenu .dropdown-menu {
+    position: static !important; /* Stop horizontal float, keep in flow */
+    margin-left: 0 !important;   /* Remove offset */
+    box-shadow: none;            /* Optional: Remove shadow for nested */
+  }
+  .dropdown-submenu .dropdown-menu {
+    left: 0; /* Make sure it aligns with parent */
+    top: 100%; /* Drop vertically below the parent */
+    display: none; /* Hide by default */
+  }
+  .dropdown-submenu.show > .dropdown-menu {
+    display: block;
+  }
+
+  .hide{
+    display: block;
+  }
 }

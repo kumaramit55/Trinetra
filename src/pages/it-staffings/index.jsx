@@ -40,13 +40,13 @@ function ItStaffings() {
       <div className="homepage-container">
         {/* image section */}
           <img
-          src="/images/IT SOLUTIONS (1).webp"
+          src="images/IT STAFFING HERO SECTION.webp"
           alt="IT Solutions"
           className="img-style"
           loading="lazy"
           width="1200"
           height="675"
-          srcSet="/images/IT SOLUTIONS (1)-480w.webp 480w, /images/IT SOLUTIONS (1)-800w.webp 800w, /images/IT SOLUTIONS (1).webp 1200w"
+          srcSet="/images/IT STAFFING HERO SECTION-480w.webp 480w, /images/IT STAFFING HERO SECTION-800w.webp 800w, /images/IT STAFFING HERO SECTION.webp 1200w"
           sizes="(max-width: 576px) 480px, (max-width: 992px) 800px, 1200px"
         />
 

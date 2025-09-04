@@ -1,12 +1,54 @@
+import { useEffect, useRef, useState } from "react";
 import { NavLink } from "react-router-dom";
-import { RxHamburgerMenu } from "react-icons/rx";
 
 const Header = () => {
-  const getNavLinkClass = ({ isActive }) => (isActive ? "nav-link active" : "nav-link");
+  const [dropdownOpen, setDropdownOpen] = useState({
+    staffing: false,
+    recruitment: false,
+    contracting: false,
+  });
+
+  const toggleDropdown = (name, e) => {
+    e.preventDefault();
+    e.stopPropagation();
+    setDropdownOpen((prev) => ({
+      ...prev,
+      [name]: !prev[name],
+    }));
+   
+  };
 
   
+  const navRef = useRef(null);
+useEffect(() => {
+  const handleClickOutside = (event) => {
+    if (
+      navRef.current && (
+        !navRef.current.contains(event.target) ||            // Click outside navbar
+        (navRef.current.contains(event.target) &&            // OR click inside navbar but
+         !event.target.closest(".dropdown-menu") &&           // NOT inside dropdown menu
+         !event.target.closest(".dropdown-toggle"))           // AND NOT on dropdown toggle button
+      )
+    ) {
+      setDropdownOpen({
+        staffing: false,
+        recruitment: false,
+        contracting: false,
+      });
+    }
+  };
+
+  document.addEventListener("click", handleClickOutside);
+  return () => document.removeEventListener("click", handleClickOutside);
+}, []);
+
+
+
+  const getNavLinkClass = ({ isActive }) =>
+    isActive ? "nav-link active" : "nav-link";
+
   return (
-    <nav className="navbar navbar-expand-lg">
+    <nav ref={navRef} className="navbar navbar-expand-lg">
       <div className="container-fluid">
         <NavLink className="navbar-brand text-white" to="/">
           Trinetra
@@ -20,7 +62,7 @@ const Header = () => {
           aria-expanded="false"
           aria-label="Toggle navigation"
         >
-          <RxHamburgerMenu />
+          &#9776;
         </button>
         <div className="collapse navbar-collapse" id="navbarSupportedContent">
           <ul className="navbar-nav m-auto mb-2 mb-lg-0 gap-4">
@@ -31,77 +73,174 @@ const Header = () => {
             </li>
 
             <li className="nav-item dropdown">
-              <a
-                className="nav-link dropdown-toggle"
-                role="button"
-                data-bs-toggle="dropdown"
-                aria-expanded="false"
-                href="#"
+              <button
+                className="nav-link dropdown-toggle btn btn-link"
+                type="button"
+                style={{ color: "white", textDecoration: "none" }}
+                onClick={(e) => toggleDropdown("staffing", e)}
+                aria-expanded={dropdownOpen.staffing}
               >
                 Staffing
-              </a>
-              <ul className="dropdown-menu">
+              </button>
+              <ul
+                className={`dropdown-menu${
+                  dropdownOpen.staffing ? " show" : ""
+                }`}
+              >
                 <li>
-                  <NavLink className="dropdown-item" to="it-staffing-solutions">
+                  <NavLink
+                    className="dropdown-item"
+                    to="it-staffing-solutions"
+                    onClick={(e) =>
+                      setDropdownOpen(
+                        {
+                          staffing: false,
+                          recruitment: false,
+                          contracting: false,
+                        },
+                        e
+                      )
+                    }
+                  >
                     IT Staffing Solution
                   </NavLink>
                 </li>
                 <li>
-                  <NavLink className="dropdown-item" to="consultation-audit">
+                  <NavLink
+                    className="dropdown-item"
+                    to="consultation-audit"
+                    onClick={() =>
+                      setDropdownOpen({
+                        staffing: false,
+                        recruitment: false,
+                        contracting: false,
+                      })
+                    }
+                  >
                     Audit & Compliance Services
                   </NavLink>
                 </li>
                 <li>
-                  <NavLink className="dropdown-item" to="licensing">
+                  <NavLink
+                    className="dropdown-item"
+                    to="licensing"
+                    onClick={() =>
+                      setDropdownOpen({
+                        staffing: false,
+                        recruitment: false,
+                        contracting: false,
+                      })
+                    }
+                  >
                     Licensing
                   </NavLink>
                 </li>
                 <li>
-                  <NavLink className="dropdown-item" to="payroll-and-operations">
+                  <NavLink
+                    className="dropdown-item"
+                    to="payroll-and-operations"
+                    onClick={() =>
+                      setDropdownOpen({
+                        staffing: false,
+                        recruitment: false,
+                        contracting: false,
+                      })
+                    }
+                  >
                     Payroll and Operation
                   </NavLink>
                 </li>
-                <li className="dropdown-submenu">
-                  <NavLink
-                    to="recruitment"
+
+                <li className="dropdown-submenu dropend">
+                  <button
                     className="dropdown-item dropdown-toggle"
-                    role="button"
-                    data-bs-toggle="dropdown"
-                    aria-expanded="false"
+                    type="button"
+                    onClick={(e) => {
+                    
+                      toggleDropdown("recruitment", e);
+                    }}
+                    aria-expanded={dropdownOpen.recruitment}
                   >
                     Recruitment
-                  </NavLink>
-                  <ul className="dropdown-menu">
+                  </button>
+                  <ul
+                    className={`dropdown-menu${
+                      dropdownOpen.recruitment ? " show" : ""
+                    }`}
+                  >
                     <li>
-                      <NavLink className="dropdown-item" to="recruitment/temp-staff">
+                      <NavLink
+                        className="dropdown-item"
+                        to="recruitment/temp-staff"
+                        onClick={(e) =>
+                          setDropdownOpen({
+                            staffing: false,
+                            recruitment: false,
+                            contracting: false,
+                          },e)
+                        }
+                      >
                         Temporary Staff
                       </NavLink>
                     </li>
                     <li>
-                      <NavLink className="dropdown-item" to="recruitment/perm-staff">
+                      <NavLink
+                        className="dropdown-item"
+                        to="recruitment/perm-staff"
+                        onClick={(e) =>
+                          setDropdownOpen({
+                            staffing: false,
+                            recruitment: false,
+                            contracting: false,
+                          },e)
+                        }
+                      >
                         Permanent Staff
                       </NavLink>
                     </li>
                   </ul>
                 </li>
-                <li className="dropdown-submenu">
-                  <NavLink
-                    to="contracting"
+
+                <li className="dropdown-submenu dropend">
+                  <button
                     className="dropdown-item dropdown-toggle"
-                    role="button"
-                    data-bs-toggle="dropdown"
-                    aria-expanded="false"
+                    type="button"
+                    onClick={(e) => toggleDropdown("contracting",e)}
+                    aria-expanded={dropdownOpen.contracting}
                   >
                     Contracting Staff
-                  </NavLink>
-                  <ul className="dropdown-menu">
+                  </button>
+                  <ul
+                    className={`dropdown-menu${
+                      dropdownOpen.contracting ? " show" : ""}`}
+                  >
                     <li>
-                      <NavLink className="dropdown-item" to="contracting/blue-color">
+                      <NavLink
+                        className="dropdown-item"
+                        to="contracting/blue-color"
+                        onClick={(e) =>
+                          setDropdownOpen({
+                            staffing: false,
+                            recruitment: false,
+                            contracting: false,
+                          },e)
+                        }
+                      >
                         Blue Color Staffing
                       </NavLink>
                     </li>
                     <li>
-                      <NavLink className="dropdown-item" to="contracting/white-color">
+                      <NavLink
+                        className="dropdown-item"
+                        to="contracting/white-color"
+                        onClick={(e) =>
+                          setDropdownOpen({
+                            staffing: false,
+                            recruitment: false,
+                            contracting: false,
+                          },e)
+                        }
+                      >
                         White Color Staffing
                       </NavLink>
                     </li>

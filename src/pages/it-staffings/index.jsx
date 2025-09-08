@@ -3,13 +3,28 @@ import { itstaffingsData } from "../../data/data";
 import { Card, Col, Row } from "react-bootstrap";
 const InfoSections = lazy(() => import("./infosetion"));
 
-
 function WhyChooseSection() {
   const cardsData = [
-    { title: "Proven Expertise", alt: "Proven Expertise", src: "images/cardbox (2).webp" },
-    { title: "Customer Support", alt: "Customer Support", src: "images/customer support.webp" },
-    { title: "Payroll & Compliance Support", alt: "Payroll Support", src: "images/payroll support.webp" },
-    { title: "Visa & Immigration Support", alt: "Visa Support", src: "images/visa support.webp" }
+    {
+      title: "Proven Expertise",
+      alt: "Proven Expertise",
+      src: "images/cardbox (2).webp",
+    },
+    {
+      title: "Customer Support",
+      alt: "Customer Support",
+      src: "images/customer support.webp",
+    },
+    {
+      title: "Payroll & Compliance Support",
+      alt: "Payroll Support",
+      src: "images/payroll support.webp",
+    },
+    {
+      title: "Visa & Immigration Support",
+      alt: "Visa Support",
+      src: "images/visa support.webp",
+    },
   ];
 
   return (
@@ -19,11 +34,15 @@ function WhyChooseSection() {
           <Col key={title}>
             <Suspense fallback={<div>Loading card...</div>}>
               <Card className="h-100">
-            
-                <Card.Img variant="top" src={src} alt={alt} loading="lazy" height="200px" />
+                <Card.Img
+                  variant="top"
+                  src={src}
+                  alt={alt}
+                  loading="lazy"
+                  height="200px"
+                />
                 <Card.Body>
                   <Card.Title>{title}</Card.Title>
-                
                 </Card.Body>
               </Card>
             </Suspense>
@@ -39,37 +58,36 @@ function ItStaffings() {
     <div>
       <div className="homepage-container">
         {/* image section */}
-          <img
-          src="images/IT STAFFING HERO SECTION.webp"
+        <img
+          src="/images/IT-STAFF.webp"
           alt="IT Solutions"
           className="img-style"
           loading="lazy"
           width="1200"
           height="675"
-          srcSet="/images/IT STAFFING HERO SECTION-480w.webp 480w, /images/IT STAFFING HERO SECTION-800w.webp 800w, /images/IT STAFFING HERO SECTION.webp 1200w"
-          sizes="(max-width: 576px) 480px, (max-width: 992px) 800px, 1200px"
         />
 
-
-        {/* content section */}
         <div className="content">
           <h1>
-           Precision IT <span className="gradient-text">Talent</span> Solutions  <span className="gradient-text">Empowering Sustainable </span>Business Excellence
-            
-           
+            Precision IT <span className="gradient-text">Talent</span> Solutions{" "}
+            <span className="gradient-text">Empowering Sustainable </span>
+            Business Excellence
           </h1>
-          <p className="text-lg fw-medium lh-base" style={{ fontFamily: "inherit" }}>
-          Delivering strategic IT staffing solutions meticulously aligned with your organizational goals, enabling seamless project execution and sustainable operational success.
+          <p
+            className="text-lg fw-medium lh-base"
+            style={{ fontFamily: "inherit" }}
+          >
+            Delivering strategic IT staffing solutions meticulously aligned with
+            your organizational goals, enabling seamless project execution and
+            sustainable operational success.
           </p>
         </div>
       </div>
 
-      <h1 className="custom-heading">Our Tailored Staffing Solutions</h1>
+      <h1 className="section-title">Our Tailored Staffing Solutions</h1>
       <div className="container my-4">
         <div className="row g-4">
-
-          {
-         itstaffingsData.map(({ title, text }) => (
+          {itstaffingsData.map(({ title, text }) => (
             <div className="col-md-4" key={title}>
               <div className="card h-100">
                 <div className="card-body">
@@ -79,7 +97,6 @@ function ItStaffings() {
               </div>
             </div>
           ))}
-
         </div>
       </div>
 
@@ -88,9 +105,9 @@ function ItStaffings() {
       </Suspense>
 
       <div className="why-choose-section py-5 text-center">
-        <h1 className="custom-heading mb-4">Why Choose Trinetra</h1>
+        <h1 className="section-title mb-4">Why Choose Trinetra</h1>
 
-        <WhyChooseSection/>
+        <WhyChooseSection />
       </div>
     </div>
   );

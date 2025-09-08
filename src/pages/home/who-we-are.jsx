@@ -11,29 +11,35 @@ const whoWeArePoints = [
   "Our adaptive strategies ensure clients stay ahead of regulatory changes while maintaining optimal workforce productivity.",
   "Recognized for delivering end-to-end solutions that integrate manpower supply, legal compliance, and advisory services.",
   "Focused on empowering organizations with expertise that simplifies complexities of labor laws and workforce challenges.",
-  "Dedicated to creating value by aligning human capital solutions with our clients’ unique business goals and vision."
+  
 ];
 
 
 function Whoweare() {
   return (
-    <div className='mt-4'>
-      <h1 className="customHeading">Who we are</h1>
-      <div className="dFlex">
-        <img 
-          src="/images/who we are.webp" 
-          alt="who we are"  
-          loading="lazy" 
-        />
-        <div className="textContainer">
-          <ul className="list">
-            {whoWeArePoints.map((point, index) => (
-              <li key={index} className="listItem">{point}</li>
-            ))}
-          </ul>
-        </div>
-      </div>
+ <div className="who-we-are mt-4">
+  <h1 className="section-title">Who we are</h1>
+  <div className="who-we-are__content">
+    
+    <img 
+      src="/images/who we are.webp" 
+      alt="Who we are"  
+      loading="lazy" 
+      className="who-we-are__image"
+      
+    />
+    <div className="who-we-are__text">
+      <ul className="who-we-are__list">
+        {whoWeArePoints.map((point, index) => (
+          <li key={index} className="who-we-are__list-item">
+            {point}
+          </li>
+        ))}
+      </ul>
     </div>
+  </div>
+</div>
+
   );
 }
 

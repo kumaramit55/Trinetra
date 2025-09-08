@@ -2,73 +2,36 @@ import React from "react";
 
 function Partnerns() {
   return (
-    <div className="">
-      <h1 className="custom-heading py-2" style={{background:" #002452", color:"white"}}>
+    <div className="Our-partner-container">
+      <h1 className="section-title" >
         Our Partners
       </h1>
       <div className="logo-tray-container">
         <div className="logo-tray">
           <img
-            src="\images\download.jpg"
+            src="images/partner1.jpg"
             alt=""
             className="logo-dimension"
           />
           <img
-            src="\images\download.png"
+            src="images/partner2.jpg"
             alt=""
             className="logo-dimension"
           />
           
            
           <img
-            src="\images\download (1).png"
+            src="images/partner3.jpg"
             alt=""
             className="logo-dimension"
           />
           <img
-            src="\images\download (1).jpg"
+            src="images/partner4.png"
             alt=""
             className="logo-dimension"
           />
           <img
-            src="\images\images (1).png"
-            alt=""
-            className="logo-dimension"
-          />
-          <img
-            src="\images\images (2).png"
-            alt=""
-            className="logo-dimension"
-          />
-          <img
-            src="\images\images.png"
-            alt=""
-            className="logo-dimension"
-          />
-        </div>
-         <div className="logo-tray">
-          <img
-            src="\images\download.jpg"
-            alt=""
-            className="logo-dimension"
-          />
-          <img
-            src="\images\download.png"
-            alt=""
-            className="logo-dimension"
-          />
-          <img
-            src="\images\download (1).png"
-            alt=""
-            className="logo-dimension"
-          />
-          <img
-            src="\images\download (1).jpg"
-            alt=""
-            className="logo-dimension"
-          />
-          <img
-            src="\images\images (1).png"
+            src="images/partner5.png"
             alt=""
             className="logo-dimension"
           />
@@ -78,11 +41,51 @@ function Partnerns() {
             className="logo-dimension"
           />
           <img
-            src="\images\images.png"
+            src="images/partner6.png"
             alt=""
             className="logo-dimension"
           />
         </div>
+           <div className="logo-tray">
+          <img
+            src="images/partner1.jpg"
+            alt=""
+            className="logo-dimension"
+          />
+          <img
+            src="images/partner2.jpg"
+            alt=""
+            className="logo-dimension"
+          />
+          
+           
+          <img
+            src="images/partner3.jpg"
+            alt=""
+            className="logo-dimension"
+          />
+          <img
+            src="images/partner4.png"
+            alt=""
+            className="logo-dimension"
+          />
+          <img
+            src="images/partner5.png"
+            alt=""
+            className="logo-dimension"
+          />
+          <img
+            src="\images\images (2).png"
+            alt=""
+            className="logo-dimension"
+          />
+          <img
+            src="images/partner6.png"
+            alt=""
+            className="logo-dimension"
+          />
+        </div>
+      
       
       </div>
     </div>

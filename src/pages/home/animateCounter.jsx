@@ -1,6 +1,6 @@
 import React, { useEffect, useRef, useState } from 'react';
 
-function AnimatedCounter({ target = 1000, duration = 1800,content="" }) {
+function AnimatedCounter({ target = 1000, duration = 1000,content="" }) {
   const [count, setCount] = useState(0);
   const ref = useRef();
   const [visible, setVisible] = useState(false);
@@ -23,7 +23,7 @@ function AnimatedCounter({ target = 1000, duration = 1800,content="" }) {
 
   useEffect(() => {
     if (!visible) return;
-    let start = 0;
+    let start = 100;
     const stepTime = Math.abs(Math.floor(duration / target));
     const step = () => {
       start += 1;

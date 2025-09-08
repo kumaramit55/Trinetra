@@ -11,7 +11,6 @@ const CustomButton = lazy(() => import("../../Components/elements/button"));
 function Home() {
   const navigate = useNavigate();
 
-  
   const handleNavigate = useCallback(
     (path) => () => navigate(path),
     [navigate]
@@ -20,8 +19,7 @@ function Home() {
   return (
     <>
       <div className="homepage-container">
-        {/* Image section with lazy loading */}
-         <img
+        <img
           src="images/IT STAFFING HERO SECTION.webp"
           alt="IT Solutions"
           className="img-style"
@@ -47,36 +45,20 @@ function Home() {
             regulatory requirements.
           </p>
           <div className="d-flex gap-2">
-            <Suspense
-              fallback={
-                <button className="btn btn-primary" disabled>
-                  Loading...
-                </button>
-              }
+            <CustomButton
+              className="btn-primary"
+              onClick={handleNavigate("talk-to-us")}
             >
-              <CustomButton
-                className="btn btn-primary"
-                onClick={handleNavigate("talk-to-us")}
-              >
-                Talk to us
-              </CustomButton>
-              <CustomButton
-                className="btn btn-outline-primary"
-                onClick={handleNavigate("apply-here")}
-              >
-                Apply Here
-              </CustomButton>
-            </Suspense>
+              Talk to us
+            </CustomButton>
           </div>
         </div>
       </div>
 
-      <Suspense fallback={<div>Loading...</div>}>
-        <Whoweare />
-      </Suspense>
+      <Whoweare />
 
-      <div className="counter-container">
-        <Suspense fallback={<div></div>}>
+      <div className="counter-container mt-1">
+       
           <AnimatedCounter target={2025} duration={160} content="Happy Users" />
           <AnimatedCounter
             target={150}
@@ -93,14 +75,13 @@ function Home() {
             duration={1000}
             content="Completed Cases"
           />
-        </Suspense>
+       
       </div>
 
-      <h1 className="custom-heading">Our Services</h1>
+      <h1 className="section-title">Our Services</h1>
 
       <div className="grid-container">
-        {/* Card 1 */}
-        <div className="card" data-aos="fade-left">
+        <div className="card">
           <img
             src="images/cardbox (1).webp"
             srcSet="/images/cardbox (1)-480w.jpg 480w, /images/cardbox (1).jpg 800w"
@@ -138,7 +119,7 @@ function Home() {
         </div>
 
         {/* Card 2 */}
-        <div className="card" data-aos="fade-in">
+        <div className="card">
           <img
             src="/images/cardbox1 (1).webp"
             srcSet="/images/cardbox1 (1)-480w.webp 480w, /images/cardbox1 (1).webp 800w"
@@ -175,55 +156,47 @@ function Home() {
         </div>
 
         {/* Card 3 */}
-        <div className="card" data-aos="fade-right">
-  <img
-    src="/images/cardbox (2).webp"
-    srcSet="/images/cardbox (2)-480w.webp 480w, /images/cardbox (2).webp 800w"
-    sizes="(max-width: 576px) 480px, 800px"
-    className="card-img-top img-dimension"
-    alt="Recruitment"
-    loading="lazy"
-    width={800}
-    height={450}
-  />
-  <div className="card-body">
-    <h5 className="card-title">Recruitment</h5>
-    <p className="card-text">
-      Connecting you with exceptional talent through a thorough and tailored  
-      recruitment process. We focus on quality hires that align with your company culture,  
-      ensuring long-term success and growth.
-    </p>
-    <Suspense
-      fallback={
-        <button className="btn btn-primary" disabled>
-          Loading...
-        </button>
-      }
-    >
-      <CustomButton
-        variant="primary"
-        onClick={handleNavigate("recruitment")}
-      >
-        Know More
-      </CustomButton>
-    </Suspense>
-  </div>
-</div>
-
-
-        {/* Additional cards remain unchanged but update src and add lazy loading similarly */}
-        {/* ... */}
+        <div className="card">
+          <img
+            src="/images/cardbox (2).webp"
+            srcSet="/images/cardbox (2)-480w.webp 480w, /images/cardbox (2).webp 800w"
+            sizes="(max-width: 576px) 480px, 800px"
+            className="card-img-top img-dimension"
+            alt="Recruitment"
+            loading="lazy"
+            width={800}
+            height={450}
+          />
+          <div className="card-body">
+            <h5 className="card-title">Recruitment</h5>
+            <p className="card-text">
+              Connecting you with exceptional talent through a thorough and
+              tailored recruitment process. We focus on quality hires that align
+              with your company culture, ensuring long-term success and growth.
+            </p>
+            <Suspense
+              fallback={
+                <button className="btn btn-primary" disabled>
+                  Loading...
+                </button>
+              }
+            >
+              <CustomButton
+                variant="primary"
+                onClick={handleNavigate("recruitment")}
+              >
+                Know More
+              </CustomButton>
+            </Suspense>
+          </div>
+        </div>
       </div>
 
-      <Suspense fallback={<div>Loading Partners...</div>}>
-        <Partnerns />
-      </Suspense>
+      <Partnerns />
 
-      <h1 className="text-center my-4">Our Certifications</h1>
+      <h1 className="section-title">Our Certifications</h1>
 
-      <Suspense fallback={<div>Loading Certifications...</div>}>
-        <Tray3DSlider />
-      </Suspense>
+      <Tray3DSlider />
     </>
   );
 }

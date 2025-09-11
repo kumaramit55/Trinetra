@@ -109,7 +109,7 @@ export default function AboutPage() {
               Connecting Businesses with Exceptional Talent
             </h2>
             <p className="fs-5 text-muted mb-3">
-              For over 2 decades, Buzzworks has been instrumental in changing
+              For over 2 decades,Trinetra has been instrumental in changing
               lives and transforming businesses by connecting the right people
               with the right job opportunities. With a focus on advancing human
               capital, we help global companies find the right people, enhance

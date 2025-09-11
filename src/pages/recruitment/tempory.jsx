@@ -6,9 +6,9 @@ export default function TemporaryRecruitment() {
   return (
     <div className="container my-5">
       {/* Hero Section */}
-      <section className="text-center py-5 bg-light rounded">
-        <h1 className="display-4 fw-bold mb-3 text-primary">Temporary Recruitment Solutions</h1>
-        <p className="lead mb-4 text-secondary">
+      <section className="text-center py-2 bg-light rounded">
+        <h2 className="hero-heading ">Temporary Recruitment Solutions</h2>
+        <p className="hero-text">
           Speed, flexibility, and quality are essential to meet your short-term staffing needs. Our Temporary Recruitment services connect you with skilled professionals, available immediately to support your project deadlines, seasonal spikes, or unexpected requirements.
         </p>
        <NavLink to="/talk-to-us">
@@ -20,7 +20,7 @@ export default function TemporaryRecruitment() {
 
       {/* Why Choose Us with Icons */}
       <section className="mt-5">
-        <h2 className="fw-bold mb-4 text-center">Why Choose Our Temporary Staffing Services?</h2>
+        <h2 className="section-title custom-h2">Why Choose Our Temporary Staffing Services?</h2>
         <div className="row g-4 text-center">
           {[
             {
@@ -91,7 +91,7 @@ export default function TemporaryRecruitment() {
       <div className="text-center mt-5 mb-5">
         <NavLink to="/talk-to-us">
         <button type="button" className="btn btn-primary btn-lg px-5">
-          Contact Us to Hire Temporary Staff
+          Hire Temporary Staff
         </button>
         </NavLink>
       </div>

@@ -75,19 +75,15 @@
 }
  
 /* ===================================================================WHO WE ARE */
-.section-title {
+.custom-h2 {
   font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-  font-weight: 700;
-  font-size: 2.8rem;
   color: #0006fb;
   text-align: center;
-  margin: 1.5rem 0;
   letter-spacing: 1.2px;
   text-transform: uppercase;
   text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.1);
-  white-space: nowrap; /* force single line */
-  overflow: hidden;    /* prevent spillover */
-  text-overflow: ellipsis; /* adds ... if text is too long */
+  overflow: hidden;    
+  text-overflow: ellipsis; 
 }
 
 
@@ -151,9 +147,7 @@
     padding: 40px 0px;
     gap: 30px;
   }
-  .section-title {
-    font-size: 2.2rem;
-  }
+  
 
   .who-we-are__text {
     padding: 10px 20px;
@@ -203,9 +197,7 @@
 
 /* Extra small screens */
 @media (max-width: 450px) {
-  .section-title {
-    font-size: 1.8rem;
-  }
+ 
   .who-we-are__list {
     font-size: 0.95rem;
     line-height: 1.5;
@@ -683,3 +675,27 @@
   }
 }
 
+
+
+.responsive-card {
+  padding: 1rem; /* mobile */
+}
+
+@media (max-width: 576px) {
+  .card {
+    max-width: 90%;
+    margin: 0 auto; /* center the card */
+  }
+}
+
+@media (min-width: 576px) {
+  .responsive-card {
+    padding: 1.5rem; /* small devices */
+  }
+}
+
+@media (min-width: 992px) {
+  .responsive-card {
+    padding: 1rem; /* large screens (3 cards per row, tighter space) */
+  }
+}

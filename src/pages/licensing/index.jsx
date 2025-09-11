@@ -1,20 +1,19 @@
-
-
 export default function Licensing() {
   return (
     <div className="container my-5 px-3">
       {/* Header with Intro */}
       <section className="row align-items-center gy-5">
-        <div className="col-lg-6">
-          <h1 className="display-4 fw-bold text-primary mb-3">
+        {/* Left column (text) */}
+        <div className="col-12 col-lg-6">
+          <h1 className="hero-heading mb-3">
             Licensing & Accreditation
           </h1>
-          <p >
+          <p className="hero-text">
             Trinetra operates as a fully licensed and accredited manpower solutions provider committed to the highest standards of legal compliance, ethical business practices, and operational transparency. Our licenses and certifications affirm our dedication to serving clients with integrity and professionalism.
           </p>
 
           {/* Credentials List */}
-          <ul className="list-unstyled fs-5 lh-lg mb-4">
+          <ul className="list-unstyled fs-6 fs-md-5 lh-lg mb-4">
             <li>
               <strong className="text-dark">Business Registration:</strong>{" "}
               <span className="text-muted ms-2">
@@ -51,24 +50,27 @@ export default function Licensing() {
           </a>
         </div>
 
-        <div className="col-lg-6 text-center">
+        {/* Right column (image) */}
+        <div className="col-12 col-lg-6 text-center">
           <img
             src="images/adam-winger-0NFDoeXGJso-unsplash.webp"
             alt="Licensing Certificate"
             className="img-fluid rounded shadow"
-            style={{ maxHeight: "360px", objectFit: "cover" }}
             loading="lazy"
           />
         </div>
       </section>
 
       {/* Transparency & Trust Section */}
-      <section className="bg-white shadow rounded-4 p-5 my-5">
-        <h2 className="text-primary mb-4">Our Commitment to Transparency & Ethics</h2>
-        <p className="fs-5 mb-3">
+      <section className="bg-white shadow rounded-4 p-4 p-md-5 my-5">
+        <h2 className="section-title custom-h2">
+          Our Commitment to Transparency & Ethics
+        </h2>
+        <p className="fs-6 fs-md-5 mb-3 text-center text-md-start mx-auto" style={{ maxWidth: "720px" }}>
           We understand that trust is foundational to any successful partnership. That's why we maintain comprehensive transparency about our credentials, processes, and compliance. Our clients benefit from:
         </p>
-        <ul className="fs-5 list-group list-group-flush mb-4" style={{ maxWidth: "720px", margin: "auto" }}>
+
+        <ul className="fs-6 fs-md-5 list-group list-group-flush mb-4 mx-auto" style={{ maxWidth: "720px" }}>
           <li className="list-group-item">
             <strong>Regular Independent Audits:</strong> Third-party audits verify our adherence to labor laws and operational standards.
           </li>
@@ -83,7 +85,7 @@ export default function Licensing() {
           </li>
         </ul>
 
-        <p className="fs-5" style={{ maxWidth: "720px", margin: "auto" }}>
+        <p className="fs-6 fs-md-5 text-center text-md-start mx-auto" style={{ maxWidth: "720px" }}>
           Our ongoing investment in compliance and ethical standards ensures that your business is supported by a reliable, principled, and legally sound staffing partner — building lasting peace of mind and long-term value.
         </p>
       </section>

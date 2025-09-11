@@ -166,7 +166,7 @@ export default function PermanentRecruitment() {
       <div className="text-center mt-5 pb-5">
         <NavLink to="/talk-to-us">
         <button className="btn btn-primary btn-lg px-5">
-          Reach Out for Permanent Hiring
+Hire Now
         </button>
         </NavLink>
       </div>

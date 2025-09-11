@@ -18,7 +18,7 @@ const whoWeArePoints = [
 function Whoweare() {
   return (
  <div className="who-we-are mt-4">
-  <h1 className="section-title">Who we are</h1>
+  <h2 className="section-title custom-h2 ">Who we are</h2>
   <div className="who-we-are__content">
     
     <img 

@@ -8,10 +8,6 @@ import LaptopCode from '../../assets/icons/laptopcode.svg?react'
 import UserIcon from '../../assets/icons/user.svg?react'
 import BankingIcon from '../../assets/icons/banking.svg?react'
 
-
-
-
-
 export default function InfoSections() {
   const sections = [
     {
@@ -56,15 +52,15 @@ export default function InfoSections() {
   
   console.log(sections)
   return (
-    <div className="container my-5">
-      <div className="row g-4">
-        {sections.map((sec, i) => (
-          <div key={i} className="col-md-4">
-            <InfoCard {...sec} />
-          </div>
-        ))}
+   <div className="container my-5">
+  <div className="px-1 responsive-card row g-4 row-cols-1 row-cols-sm-2 row-cols-lg-3">
+    {sections.map((item, index) => (
+      <div key={index} className="col">
+        <InfoCard {...item} />
       </div>
-     
-    </div>
+    ))}
+  </div>
+</div>
+
   );
 }

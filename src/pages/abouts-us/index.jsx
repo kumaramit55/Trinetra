@@ -1,5 +1,3 @@
-
-import { FaBullseye, FaSearch, FaDollarSign, FaGlobe, FaIndustry, FaUser, FaLaptopCode } from "react-icons/fa";
 import InfoCard from "../../Components/elements/infocard";
 import BullseyeIcon from '../../assets/icons/bullseye.svg?react';
 import DollarIcon from '../../assets/icons/dollar.svg?react';
@@ -58,13 +56,14 @@ import BankingIcon from '../../assets/icons/banking.svg?react'
   console.log(sections)
   return (
     <div className="container my-5">
-      <div className="row g-4">
-        {sections.map((sec, i) => (
-          <div key={i} className="col-md-4">
-            <InfoCard {...sec} />
-          </div>
-        ))}
-      </div>
+    <div className="row g-4 row-cols-1 row-cols-sm-2 row-cols-lg-3">
+  {sections.map((sec, i) => (
+    <div key={i} className="col">
+      <InfoCard {...sec} />
+    </div>
+  ))}
+</div>
+
      
     </div>
   );
@@ -95,14 +94,14 @@ export default function AboutPage() {
       </section>
 
       {/* Company Story & Journey */}
-      <section className="container mb-5">
+      <section className="container  my-5">
         <div className="row gy-3 align-items-center">
           <div className="col-12 col-lg-6 text-center text-lg-start mb-4 mb-lg-0">
             <img
               src="images/campaign-creators-gMsnXqILjp4-unsplash.webp"
               alt="Company Story"
               className="img-fluid rounded shadow-lg"
-              style={{ maxWidth: "550px", width: "100%" }}
+              style={{ maxWidth: "100%", width: "850px" }}
             />
           </div>
           <div className="col-12 col-lg-6">

@@ -11,7 +11,7 @@ function TalkToUs() {
           <Col md={8}>
             <h1 className="talk-heading">💬 Talk to Us</h1>
             <p className="talk-subtext">
-              We’d love to hear from you! Whether it’s a question, feedback, or just a friendly hello <FaSmile color="#f37021" />, we’re here to help.
+              We’d love to hear from you! Whether it’s a question, feedback, or just a friendly hello <FaSmile color="#002452" />, we’re here to help.
             </p>
           </Col>
         </Row>

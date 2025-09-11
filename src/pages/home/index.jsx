@@ -32,13 +32,13 @@ function Home() {
 
         {/* Content section */}
         <div className="content">
-          <h1>
+          <h1 className="hero-heading">
             Delivering the <span className="gradient-text">Talent</span> You
             Need, with the <span className="gradient-text">Expertise</span> You
             Trust, Exactly When You{" "}
             <span className="gradient-text">Need It</span>.
           </h1>
-          <p className="p-tag">
+          <p className="hero-text">
             Empowering businesses with skilled professionals and seamless
             compliance solutions. Our team ensures you get the right
             expertise—on time, every time—to drive growth and meet all
@@ -78,7 +78,7 @@ function Home() {
        
       </div>
 
-      <h1 className="section-title">Our Services</h1>
+      <h2 className="section-title custom-h2">Our Services</h2>
 
       <div className="grid-container">
         <div className="card">
@@ -93,7 +93,7 @@ function Home() {
             height={450}
           />
           <div className="card-body">
-            <h5 className="card-title">IT STAFF SOLUTION</h5>
+            <h5 className="card-heading">IT STAFF SOLUTION</h5>
             <p className="card-text">
               Empowering your business with top-tier IT talent carefully matched
               to your specific project requirements. Our rigorous selection
@@ -131,7 +131,7 @@ function Home() {
             height={450}
           />
           <div className="card-body">
-            <h5 className="card-title">Payroll Management</h5>
+            <h5 className="card-heading">Payroll Management</h5>
             <p className="card-text">
               Streamline your payroll operations with our comprehensive
               management solutions that guarantee accuracy, compliance, and
@@ -168,7 +168,7 @@ function Home() {
             height={450}
           />
           <div className="card-body">
-            <h5 className="card-title">Recruitment</h5>
+            <h5 className="card-heading">Recruitment</h5>
             <p className="card-text">
               Connecting you with exceptional talent through a thorough and
               tailored recruitment process. We focus on quality hires that align

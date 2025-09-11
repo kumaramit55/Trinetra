@@ -64,34 +64,40 @@ export default function ConsultationAudit() {
 
   return (
     <div className="container my-5 px-3 px-md-5">
-      {/* Hero Section */}
-      <section className="hero-section mb-5 rounded-4 shadow-lg overflow-hidden position-relative">
-        <img
-          src="/images/scott-graham-5fNmWej4tAA-unsplash.jpg"
-          alt="Consultation and Audit"
-          className="w-100 h-100 object-fit-cover hero-img"
-        />
-        <div className="hero-overlay d-flex flex-column justify-content-center align-items-center text-center text-white px-4 px-md-5">
-          <h1 className="display-4 fw-bold mb-4">
-            Consultation & Audit{" "}
-            <span className="text-primary">Services</span>
-          </h1>
-          <p className="lead mb-4 fw-normal">
-            Navigate complex labor regulations, manage compliance risks, and
-            optimize workforce processes with our expert consultation and audit
-            tailored for sustained success.
-          </p>
-          <NavLink to="/talk-to-us">
-          <button className="btn btn-primary btn-lg px-5 rounded-pill shadow">
-            Book Now
-          </button>
-          </NavLink>
-        </div>
-      </section>
+     
+    <section className="hero-section mb-5 mt-5 rounded-4 shadow-lg overflow-hidden position-relative">
+  <img
+    src="/images/scott-graham-5fNmWej4tAA-unsplash.jpg"
+    alt="Consultation and Audit"
+    className="w-100 h-100 object-fit-cover hero-img"
+  />
+  <div className="hero-overlay d-flex flex-column justify-content-center align-items-center text-center text-white px-4 px-md-5">
+    <h1 className="hero-heading">
+      Consultation & Audit <span className="text-primary">Services</span>
+    </h1>
+    
+    <div className="row justify-content-center">
+      <div className="col-12 col-md-8">
+        <p className="hero-text">
+          Navigate complex labor regulations, manage compliance risks, and
+          optimize workforce processes with our expert consultation and audit
+          tailored for sustained success.
+        </p>
+      </div>
+    </div>
+
+    <NavLink to="/talk-to-us">
+      <button className="btn btn-primary btn-lg px-5 rounded-pill shadow mt-4">
+        Book Now
+      </button>
+    </NavLink>
+  </div>
+</section>
+
 
       {/* Benefits Section */}
       <section className="mb-5">
-        <h2 className="text-center fw-bold mb-5 display-6">
+        <h2 className="section-title custom-h2">
           What Sets Us Apart
         </h2>
         <div className="row g-4">
@@ -99,8 +105,8 @@ export default function ConsultationAudit() {
             <div key={idx} className="col-md-6 col-lg-4">
               <div className="card benefit-card h-100 border-0 rounded-4 shadow-sm text-center p-4">
                 <div className="benefit-icon mb-3">{icon}</div>
-                <h5 className="fw-bold mb-3">{title}</h5>
-                <p className="text-muted">{description}</p>
+                <h5 className="card-heading">{title}</h5>
+                <p className="card-text mt-2">{description}</p>
               </div>
             </div>
           ))}
@@ -109,15 +115,15 @@ export default function ConsultationAudit() {
 
       {/* Services Section */}
       <section className="mb-5">
-        <h2 className="text-center fw-bold mb-5 display-6">
+        <h2 className="section-title custom-h2">
           Our Services Include
         </h2>
-        <div className="row g-4">
+        <div className="row g-4 ">
           {services.map((s, idx) => (
-            <div key={idx} className="col-md-6 col-lg-3">
-              <div className="card h-100 service-card text-center p-4 shadow-sm border-0 rounded-4">
-                <h5 className="fw-bold mb-3 text-primary">{s.title}</h5>
-                <p className="text-muted">{s.desc}</p>
+            <div key={idx} className="col-md-6 col-lg-3 ">
+              <div className="card h-100 service-card text-center p-4 shadow-sm border-0 rounded-4 py-5 py-sm-3 py-md-4">
+                <h5 className="card-heading">{s.title}</h5>
+                <p className="card-text">{s.desc}</p>
               </div>
             </div>
           ))}
@@ -126,8 +132,8 @@ export default function ConsultationAudit() {
 
       {/* How We Work Section */}
       <section className="mb-5">
-        <h2 className="text-center fw-bold mb-5 display-6">How We Work</h2>
-        <div className="timeline">
+        <h2 className="section-title custom-h2 ">How We Work</h2>
+        <div className="timeline mt-4">
           {steps.map((s, idx) => (
             <div key={idx} className="timeline-step">
               <div className="timeline-number">{s.step}</div>

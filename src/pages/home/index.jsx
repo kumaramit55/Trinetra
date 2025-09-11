@@ -194,7 +194,7 @@ function Home() {
 
       <Partnerns />
 
-      <h1 className="section-title">Our Certifications</h1>
+      <h2 className="section-title custom-h2">Our Certifications</h2>
 
       <Tray3DSlider />
     </>

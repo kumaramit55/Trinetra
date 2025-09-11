@@ -3,9 +3,9 @@ import React from "react";
 function Partnerns() {
   return (
     <div className="Our-partner-container">
-      <h1 className="section-title" >
+      <h2 className="section-title custom-h2"> 
         Our Partners
-      </h1>
+      </h2>
       <div className="logo-tray-container">
         <div className="logo-tray">
           <img

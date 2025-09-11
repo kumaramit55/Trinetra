@@ -321,6 +321,14 @@
   border-radius: 8px 8px 8px 8px;
 }
 
+@media (max-width: 768px) {
+  .grid-container {
+  
+  width: 95%;
+  padding: 10px;
+ 
+}
+}
 /* Card styling */
 .card {
   background: #fff;
@@ -338,7 +346,7 @@
 .card:hover
  {
   transform: translateY(-6px) scale(1.02);
-  /* box-shadow: 0 12px 30px rgba(0, 0, 0, 0.048); */
+  box-shadow: 0 12px 30px rgba(0, 0, 0, 0.048); 
   outline: none; 
 }
 
@@ -677,25 +685,6 @@
 
 
 
-.responsive-card {
-  padding: 1rem; /* mobile */
-}
 
-@media (max-width: 576px) {
-  .card {
-    max-width: 90%;
-    margin: 0 auto; /* center the card */
-  }
-}
 
-@media (min-width: 576px) {
-  .responsive-card {
-    padding: 1.5rem; /* small devices */
-  }
-}
 
-@media (min-width: 992px) {
-  .responsive-card {
-    padding: 1rem; /* large screens (3 cards per row, tighter space) */
-  }
-}

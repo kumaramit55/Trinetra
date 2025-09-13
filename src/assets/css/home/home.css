@@ -1,5 +1,4 @@
 .homepage-container{
-  
   display: flex;
   padding: 10px;
   min-height: 500px;
@@ -683,6 +682,24 @@
   }
 }
 
+
+
+/* Logo styling */
+.logo {
+  height: 60px;           /* Adjust height as needed */
+  width: auto;            /* Maintain aspect ratio */
+  object-fit: contain;
+  margin-left: 50px;    /* Ensures the image fits nicely */
+  /* Space between logo and text if any */
+  vertical-align: middle; /* Aligns logo with text if inline */
+}
+
+/* Optional: Make logo responsive */
+@media (max-width: 768px) {
+  .logo {
+    height: 40px;
+  }
+}
 
 
 

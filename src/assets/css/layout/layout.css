@@ -11,9 +11,9 @@
 
 .layout-header,
 .layout-footer {
-  background-color: #002452;
+  background-color: #030303;
   color: white;
-  padding: 1rem;
+
 }
 
 /* navbar */
@@ -25,7 +25,7 @@
 }
 
 .nav-item {
-  margin: 0px 10px;
+  margin: 0px 5px;
 }
 
 .nav-item > a {

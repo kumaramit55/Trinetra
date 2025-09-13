@@ -1,5 +1,6 @@
 import { useEffect, useRef, useState } from "react";
 import { NavLink } from "react-router-dom";
+import logo from "../../../assets/images/logo_2.png"
 
 const Header = () => {
   const [dropdownOpen, setDropdownOpen] = useState({
@@ -49,10 +50,13 @@ useEffect(() => {
 
   return (
     <nav ref={navRef} className="navbar navbar-expand-lg">
-      <div className="container-fluid">
-        <NavLink className="navbar-brand text-white" to="/">
-          Trinetra
+     
+    
+        <div>
+           <NavLink className="navbar-brand text-white" to="/">
+        <img src={logo} alt="" className="logo" />
         </NavLink>
+        </div>
         <button
           className="navbar-toggler"
           type="button"
@@ -268,7 +272,7 @@ useEffect(() => {
             </li>
           </ul>
         </div>
-      </div>
+    
     </nav>
   );
 };

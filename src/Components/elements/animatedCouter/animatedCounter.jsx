@@ -1,6 +1,6 @@
 import React, { useEffect, useRef, useState } from 'react';
 
-function AnimatedCounter({ target = 1000, duration = 1000,content="" }) {
+function AnimatedCounter({ target = 1000, duration = 1000, content = "", showPlus = false }) {
   const [count, setCount] = useState(0);
   const ref = useRef();
   const [visible, setVisible] = useState(false);
@@ -12,7 +12,7 @@ function AnimatedCounter({ target = 1000, duration = 1000,content="" }) {
         ([entry]) => {
           if (entry.isIntersecting) setVisible(true);
         },
-        { threshold: 0.4 } // Trigger when 40% in view
+        { threshold: 0.4 }
       );
       observer.observe(ref.current);
     }
@@ -23,8 +23,10 @@ function AnimatedCounter({ target = 1000, duration = 1000,content="" }) {
 
   useEffect(() => {
     if (!visible) return;
-    let start = 100;
-    const stepTime = Math.abs(Math.floor(duration / target));
+
+    let start = 0;
+    const stepTime = Math.max(10, Math.floor(duration / target));
+
     const step = () => {
       start += 1;
       setCount(start);
@@ -33,13 +35,14 @@ function AnimatedCounter({ target = 1000, duration = 1000,content="" }) {
       }
     };
     step();
-    // Only count once per page load/scroll-in
-    // eslint-disable-next-line
-  }, [visible]);
+  }, [visible, duration, target]);
 
   return (
-    <div ref={ref} className="counter-box">
-      <span className="counter-number ">{count}</span>
+    <div ref={ref} className="counter-box text-center">
+      <span className="counter-number">
+        {count}
+        {showPlus && count >= target ? '+' : ''}
+      </span>
       <p>{content}</p>
     </div>
   );

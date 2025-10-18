@@ -1,10 +1,9 @@
-import React, { lazy, Suspense, useCallback } from "react";
+import React, { lazy, useCallback } from "react";
 import { useNavigate } from "react-router-dom";
+import AnimatedCounter from "../../Components/elements/animatedCouter/animatedCounter";
+import CardImage from "../../Components/elements/card-Image";
 
-// Lazy-load below-the-fold components
 const Partnerns = lazy(() => import("./partners"));
-const Tray3DSlider = lazy(() => import("./certification"));
-const AnimatedCounter = lazy(() => import("./animateCounter"));
 const Whoweare = lazy(() => import("./who-we-are"));
 const CustomButton = lazy(() => import("../../Components/elements/button"));
 
@@ -30,7 +29,6 @@ function Home() {
           sizes="(max-width: 576px) 480px, (max-width: 992px) 800px, 1200px"
         />
 
-        {/* Content section */}
         <div className="content">
           <h1 className="hero-heading">
             Delivering the <span className="gradient-text">Talent</span> You
@@ -58,39 +56,31 @@ function Home() {
       <Whoweare />
 
       <div className="counter-container mt-1">
-       
-          <AnimatedCounter target={2025} duration={160} content="Happy Users" />
-          <AnimatedCounter
-            target={150}
-            duration={1000}
-            content="Projects Done"
-          />
-          <AnimatedCounter
-            target={150}
-            duration={1000}
-            content="Expert Consultant"
-          />
-          <AnimatedCounter
-            target={880}
-            duration={1000}
-            content="Completed Cases"
-          />
-       
+        <AnimatedCounter
+          target={10}
+          duration={1000}
+          content="Customers"
+          showPlus
+        />
+        <AnimatedCounter target={5} duration={1000} content="Projects Done" />
+        <AnimatedCounter
+          target={5}
+          duration={1000}
+          content="Expert Consultants"
+          showPlus
+        />
       </div>
 
       <h2 className="section-title custom-h2">Our Services</h2>
 
       <div className="grid-container">
         <div className="card">
-          <img
-            src="images/cardbox (1).webp"
-            srcSet="/images/cardbox (1)-480w.jpg 480w, /images/cardbox (1).jpg 800w"
-            sizes="(max-width: 576px) 480px, 800px"
-            className="card-img-top img-dimension"
+          <CardImage
+            src="images/IT STAFF SOLUTION.webp"
             alt="IT Staffing Solution"
-            loading="lazy"
-            width={800}
-            height={450}
+            rounded
+            shadow
+            aspectRatio="16/9"
           />
           <div className="card-body">
             <h5 className="card-heading">IT STAFF SOLUTION</h5>
@@ -101,34 +91,23 @@ function Home() {
               innovation, security, and efficiency—so your technology can scale
               confidently.
             </p>
-            <Suspense
-              fallback={
-                <button className="btn btn-primary" disabled>
-                  Loading...
-                </button>
-              }
+
+            <CustomButton
+              variant="primary"
+              onClick={handleNavigate("it-staffing-solutions")}
             >
-              <CustomButton
-                variant="primary"
-                onClick={handleNavigate("it-staffing-solutions")}
-              >
-                Know More
-              </CustomButton>
-            </Suspense>
+              Know More
+            </CustomButton>
           </div>
         </div>
 
-        {/* Card 2 */}
         <div className="card">
-          <img
-            src="/images/cardbox1 (1).webp"
-            srcSet="/images/cardbox1 (1)-480w.webp 480w, /images/cardbox1 (1).webp 800w"
-            sizes="(max-width: 576px) 480px, 800px"
-            className="card-img-top img-dimension"
+          <CardImage
+            src="images/PAYROLL-MAGEMENT.webp"
             alt="Payroll Management"
-            loading="lazy"
-            width={800}
-            height={450}
+            rounded
+            shadow
+            aspectRatio="16/9"
           />
           <div className="card-body">
             <h5 className="card-heading">Payroll Management</h5>
@@ -138,34 +117,23 @@ function Home() {
               timely employee payments. We handle complexities so you can focus
               on growing your business with confidence.
             </p>
-            <Suspense
-              fallback={
-                <button className="btn btn-primary" disabled>
-                  Loading...
-                </button>
-              }
+
+            <CustomButton
+              variant="primary"
+              onClick={handleNavigate("payroll-and-operations")}
             >
-              <CustomButton
-                variant="primary"
-                onClick={handleNavigate("payroll-and-operations")}
-              >
-                Know More
-              </CustomButton>
-            </Suspense>
+              Know More
+            </CustomButton>
           </div>
         </div>
 
-        {/* Card 3 */}
         <div className="card">
-          <img
-            src="/images/cardbox (2).webp"
-            srcSet="/images/cardbox (2)-480w.webp 480w, /images/cardbox (2).webp 800w"
-            sizes="(max-width: 576px) 480px, 800px"
-            className="card-img-top img-dimension"
+          <CardImage
+            src="images/RECRUITEMENT.webp"
             alt="Recruitment"
-            loading="lazy"
-            width={800}
-            height={450}
+            rounded
+            shadow
+            aspectRatio="16/9"
           />
           <div className="card-body">
             <h5 className="card-heading">Recruitment</h5>
@@ -174,29 +142,18 @@ function Home() {
               tailored recruitment process. We focus on quality hires that align
               with your company culture, ensuring long-term success and growth.
             </p>
-            <Suspense
-              fallback={
-                <button className="btn btn-primary" disabled>
-                  Loading...
-                </button>
-              }
+
+            <CustomButton
+              variant="primary"
+              onClick={handleNavigate("recruitment")}
             >
-              <CustomButton
-                variant="primary"
-                onClick={handleNavigate("recruitment")}
-              >
-                Know More
-              </CustomButton>
-            </Suspense>
+              Know More
+            </CustomButton>
           </div>
         </div>
       </div>
 
       <Partnerns />
-
-      <h2 className="section-title custom-h2">Our Certifications</h2>
-
-      <Tray3DSlider />
     </>
   );
 }

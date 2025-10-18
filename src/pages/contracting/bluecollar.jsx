@@ -1,5 +1,6 @@
 import React from "react";
 import { FaTools, FaUserShield, FaTruck, FaBuilding, FaUserCheck, FaBolt } from "react-icons/fa";
+import { NavLink } from "react-router-dom";
 
 export default function BlueCollarStaffing() {
   return (
@@ -153,9 +154,11 @@ export default function BlueCollarStaffing() {
             Get access to pre-verified, safety-trained workers who are ready to 
             contribute from day one.
           </p>
+          <NavLink to="/talk-to-us">
           <button className="btn btn-light btn-lg px-5 fw-semibold">
             Contact Us Now
           </button>
+            </NavLink>
         </div>
       </section>
     </div>

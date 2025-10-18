@@ -1,31 +1,27 @@
 import InfoCard from "../../Components/elements/infocard";
-import BullseyeIcon from '../../assets/icons/bullseye.svg?react';
-import DollarIcon from '../../assets/icons/dollar.svg?react';
+import BullseyeIcon from "../../assets/icons/bullseye.svg?react";
+import DollarIcon from "../../assets/icons/dollar.svg?react";
 import SearchIcon from "../../assets/icons/search.svg?react";
 import GlobbeIcon from "../../assets/icons/globbe.svg?react";
-import LaptopCode from '../../assets/icons/laptopcode.svg?react'
-import UserIcon from '../../assets/icons/user.svg?react'
-import BankingIcon from '../../assets/icons/banking.svg?react'
+import LaptopCode from "../../assets/icons/laptopcode.svg?react";
+import UserIcon from "../../assets/icons/user.svg?react";
+import BankingIcon from "../../assets/icons/banking.svg?react";
 
-
-
-
-
- function InfoSections() {
+function InfoSections() {
   const sections = [
     {
       title: "Solutions we provide",
       items: [
-        { IconComponent:BullseyeIcon, title: "Staffing",color:"black" },
+        { IconComponent: BullseyeIcon, title: "Staffing", color: "black" },
         { IconComponent: SearchIcon, title: "Recruitment" },
-        { IconComponent: DollarIcon, title: "Payroll & Operations" }
+        { IconComponent: DollarIcon, title: "Payroll & Operations" },
       ],
       subTitle: "Geographies we serve",
       flags: [
-        { IconComponent: GlobbeIcon, title: "India", color:"black" },
+        { IconComponent: GlobbeIcon, title: "India", color: "black" },
         { IconComponent: GlobbeIcon, title: "GCC" },
-        { IconComponent: GlobbeIcon, title: "Europe" }
-      ]
+        { IconComponent: GlobbeIcon, title: "Europe" },
+      ],
     },
     {
       title: "Industries we serve",
@@ -36,8 +32,8 @@ import BankingIcon from '../../assets/icons/banking.svg?react'
         { IconComponent: BankingIcon, title: "Healthcare & Pharmaceutical" },
         { IconComponent: BankingIcon, title: "Industrial & Manufacturing" },
         { IconComponent: BankingIcon, title: "Logistics & Transportation" },
-        { IconComponent: BankingIcon, title: "Media & Entertainment" }
-      ]
+        { IconComponent: BankingIcon, title: "Media & Entertainment" },
+      ],
     },
     {
       title: "Roles we hire",
@@ -47,28 +43,24 @@ import BankingIcon from '../../assets/icons/banking.svg?react'
         { IconComponent: UserIcon, title: "Business Analyst" },
         { IconComponent: LaptopCode, title: "Web Developer" },
         { IconComponent: LaptopCode, title: "JavaScript Developer" },
-        { IconComponent: UserIcon, title: "Back End Support" }
+        { IconComponent: UserIcon, title: "Back End Support" },
       ],
-     
-    }
+    },
   ];
-  
-  console.log(sections)
+
+  console.log(sections);
   return (
     <div className="container my-5">
-    <div className="row g-4 row-cols-1 row-cols-sm-2 row-cols-lg-3">
-  {sections.map((sec, i) => (
-    <div key={i} className="col">
-      <InfoCard {...sec} />
-    </div>
-  ))}
-</div>
-
-     
+      <div className="row g-4 row-cols-1 row-cols-sm-2 row-cols-lg-3">
+        {sections.map((sec, i) => (
+          <div key={i} className="col">
+            <InfoCard {...sec} />
+          </div>
+        ))}
+      </div>
     </div>
   );
 }
-
 
 export default function AboutPage() {
   return (
@@ -81,7 +73,7 @@ export default function AboutPage() {
               src="images/vitaly-gariev-3EUgUg4e3nE-unsplash.webp"
               alt="About Us"
               className="img-fluid rounded shadow-lg"
-              style={{ width: "100%"}}
+              style={{ width: "100%" }}
             />
           </div>
           <div className="col-12 col-md-6 order-md-1 d-flex align-items-center">
@@ -109,32 +101,15 @@ export default function AboutPage() {
               Connecting Businesses with Exceptional Talent
             </h2>
             <p className="fs-5 text-muted mb-3">
-              For over 2 decades,Trinetra has been instrumental in changing
-              lives and transforming businesses by connecting the right people
-              with the right job opportunities. With a focus on advancing human
-              capital, we help global companies find the right people, enhance
-              their productivity and thereby improve profitability.
+            At Trinetra, we specialize in connecting businesses with the right talent, efficiently and reliably. Founded with a vision to streamline workforce solutions, we understand that people are the backbone of every organization. Our mission is to provide skilled, trustworthy, and motivated manpower to meet diverse business needs.
             </p>
             <p className="fs-5 text-muted mb-3">
-              Our journey began with a simple yet profound belief: People are
-              the heart and soul of every organization. In an ever-evolving job
-              market, finding the right talent can be a challenge but it is also
-              the key to success. With this belief as our guiding star, we set
-              out to create a company to bridge the gap between businesses and
-              talent.
+              Whether it’s temporary staffing, permanent placements, or specialized manpower solutions, we pride ourselves on delivering personalized services that match the right candidate to the right role. With a commitment to professionalism, integrity, and excellence, [Your Company Name] aims to be a trusted partner in building successful teams for businesses of all sizes.
             </p>
-            <p className="fs-5 text-muted mb-3">
-              Established in 2001 from a small office in Chennai, we are now an
-              ISO 9001:2015 certified company with offices across India and
-              Dubai. Our turnover is 450cr+ with aims to reach 1000cr+ over the
-              next 3 years, backed by defined processes and performance-driven
-              teams.
-            </p>
-            <p className="fs-6 fst-italic text-primary">
-              Proudly aligned with UN’s Sustainable Development Goal 8: to
-              promote sustained, inclusive and sustainable economic growth, full
-              and productive employment and decent work for all.
-            </p>
+            <p className="tagline">
+  We don’t just provide manpower—we provide people who make a difference
+</p>
+            
           </div>
         </div>
       </section>
@@ -146,9 +121,10 @@ export default function AboutPage() {
             <div className="p-5 bg-white rounded shadow h-100 border-start border-4 border-primary">
               <h3 className="fw-bold mb-3 text-primary">Our Vision</h3>
               <p className="fs-5">
-                Drive Economic Productivity and Enterprise Profitability by
-                Matching Employment Opportunities to the Right People with the
-                Right Skills at the Right Time.
+                To be the most trusted and innovative partner in workforce
+                management and labour law compliance, empowering businesses
+                across India to operate with confidence, integrity, and
+                compliance excellence.
               </p>
             </div>
           </div>
@@ -156,9 +132,15 @@ export default function AboutPage() {
             <div className="p-5 bg-white rounded shadow h-100 border-start border-4 border-primary">
               <h3 className="fw-bold mb-3 text-primary">Our Mission</h3>
               <p className="fs-5">
-                Empower 100,000 people annually across India, GCC and Europe to
-                find meaningful work on a contract basis with fair remuneration
-                as per their skills by FY 2025.
+                Deliver reliable and customized manpower solutions that align
+                with our clients’ operational goals. Ensure 100% statutory and
+                legal compliance through expert consulting and proactive
+                management. Simplify labour law complexities for businesses with
+                clarity, accountability, and up-to-date expertise. Build
+                long-term partnerships based on transparency, service
+                excellence, and client success. Promote ethical employment
+                practices and contribute to a compliant and empowered workforce
+                ecosystem
               </p>
             </div>
           </div>
@@ -166,7 +148,7 @@ export default function AboutPage() {
       </section>
 
       {/* Our Offerings */}
-        <InfoSections/>
+      <InfoSections />
     </div>
   );
 }

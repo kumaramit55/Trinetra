@@ -110,3 +110,28 @@
     font-size: 1rem;
   }
 }
+
+
+.tagline {
+  font-size: 1.25rem; /* Slightly larger for prominence */
+  color: #4a4a4a; /* Soft dark gray for subtle elegance */
+  font-weight: 600; /* Semi-bold for emphasis */
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; /* Clean professional font */
+  line-height: 1.6;
+  max-width: 600px; /* Limit width for better readability */
+  margin: 1.5rem auto; /* Center horizontally with margin */
+  text-align: center;
+  letter-spacing: 0.03em; /* Slight letter spacing for clarity */
+  background: linear-gradient(90deg, #002452 0%, #fdd835 100%); /* Gradient text effect */
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  user-select: none; /* Prevent accidental text selection */
+  transition: color 0.3s ease;
+  cursor: default;
+}
+
+.tagline:hover {
+  color: #002452; /* Dark blue on hover for subtle interaction */
+  -webkit-text-fill-color: initial;
+  background: none;
+}

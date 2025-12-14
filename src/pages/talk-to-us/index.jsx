@@ -21,15 +21,11 @@ function TalkToUs() {
           <Col md={5} className="contact-info">
             <div className="info-item">
               <FaMapMarkerAlt className="info-icon" />  
-              <span>123, Business Street, Chennai, India</span>
-            </div>
-            <div className="info-item">
-              <FaPhoneAlt className="info-icon" />  
-              <span>+91 98765 43210</span>
+              <span>Gurugram, Haryana, 122011</span>
             </div>
             <div className="info-item">
               <FaEnvelope className="info-icon" />  
-              <span>support@yourcompany.com</span>
+              <span>trinetrabusinessesservices@gmail.com</span>
             </div>
           </Col>
 

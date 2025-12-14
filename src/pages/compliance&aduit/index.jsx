@@ -63,102 +63,108 @@ export default function ConsultationAudit() {
   ];
 
   return (
-    <div className="container my-5 px-3 px-md-5">
-     
-    <section className="hero-section mb-5 mt-5 rounded-4 shadow-lg overflow-hidden position-relative">
-  <img
-    src="/images/scott-graham-5fNmWej4tAA-unsplash.jpg"
-    alt="Consultation and Audit"
-    className="w-100 h-100 object-fit-cover hero-img"
-  />
-  <div className="hero-overlay d-flex flex-column justify-content-center align-items-center text-center text-white px-4 px-md-5">
-    <h1 className="hero-heading">
-      Consultation & Audit <span className="text-primary">Services</span>
-    </h1>
-    
-    <div className="row justify-content-center">
-      <div className="col-12 col-md-8">
-        <p className="hero-text">
-          Navigate complex labor regulations, manage compliance risks, and
-          optimize workforce processes with our expert consultation and audit
-          tailored for sustained success.
-        </p>
-      </div>
-    </div>
+    <div>
 
-    <NavLink to="/talk-to-us">
-      <button className="btn btn-primary btn-lg px-5 rounded-pill shadow mt-4">
-        Book Now
-      </button>
-    </NavLink>
-  </div>
-</section>
+      {/* ================= HERO ================= */}
+      <section
+        className="text-white"
+        style={{
+          background: "linear-gradient(135deg, #00264d, #003d80)",
+          padding: "110px 0",
+        }}
+      >
+        <div className="container">
+          <div className="row align-items-center">
+            <div className="col-lg-7">
+              <h1 className="display-4 fw-bold mb-3">
+                Consultation & Audit Services
+              </h1>
+              <p className="fs-5 text-light mb-4">
+                Navigate complex labor regulations, manage compliance risks,
+                and optimize workforce processes with expert consultation and
+                audit services designed for long-term stability.
+              </p>
+              <NavLink to="/talk-to-us">
+                <button className="btn btn-light btn-lg px-5 fw-semibold">
+                  Book Consultation
+                </button>
+              </NavLink>
+            </div>
 
+            <div className="col-lg-5">
+              <img
+                src="images/kelly-sikkema-xoU52jUVUXA-unsplash.jpg"
+                alt="Consultation and Audit"
+                className="img-fluid rounded shadow-lg"
+              />
+            </div>
+          </div>
+        </div>
+      </section>
 
-      {/* Benefits Section */}
-      <section className="mb-5">
-        <h2 className="section-title custom-h2">
-          What Sets Us Apart
-        </h2>
+      {/* ================= BENEFITS ================= */}
+      <section className="container my-5">
+        <h2 className="fw-bold mb-4 text-center">What Sets Us Apart</h2>
         <div className="row g-4">
           {benefits.map(({ icon, title, description }, idx) => (
             <div key={idx} className="col-md-6 col-lg-4">
-              <div className="card benefit-card h-100 border-0 rounded-4 shadow-sm text-center p-4">
-                <div className="benefit-icon mb-3">{icon}</div>
-                <h5 className="card-heading">{title}</h5>
-                <p className="card-text mt-2">{description}</p>
+              <div className="h-100 p-4 border rounded shadow-sm">
+                <div className="fs-3 mb-2">{icon}</div>
+                <h6 className="fw-semibold">{title}</h6>
+                <p className="text-secondary mb-0">{description}</p>
               </div>
             </div>
           ))}
         </div>
       </section>
 
-      {/* Services Section */}
-      <section className="mb-5">
-        <h2 className="section-title custom-h2">
-          Our Services Include
-        </h2>
-        <div className="row g-4 ">
+      {/* ================= SERVICES ================= */}
+      <section className="container my-5">
+        <h2 className="fw-bold mb-4 text-center">Our Services Include</h2>
+        <div className="row g-4">
           {services.map((s, idx) => (
-            <div key={idx} className="col-md-6 col-lg-3 ">
-              <div className="card h-100 service-card text-center p-4 shadow-sm border-0 rounded-4 py-5 py-sm-3 py-md-4">
-                <h5 className="card-heading">{s.title}</h5>
-                <p className="card-text">{s.desc}</p>
+            <div key={idx} className="col-md-6 col-lg-3">
+              <div className="h-100 p-4 border rounded shadow-sm">
+                <h6 className="fw-semibold">{s.title}</h6>
+                <p className="text-secondary mb-0">{s.desc}</p>
               </div>
             </div>
           ))}
         </div>
       </section>
 
-      {/* How We Work Section */}
-      <section className="mb-5">
-        <h2 className="section-title custom-h2 ">How We Work</h2>
-        <div className="timeline mt-4">
+      {/* ================= PROCESS ================= */}
+      <section className="container my-5">
+        <h2 className="fw-bold mb-4 text-center">How We Work</h2>
+        <div className="row g-4">
           {steps.map((s, idx) => (
-            <div key={idx} className="timeline-step">
-              <div className="timeline-number">{s.step}</div>
-              <div className="timeline-content">
-                <h5 className="fw-bold">{s.title}</h5>
-                <p className="text-muted">{s.desc}</p>
+            <div key={idx} className="col-md-6 col-lg-4">
+              <div className="h-100 p-4 border rounded shadow-sm">
+                <span className="fw-bold text-primary">{s.step}</span>
+                <h6 className="fw-semibold mt-2">{s.title}</h6>
+                <p className="text-secondary mb-0">{s.desc}</p>
               </div>
             </div>
           ))}
         </div>
       </section>
 
-      {/* Call to Action */}
-      <section className="text-center py-5 bg-primary text-white rounded-4 shadow-lg">
-        <h2 className="fw-bold mb-3">Ready to Get Started?</h2>
-        <p className="mb-4">
-          Contact us today to book your consultation and take the first step
-          towards hassle-free compliance and optimized HR processes.
-        </p>
-        <NavLink to="/talk-to-us">
-        <button className="btn btn-light btn-lg px-5 rounded-pill shadow">
-          Contact Us
-        </button>
-        </NavLink>
+      {/* ================= CTA ================= */}
+      <section className="bg-primary text-white text-center py-5 mt-5">
+        <div className="container">
+          <h2 className="fw-bold mb-3 text-center">Ready to Get Started?</h2>
+          <p className="fs-5 mb-4">
+            Contact us today to book your consultation and take the first step
+            towards hassle-free compliance and optimized HR processes.
+          </p>
+          <NavLink to="/talk-to-us">
+            <button className="btn btn-light btn-lg px-5 fw-semibold">
+              Contact Us
+            </button>
+          </NavLink>
+        </div>
       </section>
+
     </div>
   );
 }

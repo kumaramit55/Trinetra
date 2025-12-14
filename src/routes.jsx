@@ -14,6 +14,7 @@ import ConsultationAudit from "./pages/compliance&aduit";
 import Licensing from "./pages/licensing";
 import JobOpportunities from "./pages/jobs";
 import Resources from "./pages/resources";
+import StaffingSolutions from "./pages/contracting";
 
 const routes = createBrowserRouter([
   {
@@ -24,14 +25,10 @@ const routes = createBrowserRouter([
       { path: "it-staffing-solutions", element: <ItStaffings /> },
       { path: "payroll-and-operations", element: <Payroll /> },
       { path: "recruitment", element: <Recruitment /> },
-      { path: "/recruitment/temp-staff", element: <TemporaryRecruitment /> },
-      { path: "/recruitment/perm-staff", element: <PermanentRecruitment /> },
-      { path: "/contracting/white-color", element: <WhiteCollarStaffing /> },
-      { path: "/contracting/blue-color", element: <BlueCollarStaffing /> },
+      { path: "/contracting", element: <StaffingSolutions/> },
       { path: "/consultation-audit", element: <ConsultationAudit /> },
-      { path: "licensing", element: <Licensing /> },
       { path: "job-opportunities", element: <JobOpportunities /> },
-      { path: "resources", element: <Resources /> },
+      
       { path: "about-us", element: <AboutUs /> },
       { path: "talk-to-us", element: <TalktoUs /> },
     ],

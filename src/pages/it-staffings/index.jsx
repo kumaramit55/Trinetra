@@ -20,16 +20,12 @@ function WhyChooseSection() {
       alt: "Payroll Support",
       src: "images/payroll support.webp",
     },
-    {
-      title: "Visa & Immigration Support",
-      alt: "Visa Support",
-      src: "images/visa support.webp",
-    },
+    
   ];
 
   return (
     <div className="container">
-      <Row xs={1} sm={2} lg={4} className="g-4">
+      <Row xs={1} sm={2} lg={3} className="g-4">
         {cardsData.map(({ title, alt, src }) => (
           <Col key={title}>
             <Suspense fallback={<div>Loading card...</div>}>
@@ -39,7 +35,8 @@ function WhyChooseSection() {
                   src={src}
                   alt={alt}
                   loading="lazy"
-                  height="200px"
+                  width="150px"
+                  height="300px"
                 />
                 <div className="card-body">
                   <div className="card-heading">{title}</div>

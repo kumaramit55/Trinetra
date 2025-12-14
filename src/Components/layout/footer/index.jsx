@@ -13,17 +13,17 @@ function Footer() {
       <div className="container">
         <div className="row text-center text-md-left">
           {/* Company Info */}
-          <div className="col-md-4 mb-3">
-            <h5 className="mb-3">Trinetra Foundation</h5>
+          <div className="col-md-3 mb-3">
+            <h5 className="mb-3">Trinetra Services</h5>
             <p className="small">
-              Registered under Trinetra Foundation. Committed to delivering
+              Registered under Trinetra Services. Committed to delivering
               quality manpower and compliance solutions that empower businesses
               sustainably.
             </p>
           </div>
 
           {/* Quick Links */}
-          <div className="col-md-4 mb-3">
+          <div className="col-md-3 mb-3">
             <h5 className="mb-3">Quick Links</h5>
             <ul className="list-unstyled">
               <li>
@@ -52,10 +52,42 @@ function Footer() {
                 </NavLink>
               </li>
             </ul>
+            
+          </div>
+          <div className="col-md-3 mb-3">
+            <h5 className="mb-3">Our Services</h5>
+            <ul className="list-unstyled">
+              <li>
+                <NavLink
+                  to="/it-staffing-solutions"
+                  className="text-light text-decoration-none"
+                >
+                  IT Staffing
+                </NavLink>
+              </li>
+              
+              <li>
+                <NavLink
+                  to="/contracting"
+                  className="text-light text-decoration-none"
+                >
+                  Contractual Staffing
+                </NavLink>
+              </li>
+              <li>
+                <NavLink
+                  to="/consultation-audit"
+                  className="text-light text-decoration-none"
+                >
+                  Audit and Complaince
+                </NavLink>
+              </li>
+            </ul>
+            
           </div>
 
           {/* Social Media */}
-          <div className="col-md-4 mb-3">
+          <div className="col-md-3 mb-3">
             <h5 className="mb-3">Follow Us</h5>
             <div>
               <a
@@ -99,7 +131,7 @@ function Footer() {
         </div>
 
         <div className="text-center pt-3 border-top border-secondary small">
-          © {new Date().getFullYear()} Trinetra Foundation. All rights reserved.
+          © {new Date().getFullYear()} Trinetra Services. All rights reserved.
         </div>
       </div>
     </footer>

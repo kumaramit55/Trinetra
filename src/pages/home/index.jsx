@@ -74,86 +74,84 @@ function Home() {
       <h2 className="section-title custom-h2">Our Services</h2>
 
       <div className="grid-container">
-        <div className="card">
-          <CardImage
-            src="images/IT STAFF SOLUTION.webp"
-            alt="IT Staffing Solution"
-            rounded
-            shadow
-            aspectRatio="16/9"
-          />
-          <div className="card-body">
-            <h5 className="card-heading">IT STAFF SOLUTION</h5>
-            <p className="card-text">
-              Empowering your business with top-tier IT talent carefully matched
-              to your specific project requirements. Our rigorous selection
-              process ensures reliable, skilled professionals who drive
-              innovation, security, and efficiency—so your technology can scale
-              confidently.
-            </p>
+          {/* IT Staffing */}
+          <div className="card">
+            <CardImage
+              src="images/IT STAFF SOLUTION.webp"
+              alt="IT Staffing Solutions"
+              rounded
+              shadow
+              aspectRatio="16/9"
+            />
+            <div className="card-body">
+              <h5 className="card-heading">IT Staffing Solutions</h5>
+              <p className="card-text">
+                Structured access to skilled IT professionals aligned with
+                project requirements, security standards, and delivery
+                timelines.
+              </p>
 
-            <CustomButton
-              variant="primary"
-              onClick={handleNavigate("it-staffing-solutions")}
-            >
-              Know More
-            </CustomButton>
+              <CustomButton
+                variant="primary"
+                onClick={handleNavigate("it-staffing-solutions")}
+              >
+                Explore IT Staffing
+              </CustomButton>
+            </div>
+          </div>
+
+          {/* Payroll */}
+          <div className="card">
+            <CardImage
+              src="images/PAYROLL-MAGEMENT.webp"
+              alt="Payroll & Operations"
+              rounded
+              shadow
+              aspectRatio="16/9"
+            />
+            <div className="card-body">
+              <h5 className="card-heading">Payroll & Operations</h5>
+              <p className="card-text">
+                End-to-end payroll administration with statutory compliance,
+                reporting accuracy, and operational control.
+              </p>
+
+              <CustomButton
+                variant="primary"
+                onClick={handleNavigate("payroll-and-operations")}
+              >
+                View Payroll Services
+              </CustomButton>
+            </div>
+          </div>
+
+          {/* Recruitment */}
+          <div className="card">
+            <CardImage
+              src="images/RECRUITEMENT.webp"
+              alt="Recruitment Services"
+              rounded
+              shadow
+              aspectRatio="16/9"
+            />
+            <div className="card-body">
+              <h5 className="card-heading">Recruitment Services</h5>
+              <p className="card-text">
+                Role-based recruitment focused on skill suitability,
+                organizational fit, and long-term workforce stability.
+              </p>
+
+              <CustomButton
+                variant="primary"
+                onClick={handleNavigate("recruitment")}
+              >
+                Explore Recruitment
+              </CustomButton>
+            </div>
           </div>
         </div>
 
-        <div className="card">
-          <CardImage
-            src="images/PAYROLL-MAGEMENT.webp"
-            alt="Payroll Management"
-            rounded
-            shadow
-            aspectRatio="16/9"
-          />
-          <div className="card-body">
-            <h5 className="card-heading">Payroll Management</h5>
-            <p className="card-text">
-              Streamline your payroll operations with our comprehensive
-              management solutions that guarantee accuracy, compliance, and
-              timely employee payments. We handle complexities so you can focus
-              on growing your business with confidence.
-            </p>
-
-            <CustomButton
-              variant="primary"
-              onClick={handleNavigate("payroll-and-operations")}
-            >
-              Know More
-            </CustomButton>
-          </div>
-        </div>
-
-        <div className="card">
-          <CardImage
-            src="images/RECRUITEMENT.webp"
-            alt="Recruitment"
-            rounded
-            shadow
-            aspectRatio="16/9"
-          />
-          <div className="card-body">
-            <h5 className="card-heading">Recruitment</h5>
-            <p className="card-text">
-              Connecting you with exceptional talent through a thorough and
-              tailored recruitment process. We focus on quality hires that align
-              with your company culture, ensuring long-term success and growth.
-            </p>
-
-            <CustomButton
-              variant="primary"
-              onClick={handleNavigate("recruitment")}
-            >
-              Know More
-            </CustomButton>
-          </div>
-        </div>
-      </div>
-
-      <Partnerns />
+      
     </>
   );
 }

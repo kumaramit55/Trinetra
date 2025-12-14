@@ -1,130 +1,271 @@
 import React from "react";
+import {
+  FaBolt,
+  FaDollarSign,
+  FaUsers,
+  FaClipboardCheck,
+  FaCogs,
+  FaBullseye,
+  FaSearch,
+  FaIndustry,
+  FaUser,
+} from "react-icons/fa";
+import { NavLink } from "react-router-dom";
 
-export default function Recruitment() {
+export default function RecruitmentSolutions() {
   return (
-    <>
-      {/* Hero Section */}
-      <div className="container my-5">
-        <div className="row align-items-center gy-4">
-          <div className="col-lg-7">
-            <h1 className="fw-bold mb-4" style={{ fontSize: "2.5rem", lineHeight: "1.2" }}>
-              Expert Recruitment Solutions<br />
-              Aligned to Your Workplace Needs
-            </h1>
-            <p className="fs-5 text-secondary">
-              Empower your business growth with access to top talent, transparent hiring processes, and tailored recruitment services designed just for you.
-            </p>
-          </div>
-          <div className="col-lg-5">
-            <img
-              src="\images\sebastian-herrmann-NbtIDoFKGO8-unsplash.jpg"
-              alt="Online Interview"
-              className="img-fluid rounded shadow-sm"
-              style={{ minHeight: "260px", objectFit: "cover", width: "100%" }}
-            />
-          </div>
-        </div>
+    <div>
 
-        {/* Message Box */}
-        <div className="row justify-content-center mt-5">
-          <div className="col-lg-10 col-xl-8">
-            <div className="position-relative">
-              <div
-                style={{
-                  backgroundColor: "#ff6b2c",
-                  height: "48px",
-                  borderRadius: "1rem 1rem 0 0",
-                }}
-              />
-              <div
-                className="shadow-lg p-4 bg-white rounded-bottom"
-                style={{
-                  marginTop: "-32px",
-                  position: "relative",
-                }}
-              >
-                <p className="mb-0 fs-5" style={{ lineHeight: "1.7", color: "#444" }}>
-                  In an evolving business landscape, the ability to efficiently attract and retain skilled professionals is key to staying ahead. Our team specializes in sourcing diverse talent for offices, technical operations, and skilled trades. We are committed to understanding your company's requirements and delivering recruitment solutions that help you excel in today's market. Partner with us to solve your hiring needs and build a future-ready workforce.
-                </p>
+      {/* ================= HERO ================= */}
+      <section
+  className="text-white position-relative"
+  style={{
+    background: "linear-gradient(135deg, #00264d 0%, #003d80 100%)",
+    padding: "130px 0 110px",
+  }}
+>
+  {/* subtle background layer */}
+  <div
+    style={{
+      position: "absolute",
+      inset: 0,
+      background:
+        "radial-gradient(circle at 15% 20%, rgba(255,255,255,0.08), transparent 40%)",
+      pointerEvents: "none",
+    }}
+  />
+
+  <div className="container position-relative">
+    <div className="row justify-content-center">
+      <div className="col-lg-9 text-center">
+
+        {/* Eyebrow */}
+        <span className="text-uppercase small fw-semibold text-light opacity-75">
+          End-to-End Recruitment Services
+        </span>
+
+        {/* Main Heading */}
+        <h1 className="display-4 fw-bold mt-3 mb-4">
+          Recruitment Solutions
+          <span className="d-block text-info">
+            Built for Speed, Quality & Growth
+          </span>
+        </h1>
+
+        {/* Supporting Text */}
+        <p className="fs-5 text-light mx-auto mb-5" style={{ maxWidth: 760 }}>
+          Flexible recruitment models designed to support both short-term
+          workforce requirements and long-term organizational growth, with
+          structured processes and reliable execution.
+        </p>
+
+        {/* CTA */}
+        <NavLink to="/talk-to-us">
+          <button className="btn btn-light btn-lg px-5 fw-semibold">
+            Talk to Us
+          </button>
+        </NavLink>
+
+      </div>
+    </div>
+  </div>
+</section>
+
+
+      {/* ================= TEMPORARY RECRUITMENT ================= */}
+      <section className="container my-5">
+
+        <h2 className="fw-bold mb-3">
+          Temporary Recruitment Solutions
+        </h2>
+        <p className="fs-5 text-secondary mb-4">
+          Speed, flexibility, and quality are essential to meet your short-term
+          staffing needs. Our Temporary Recruitment services connect you with
+          skilled professionals, available immediately to support project
+          deadlines, seasonal spikes, or unexpected requirements.
+        </p>
+
+        {/* BENEFITS */}
+        <div className="row g-4 text-center mb-5">
+          {[
+            {
+              icon: <FaBolt size={40} className="text-primary" />,
+              title: "Rapid Deployment",
+              desc: "Get qualified temporary staff ready to work at short notice.",
+            },
+            {
+              icon: <FaDollarSign size={40} className="text-primary" />,
+              title: "Cost-Effective",
+              desc: "Reduce overheads by scaling workforce according to demand.",
+            },
+            {
+              icon: <FaUsers size={40} className="text-primary" />,
+              title: "Diverse Talent Pool",
+              desc: "Access specialists from entry-level to highly technical roles.",
+            },
+            {
+              icon: <FaClipboardCheck size={40} className="text-primary" />,
+              title: "Compliance & Payroll",
+              desc: "We manage legal, administrative, and payroll tasks seamlessly.",
+            },
+            {
+              icon: <FaCogs size={40} className="text-primary" />,
+              title: "Tailored Solutions",
+              desc: "Flexible staffing designed to fit your operational needs.",
+            },
+          ].map((item, i) => (
+            <div key={i} className="col-md-4">
+              <div className="p-4 border rounded shadow-sm h-100">
+                {item.icon}
+                <h5 className="mt-3">{item.title}</h5>
+                <p className="text-muted">{item.desc}</p>
               </div>
             </div>
+          ))}
+        </div>
+
+        {/* IMAGE + CONTENT */}
+        <div className="row align-items-center g-4 mb-5">
+          <div className="col-md-6">
+            <img
+              src="images\job-interview-candidate-selection-employment.jpg"
+              alt="Temporary workforce"
+              className="img-fluid rounded shadow"
+              style={{ minHeight: 300, objectFit: "cover", width: "100%" }}
+            />
+          </div>
+          <div className="col-md-6">
+            <h3 className="mb-3">How Our Temporary Recruitment Works</h3>
+            <ol className="fs-5">
+              <li><strong>Requirement Analysis:</strong> Define staffing needs and timelines.</li>
+              <li><strong>Targeted Candidate Search:</strong> Identify right-fit candidates quickly.</li>
+              <li><strong>Screening & Evaluation:</strong> Background and skill assessments.</li>
+              <li><strong>Seamless Onboarding:</strong> Documentation and orientation.</li>
+              <li><strong>Ongoing Support:</strong> Continuous management and feedback.</li>
+            </ol>
           </div>
         </div>
-      </div>
 
-      {/* Services Cards Section */}
-      <section className=" py-5">
-        <div className="container">
-          <div className="row g-4 justify-content-center">
+      
+        
+
+      </section>
+
+      {/* ================= PERMANENT RECRUITMENT ================= */}
+      <section className="container my-5">
+
+        <h2 className="fw-bold mb-3">
+          Permanent Recruitment Solutions
+        </h2>
+        <p className="fs-5 text-secondary mb-4">
+          Our Permanent Recruitment services connect you with top-tier talent
+          aligned with your company’s vision, culture, and long-term goals.
+        </p>
+
+        {/* BENEFITS */}
+        <div className="row g-4 text-center mb-5">
+          {[
+            {
+              icon: <FaBullseye size={40} className="text-primary" />,
+              title: "Expert Candidate Matching",
+              desc: "Ensuring perfect alignment with skills and culture.",
+            },
+            {
+              icon: <FaSearch size={40} className="text-primary" />,
+              title: "Streamlined Hiring",
+              desc: "Efficient processes to reduce time and cost.",
+            },
+            {
+              icon: <FaIndustry size={40} className="text-primary" />,
+              title: "Industry Specialization",
+              desc: "Recruiters specialized in your sector.",
+            },
+            {
+              icon: <FaUser size={40} className="text-primary" />,
+              title: "Ongoing Support",
+              desc: "Long-term partnership beyond placement.",
+            },
+          ].map((item, i) => (
+            <div key={i} className="col-md-3">
+              <div className="p-4 border rounded shadow-sm h-100">
+                {item.icon}
+                <h5 className="mt-3">{item.title}</h5>
+                <p className="text-muted">{item.desc}</p>
+              </div>
+            </div>
+          ))}
+        </div>
+
+        {/* IMAGE + CONTENT */}
+        <div className="row align-items-center g-4 mb-5">
+          <div className="col-md-6 order-md-2">
+            <img
+              src="/images/permanent job.webp"
+              alt="Permanent recruitment"
+              className="img-fluid rounded shadow"
+              style={{ minHeight: 300, objectFit: "cover", width: "100%" }}
+            />
+          </div>
+          <div className="col-md-6 order-md-1">
+            <h3 className="mb-3">Our Recruitment Process</h3>
+            <ol className="fs-5">
+              <li><strong>Requirement Analysis:</strong> Define job specifications.</li>
+              <li><strong>Candidate Sourcing:</strong> Extensive talent search.</li>
+              <li><strong>Screening & Interviews:</strong> Thorough assessments.</li>
+              <li><strong>Offer & Onboarding:</strong> Smooth transition.</li>
+              <li><strong>Follow-up & Retention:</strong> Post-placement engagement.</li>
+            </ol>
+          </div>
+        </div>
+
+        {/* TESTIMONIALS */}
+        <section className="mb-5">
+          <h3 className="text-center mb-4">What Our Clients Say</h3>
+          <div className="row g-4">
             {[
               {
-                title: "Temporary Workforce",
-                imgSrc: "/images/workforce.jpg",
-                altText: "Temporary Workforce",
-                description: "Flexible hiring solutions for short-term needs. Access a pool of qualified contract staff and let us handle payroll and admin, so you can focus on growing your business.",
+                name: "Sarah J.",
+                role: "HR Manager",
+                feedback:
+                  "The talent we got through their recruitment process has been outstanding. Efficient and professional.",
               },
               {
-                title: "Permanent Employees",
-                imgSrc: "/images/sebastian-herrmann-O2o1hzDA7iE-unsplash.jpg",
-                altText: "Permanent Employees",
-                description: "From sourcing to onboarding, we help you build a steady, skilled workforce. Save time and resources with our proven recruitment processes for long-term hires.",
+                name: "Michael B.",
+                role: "Operations Head",
+                feedback:
+                  "They understood our needs perfectly and delivered candidates who fit our culture seamlessly.",
               },
-              {
-                title: "Apprentice Programs",
-                imgSrc: "images/jason-goodman-Ti7LQ0r-zy4-unsplash.jpg",
-                altText: "Apprentice Programs",
-                description: "Launch and manage customized apprenticeship programs for your enterprise. Bridge the skills gap and create talent pipelines to power your future growth.",
-              },
-            ].map(({ title, imgSrc, altText, description }, idx) => (
-              <div className="col-md-6 col-lg-4" key={idx}>
-                <div className="card h-100 shadow-lg border-0 rounded">
-                  <img
-                    src={imgSrc}
-                    alt={altText}
-                    className="card-img-top rounded-top"
-                    style={{ height: "200px", objectFit: "cover" }}
-                  />
-                  <div className="card-body d-flex flex-column">
-                    <h5 className="card-title  fw-bold text-black">{title}</h5>
-                    <p className="card-text text-light flex-grow-1 text-black">{description}</p>
-                    <a href="#" className="btn btn-outline-light mt-3 align-self-start">
-                      Know More
-                    </a>
-                  </div>
+            ].map((item, i) => (
+              <div key={i} className="col-md-6">
+                <div className="p-4 bg-light rounded shadow-sm h-100">
+                  <p className="fst-italic">"{item.feedback}"</p>
+                  <h6 className="mb-0">{item.name}</h6>
+                  <small className="text-muted">{item.role}</small>
                 </div>
               </div>
             ))}
           </div>
+        </section>
+
+        {/* CTA */}
+<section className="py-5 bg-primary text-white text-center">
+        <div className="container">
+          <h2 className="fw-bold mb-3">
+            Need the Right Workforce?
+          </h2>
+          <p className="fs-5 mb-4">
+            One partner. One execution model. Complete staffing support.
+          </p>
+          <NavLink to="/talk-to-us">
+            <button className="btn btn-light btn-lg px-5 fw-semibold">
+              Talk to Us
+            </button>
+          </NavLink>
         </div>
       </section>
 
-      {/* RPO Partner Section */}
-      <div className="container py-5" style={{ background: "#eaf6fa" }}>
-        <div className="row align-items-center gy-4">
-          <div className="col-md-5">
-            <div className="card shadow-lg border-0 rounded-4 h-100">
-              <img
-                src="images\sebastian-herrmann-O2o1hzDA7iE-unsplash.jpg"
-                alt="Handshake with documents"
-                className="card-img-top rounded-4"
-                style={{ objectFit: "cover", height: "320px" }}
-              />
-            </div>
-          </div>
-          <div className="col-md-7">
-            <div className="card shadow-lg border-0 rounded-4 px-4 py-5 h-100">
-              <h4 className="fw-bold text-primary mb-3">
-                Buzzworks – The Perfect RPO Partner for Your Business
-              </h4>
-              <p className="fs-5 mb-0" style={{ lineHeight: "1.8", color: "#2c3e50" }}>
-                We take pride in positioning ourselves as the ideal Recruitment Process Outsourcing (RPO) partner for businesses of all sizes and industries. Our unparalleled commitment to understanding the unique needs and objectives of our clients sets us apart.<br /><br />
-                With a team of seasoned professionals armed with extensive industry knowledge, we seamlessly integrate into your organization to streamline and optimize your entire recruitment process. We offer a comprehensive suite of services, from talent acquisition and candidate screening to onboarding and workforce planning and management.<br /><br />
-                What makes us the perfect RPO partner is our agility and adaptability, ensuring that we tailor our solutions to match the evolving demands of your business. We are committed to building lasting, strategic relationships that drive your business forward.
-              </p>
-            </div>
-          </div>
-        </div>
-      </div>
-    </>
+      </section>
+
+    </div>
   );
 }

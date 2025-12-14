@@ -15,7 +15,17 @@
   color: white;
 
 }
+.fixed-header {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  z-index: 1000;
+  
+}
 
+/* Push content below fixed header */
+ .content-with-fixed-header {
+  padding-top: 80px;} /* adjust based on header height */
 /* navbar */
 .header-container {
   display: flex;

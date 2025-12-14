@@ -16,34 +16,22 @@ function InfoSections() {
         { IconComponent: SearchIcon, title: "Recruitment" },
         { IconComponent: DollarIcon, title: "Payroll & Operations" },
       ],
-      subTitle: "Geographies we serve",
-      flags: [
-        { IconComponent: GlobbeIcon, title: "India", color: "black" },
-        { IconComponent: GlobbeIcon, title: "GCC" },
-        { IconComponent: GlobbeIcon, title: "Europe" },
-      ],
+      
+      
     },
     {
       title: "Industries we serve",
       items: [
-        { IconComponent: BankingIcon, title: "Banking & Finance" },
+        { IconComponent: BankingIcon, title: "IT INDUSTRY" },
         { IconComponent: BankingIcon, title: "Construction & Real Estate" },
-        { IconComponent: BankingIcon, title: "Consumer Products & Goods" },
-        { IconComponent: BankingIcon, title: "Healthcare & Pharmaceutical" },
-        { IconComponent: BankingIcon, title: "Industrial & Manufacturing" },
-        { IconComponent: BankingIcon, title: "Logistics & Transportation" },
-        { IconComponent: BankingIcon, title: "Media & Entertainment" },
       ],
     },
     {
       title: "Roles we hire",
       items: [
-        { IconComponent: LaptopCode, title: "Software Developer" },
-        { IconComponent: LaptopCode, title: "Cloud Engineer" },
-        { IconComponent: UserIcon, title: "Business Analyst" },
-        { IconComponent: LaptopCode, title: "Web Developer" },
-        { IconComponent: LaptopCode, title: "JavaScript Developer" },
-        { IconComponent: UserIcon, title: "Back End Support" },
+        { IconComponent: UserIcon, title: "Business Development Executive" },
+  { IconComponent: UserIcon, title: "Field Sales Executive" },
+  { IconComponent: UserIcon, title: "Field Operation Executive" },
       ],
     },
   ];
@@ -78,8 +66,8 @@ export default function AboutPage() {
           </div>
           <div className="col-12 col-md-6 order-md-1 d-flex align-items-center">
             <blockquote className="border-start border-5 border-primary ps-4 fst-italic fs-4 text-secondary">
-              “It takes 20 years to build a reputation and five minutes to ruin
-              it. If you think about that, you’ll do things differently.”
+                   “It takes many years to build a reputation and five minutes to ruin it.
+              If you think about that, you’ll do things differently.”
             </blockquote>
           </div>
         </div>

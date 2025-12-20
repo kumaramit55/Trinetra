@@ -290,7 +290,7 @@ export default function StaffingSolutions() {
       {/* ================= FINAL CTA ================= */}
       <section className="py-5 bg-primary text-white text-center">
         <div className="container">
-          <h2 className="fw-bold mb-3">
+          <h2 className="fw-bold mb-3"  style={{ color: "#ffffff" }}>
             Need the Right Workforce?
           </h2>
           <p className="fs-5 mb-4">

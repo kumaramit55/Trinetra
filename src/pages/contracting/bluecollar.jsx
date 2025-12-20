@@ -1,6 +1,7 @@
 import React from "react";
 import { FaTools, FaUserShield, FaTruck, FaBuilding, FaUserCheck, FaBolt } from "react-icons/fa";
 import { NavLink } from "react-router-dom";
+import "../../assets/css/contracting.css";
 
 export default function BlueCollarStaffing() {
   return (

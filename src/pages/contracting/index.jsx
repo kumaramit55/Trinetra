@@ -8,6 +8,7 @@ import {
   FaRegClock,
 } from "react-icons/fa";
 import { NavLink } from "react-router-dom";
+import "../../assets/css/contracting.css";
 
 export default function StaffingSolutions() {
   return (
@@ -111,16 +112,9 @@ export default function StaffingSolutions() {
             </div>
             <div className="col-lg-6 ps-lg-5">
               <p className="fs-5 text-secondary">
-                Building your workforce shouldn’t be complicated. We deliver skilled,
+                Building your workforce shouldn't be complicated. We deliver skilled,
                 dependable blue-collar professionals to keep your projects moving —
                 safely, efficiently, and on time.
-              </p>
-              <p>
-                <p className="fs-5 text-secondary">
-                Building your workforce shouldn’t be complicated. We deliver skilled,
-                dependable blue-collar professionals to keep your projects moving —
-                safely, efficiently, and on time.
-              </p>
               </p>
             </div>
           </div>

@@ -1,6 +1,10 @@
 import React, { lazy, Suspense } from "react";
 import { itstaffingsData } from "../../data/data";
 import { Card, Col, Row } from "react-bootstrap";
+
+import '../../assets/css/it-staffing.css';
+
+
 const InfoSections = lazy(() => import("./infosetion"));
 
 function WhyChooseSection() {
@@ -53,35 +57,34 @@ function WhyChooseSection() {
 function ItStaffings() {
   return (
     <div>
-      <div className="homepage-container">
-        {/* image section */}
-        <img
-          src="/images/IT-STAFF.webp"
-          alt="IT Solutions"
-          className="img-style"
-          loading="lazy"
-          width="1200"
-          height="675"
-        />
+      <div className="it-staffing-hero">
+  <div className="it-staffing-hero__image">
+    <img
+      src="/images/IT-STAFF.webp"
+      alt="IT Solutions"
+      className="img-style"
+      loading="lazy"
+      width="1200"
+      height="675"
+    />
+  </div>
+  <div className="it-staffing-hero__content">
+    <h1 className="it-staffing-hero__title">
+      Precision IT <span className="highlight">Talent Solutions</span>{" "}
+      <span className="gradient-text">Empowering Sustainable </span>
+      Business Excellence
+    </h1>
+    <p className="it-staffing-hero__description">
+      Delivering strategic IT staffing solutions meticulously aligned with
+      your organizational goals, enabling seamless project execution and
+      sustainable operational success.
+    </p>
+  </div>
+</div>
 
-        <div className="content">
-          <h1 className="hero-heading">
-            Precision IT <span className="gradient-text">Talent</span> Solutions{" "}
-            <span className="gradient-text">Empowering Sustainable </span>
-            Business Excellence
-          </h1>
-          <p 
-            className="hero-text"
-            
-          >
-            Delivering strategic IT staffing solutions meticulously aligned with
-            your organizational goals, enabling seamless project execution and
-            sustainable operational success.
-          </p>
-        </div>
-      </div>
-
-      <h2 className="section-title custom-h2">Our Tailored Staffing Solutions</h2>
+      <div className="staffing-section-title">
+  <h2>Our Tailored Staffing Solutions</h2>
+</div>
       <div className="container my-4">
      <div className="row px-1 g-4">
   {itstaffingsData.map(({ title, text }) => (

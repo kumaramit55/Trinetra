@@ -11,6 +11,7 @@ import {
   FaUser,
 } from "react-icons/fa";
 import { NavLink } from "react-router-dom";
+import "../../assets/css/recruitment.css";
 
 export default function RecruitmentSolutions() {
   return (

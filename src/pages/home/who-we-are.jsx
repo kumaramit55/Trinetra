@@ -2,16 +2,11 @@ import React from 'react';
 
 
 const whoWeArePoints = [
-  "We are industry experts dedicated to delivering tailored manpower and compliance solutions that empower businesses to thrive.",
-  "Our team combines deep regulatory knowledge with a pragmatic approach to streamline workforce management and legal adherence.",
-  "Committed to transparent communication and fostering long-term client partnerships built on trust and results.",
-  "Leveraging technology and industry insights to offer innovative, seamless processes that reduce risks and enhance operational efficiency.",
-  "Passionate about supporting diverse sectors by providing scalable staffing services aligned with evolving market demands.",
-  "Driven by integrity, professionalism, and a relentless focus on compliance excellence for sustainable business growth.",
-  "Our adaptive strategies ensure clients stay ahead of regulatory changes while maintaining optimal workforce productivity.",
-  "Recognized for delivering end-to-end solutions that integrate manpower supply, legal compliance, and advisory services.",
-  "Focused on empowering organizations with expertise that simplifies complexities of labor laws and workforce challenges.",
-  
+  "Industry experts delivering tailored manpower and compliance solutions that empower businesses to thrive with trusted expertise.",
+  "Deep regulatory knowledge combined with innovative technology to streamline workforce management and reduce compliance risks.",
+  "End-to-end solutions integrating staffing services, legal compliance, and advisory expertise across diverse sectors.",
+  "Commitment to transparency, professionalism, and long-term partnerships that drive sustainable business growth.",
+  "Adaptive strategies ensuring clients stay ahead of market demands while maintaining optimal workforce productivity.",
 ];
 
 

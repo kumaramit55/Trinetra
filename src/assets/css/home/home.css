@@ -724,7 +724,7 @@
 }
 
 .custom-card {
-  background-color: #002452;
+  background: linear-gradient(135deg, #1a1a2e 0%, #0f3460 100%);
   border-radius: var(--radius-md);
   color: white;
   padding: 28px;

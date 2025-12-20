@@ -1,5 +1,6 @@
 import React from "react";
 import InfoSections from "./infoSection";
+import "../../assets/css/payroll/payroll.css";
 
 function Payroll() {
   return (

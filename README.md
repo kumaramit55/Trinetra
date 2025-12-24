@@ -10,3 +10,13 @@ Currently, two official plugins are available:
 ## Expanding the ESLint configuration
 
 If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+
+
+## Error
+
+If You are using Node.js 18.17.0. Vite requires Node.js version 20.19+ or 22.12+. Please upgrade your Node.js version.
+
+soluation:
+Node 20 is installed. Do this
+
+nvm use 20 && npm run dev

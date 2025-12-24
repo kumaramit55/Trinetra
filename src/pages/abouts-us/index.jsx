@@ -6,6 +6,7 @@ import GlobbeIcon from "../../assets/icons/globbe.svg?react";
 import LaptopCode from "../../assets/icons/laptopcode.svg?react";
 import UserIcon from "../../assets/icons/user.svg?react";
 import BankingIcon from "../../assets/icons/banking.svg?react";
+import "../../assets/css/about/about.css";
 
 function InfoSections() {
   const sections = [

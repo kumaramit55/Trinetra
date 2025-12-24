@@ -1,6 +1,7 @@
 import React from "react";
 import { Container, Row, Col, Form, Button } from "react-bootstrap";
 import { FaEnvelope, FaPhoneAlt, FaMapMarkerAlt, FaSmile } from "react-icons/fa";
+import "../../assets/css/talktous/talktous.css";
 
 
 function TalkToUs() {

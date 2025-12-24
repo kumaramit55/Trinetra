@@ -26,6 +26,34 @@
 /* Push content below fixed header */
  .content-with-fixed-header {
   padding-top: 80px;} /* adjust based on header height */
+
+/* ===== NAVBAR & LOGO STYLING ===== */
+
+.navbar-brand {
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  padding: 8px 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.navbar-brand:hover {
+  transform: scale(1.05);
+  filter: brightness(1.15);
+}
+
+.logo {
+  height: 50px;
+  width: auto;
+  object-fit: contain;
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  filter: drop-shadow(0 2px 8px rgba(0, 102, 204, 0.2));
+}
+
+.navbar-brand:hover .logo {
+  filter: drop-shadow(0 4px 16px rgba(0, 102, 204, 0.4));
+}
+
 /* navbar */
 .header-container {
   display: flex;
@@ -42,19 +70,20 @@
   color: #ffffff;
   font-weight: 600;
   text-decoration: none;
+  transition: all 0.3s ease;
 }
 
 .nav-item > a:hover {
   color: #a6c8ff;
   font-weight: 600;
-  text-decoration: double;
+  text-decoration: none;
 }
 
 
 .navbar .nav-link.active {
   color: #ffb800;
   font-weight: 600;
-  text-decoration: double;
+  text-decoration: none;
 }
 
 .navbar-toggler {
@@ -95,6 +124,14 @@
 
 /* For mobile, override the default dropend/right-opening style */
 @media (max-width: 991.98px) {
+  .navbar-brand {
+    padding: 6px 0;
+  }
+
+  .logo {
+    height: 45px;
+  }
+
   .dropdown-submenu .dropdown-menu {
     position: static !important; /* Stop horizontal float, keep in flow */
     margin-left: 0 !important;   /* Remove offset */

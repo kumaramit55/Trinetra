@@ -23,15 +23,8 @@
   
 }
 
-/* Push content below fixed header */
- .content-with-fixed-header {
-  padding-top: 0;
-}
-
-@media (min-width: 768px) {
-  .content-with-fixed-header {
-    padding-top: 80px;
-  }
+.content-with-fixed-header {
+  padding-top: 60px;
 }
 
 

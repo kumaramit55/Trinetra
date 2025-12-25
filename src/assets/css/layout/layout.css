@@ -30,7 +30,7 @@
 
 @media (min-width: 768px) {
   .content-with-fixed-header {
-    padding-top: 80px;
+    padding-top: 50px;
   }
 } /* adjust based on header height */
 

@@ -7,11 +7,11 @@ import Footer from "./footer";
 function Layout() {
   return (
     <div className="layout-container">
-     <header className="layout-header fixed-header">
+     <header className="layout-header ">
   <Header />
 </header>
 
-      <main className="layout-main ">
+      <main className="layout-main content-with-fixed-header">
   <Outlet />
 </main>
       <footer className="layout-footer">

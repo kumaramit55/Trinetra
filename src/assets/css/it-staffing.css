@@ -130,21 +130,7 @@
   text-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
 }
 
-/* Add accent underline */
-.staffing-section-title::after {
-  content: '';
-  display: block;
-  width: 80px;
-  height: 4px;
-  background: var(--primary-blue-gradient);
-  margin: 16px auto 0;
-  border-radius: 2px;
-  transition: width 0.3s ease;
-}
 
-.staffing-section-title:hover::after {
-  width: 120px;
-}
 
 /* ===================================================================STAFFING CARDS GRID */
 .staffing-cards-container {

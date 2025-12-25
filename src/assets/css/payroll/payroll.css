@@ -59,17 +59,7 @@ section[style*="backgroundImage"] .gradient-text {
   width: 100%;
 }
 
-.payroll-operations h1::after {
-  content: '';
-  position: absolute;
-  bottom: -15px;
-  left: 50%;
-  transform: translateX(-50%);
-  width: 80px;
-  height: 4px;
-  background: var(--primary-blue-gradient);
-  border-radius: 2px;
-}
+
 
 /* Operations Layout */
 .operations-wrapper {

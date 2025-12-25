@@ -22,6 +22,18 @@ section[style*="linear-gradient(135deg, #00264d 0%, #003d80)"] {
   overflow: hidden !important;
 }
 
+.recruitment-list {
+  margin: 0;
+  padding-left: 1.5rem;   /* proper number alignment */
+  text-align: left;       /* IMPORTANT */
+}
+
+.recruitment-list li {
+  margin-bottom: 0.75rem;
+  line-height: 1.6;
+}
+
+
 section[style*="linear-gradient(135deg, #00264d 0%, #003d80)"]::before {
   content: '';
   position: absolute;
@@ -86,24 +98,14 @@ section[style*="linear-gradient(135deg, #00264d 0%, #003d80)"] .btn-light:hover 
 .container h2.fw-bold {
   font-weight: 800 !important;
   font-size: clamp(1.6rem, 3.5vw, 2.2rem) !important;
-  color: var(--text-primary) !important;
+  /* color: var(--text-primary) !important; */
   letter-spacing: -0.5px;
   margin-bottom: 2rem !important;
   position: relative;
   display: block;
 }
 
-.container h2.fw-bold.mb-3::after,
-.container h2.fw-bold::after {
-  content: '';
-  position: absolute;
-  bottom: -12px;
-  left: 0;
-  width: 80px;
-  height: 4px;
-  background: var(--primary-blue-gradient);
-  border-radius: 2px;
-}
+
 
 .container p.fs-5.text-secondary {
   font-size: 1rem !important;

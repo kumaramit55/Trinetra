@@ -55,7 +55,7 @@ export default function AboutPage() {
   return (
     <div className="aboutus-page bg-light py-5">
       {/* Quote Section */}
-      <section className="container mb-5">
+      <section className="container mb-5 px-md-5">
         <div className="row gy-4 align-items-center">
           <div className="col-12 col-md-6 order-md-2 d-flex justify-content-center">
             <img
@@ -75,7 +75,7 @@ export default function AboutPage() {
       </section>
 
       {/* Company Story & Journey */}
-      <section className="container  my-5">
+      <section className="container my-5 px-md-5 ">
         <div className="row gy-3 align-items-center">
           <div className="col-12 col-lg-6 text-center text-lg-start mb-4 mb-lg-0">
             <img
@@ -104,7 +104,7 @@ export default function AboutPage() {
       </section>
 
       {/* Vision & Mission */}
-      <section className="container mb-5">
+      <section className="container mb-5 px-md-5">
         <div className="row gy-4 text-center text-md-start">
           <div className="col-md-6">
             <div className="p-5 bg-white rounded shadow h-100 border-start border-4 border-primary">

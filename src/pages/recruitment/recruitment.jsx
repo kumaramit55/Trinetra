@@ -16,69 +16,64 @@ import "../../assets/css/recruitment.css";
 export default function RecruitmentSolutions() {
   return (
     <div>
-
-      {/* ================= HERO ================= */}
       <section
-  className="text-white position-relative"
-  style={{
-    background: "linear-gradient(135deg, #00264d 0%, #003d80 100%)",
-    padding: "130px 0 110px",
-  }}
->
-  {/* subtle background layer */}
-  <div
-    style={{
-      position: "absolute",
-      inset: 0,
-      background:
-        "radial-gradient(circle at 15% 20%, rgba(255,255,255,0.08), transparent 40%)",
-      pointerEvents: "none",
-    }}
-  />
+        className="text-white position-relative"
+        style={{
+          background: "linear-gradient(135deg, #00264d 0%, #003d80 100%)",
+          padding: "130px 0 110px",
+        }}
+      >
+        {/* subtle background layer */}
+        <div
+          style={{
+            position: "absolute",
+            inset: 0,
+            background:
+              "radial-gradient(circle at 15% 20%, rgba(255,255,255,0.08), transparent 40%)",
+            pointerEvents: "none",
+          }}
+        />
 
-  <div className="container position-relative">
-    <div className="row justify-content-center">
-      <div className="col-lg-9 text-center">
+        <div className="container position-relative">
+          <div className="row justify-content-center">
+            <div className="col-lg-9 text-center">
+              {/* Eyebrow */}
+              <span className="text-uppercase small fw-semibold text-light opacity-75">
+                End-to-End Recruitment Services
+              </span>
 
-        {/* Eyebrow */}
-        <span className="text-uppercase small fw-semibold text-light opacity-75">
-          End-to-End Recruitment Services
-        </span>
+              {/* Main Heading */}
+              <h1 className="display-4 fw-bold mt-3 mb-4">
+                Recruitment Solutions
+                <span className="d-block text-info">
+                  Built for Speed, Quality & Growth
+                </span>
+              </h1>
 
-        {/* Main Heading */}
-        <h1 className="display-4 fw-bold mt-3 mb-4">
-          Recruitment Solutions
-          <span className="d-block text-info">
-            Built for Speed, Quality & Growth
-          </span>
-        </h1>
+              {/* Supporting Text */}
+              <p
+                className="fs-5 text-light mx-auto mb-5"
+                style={{ maxWidth: 760 }}
+              >
+                Flexible recruitment models designed to support both short-term
+                workforce requirements and long-term organizational growth, with
+                structured processes and reliable execution.
+              </p>
 
-        {/* Supporting Text */}
-        <p className="fs-5 text-light mx-auto mb-5" style={{ maxWidth: 760 }}>
-          Flexible recruitment models designed to support both short-term
-          workforce requirements and long-term organizational growth, with
-          structured processes and reliable execution.
-        </p>
-
-        {/* CTA */}
-        <NavLink to="/talk-to-us">
-          <button className="btn btn-light btn-lg px-5 fw-semibold">
-            Talk to Us
-          </button>
-        </NavLink>
-
-      </div>
-    </div>
-  </div>
-</section>
-
+              {/* CTA */}
+              <NavLink to="/talk-to-us">
+                <button className="btn btn-light btn-lg px-5 fw-semibold">
+                  Talk to Us
+                </button>
+              </NavLink>
+            </div>
+          </div>
+        </div>
+      </section>
 
       {/* ================= TEMPORARY RECRUITMENT ================= */}
-      <section className="container my-5">
-
-        <h2 className="fw-bold mb-3">
-          Temporary Recruitment Solutions
-        </h2>
+      <section className="container my-5 px-md-5 text-center">
+        <h2 className="fw-bold mb-3">Temporary Recruitment Solutions</h2>
         <p className="fs-5 text-secondary mb-4">
           Speed, flexibility, and quality are essential to meet your short-term
           staffing needs. Our Temporary Recruitment services connect you with
@@ -116,8 +111,8 @@ export default function RecruitmentSolutions() {
             },
           ].map((item, i) => (
             <div key={i} className="col-md-4">
-              <div className="p-4 border rounded shadow-sm h-100">
-                {item.icon}
+              <div className="p-4 border rounded shadow-sm h-100 text-center">
+                <div className="d-flex justify-content-center">{item.icon}</div>
                 <h5 className="mt-3">{item.title}</h5>
                 <p className="text-muted">{item.desc}</p>
               </div>
@@ -136,28 +131,36 @@ export default function RecruitmentSolutions() {
             />
           </div>
           <div className="col-md-6">
-            <h3 className="mb-3">How Our Temporary Recruitment Works</h3>
-            <ol className="fs-5">
-              <li><strong>Requirement Analysis:</strong> Define staffing needs and timelines.</li>
-              <li><strong>Targeted Candidate Search:</strong> Identify right-fit candidates quickly.</li>
-              <li><strong>Screening & Evaluation:</strong> Background and skill assessments.</li>
-              <li><strong>Seamless Onboarding:</strong> Documentation and orientation.</li>
-              <li><strong>Ongoing Support:</strong> Continuous management and feedback.</li>
+            <h3 className="mb-3 text-center">How Our Temporary Recruitment Works</h3>
+            <ol className="recruitment-list">
+              <li>
+                <strong>Requirement Analysis:</strong> Define staffing needs and
+                timelines.
+              </li>
+              <li>
+                <strong>Targeted Candidate Search:</strong> Identify right-fit
+                candidates quickly.
+              </li>
+              <li>
+                <strong>Screening & Evaluation:</strong> Background and skill
+                assessments.
+              </li>
+              <li>
+                <strong>Seamless Onboarding:</strong> Documentation and
+                orientation.
+              </li>
+              <li>
+                <strong>Ongoing Support:</strong> Continuous management and
+                feedback.
+              </li>
             </ol>
           </div>
         </div>
-
-      
-        
-
       </section>
 
       {/* ================= PERMANENT RECRUITMENT ================= */}
-      <section className="container my-5">
-
-        <h2 className="fw-bold mb-3">
-          Permanent Recruitment Solutions
-        </h2>
+      <section className="container my-5  px-md-5 text-center">
+        <h2 className="fw-bold mb-3">Permanent Recruitment Solutions</h2>
         <p className="fs-5 text-secondary mb-4">
           Our Permanent Recruitment services connect you with top-tier talent
           aligned with your company’s vision, culture, and long-term goals.
@@ -187,9 +190,11 @@ export default function RecruitmentSolutions() {
               desc: "Long-term partnership beyond placement.",
             },
           ].map((item, i) => (
-            <div key={i} className="col-md-3">
-              <div className="p-4 border rounded shadow-sm h-100">
-                {item.icon}
+            <div key={i} className="col-md-4">
+              <div className="p-4 border rounded shadow-sm h-100 text-center">
+                <div className="d-flex justify-content-center mb-2">
+                  {item.icon}
+                </div>
                 <h5 className="mt-3">{item.title}</h5>
                 <p className="text-muted">{item.desc}</p>
               </div>
@@ -208,19 +213,32 @@ export default function RecruitmentSolutions() {
             />
           </div>
           <div className="col-md-6 order-md-1">
-            <h3 className="mb-3">Our Recruitment Process</h3>
-            <ol className="fs-5">
-              <li><strong>Requirement Analysis:</strong> Define job specifications.</li>
-              <li><strong>Candidate Sourcing:</strong> Extensive talent search.</li>
-              <li><strong>Screening & Interviews:</strong> Thorough assessments.</li>
-              <li><strong>Offer & Onboarding:</strong> Smooth transition.</li>
-              <li><strong>Follow-up & Retention:</strong> Post-placement engagement.</li>
+            <h3 className="mb-3 text-center">Our Recruitment Process</h3>
+
+            <ol className="recruitment-list">
+              <li>
+                <strong>Requirement Analysis:</strong> Define job
+                specifications.
+              </li>
+              <li>
+                <strong>Candidate Sourcing:</strong> Extensive talent search.
+              </li>
+              <li>
+                <strong>Screening & Interviews:</strong> Thorough assessments.
+              </li>
+              <li>
+                <strong>Offer & Onboarding:</strong> Smooth transition.
+              </li>
+              <li>
+                <strong>Follow-up & Retention:</strong> Post-placement
+                engagement.
+              </li>
             </ol>
           </div>
         </div>
-
-        {/* TESTIMONIALS */}
-        <section className="mb-5">
+      </section>
+       {/* TESTIMONIALS */}
+        <section className="mb-5 px-4">
           <h3 className="text-center mb-4">What Our Clients Say</h3>
           <div className="row g-4">
             {[
@@ -249,24 +267,19 @@ export default function RecruitmentSolutions() {
         </section>
 
         {/* CTA */}
-<section className="py-5 bg-primary text-white text-center">
-        <div className="container">
-          <h2 className="fw-bold mb-3">
-            Need the Right Workforce?
-          </h2>
-          <p className="fs-5 mb-4">
-            One partner. One execution model. Complete staffing support.
-          </p>
-          <NavLink to="/talk-to-us">
-            <button className="btn btn-light btn-lg px-5 fw-semibold">
-              Talk to Us
-            </button>
-          </NavLink>
-        </div>
-      </section>
-
-      </section>
-
+        <section className="py-5 bg-primary text-white text-center">
+          <div className="container">
+            <h2 className="fw-bold mb-3">Need the Right Workforce?</h2>
+            <p className="fs-5 mb-4">
+              One partner. One execution model. Complete staffing support.
+            </p>
+            <NavLink to="/talk-to-us">
+              <button className="btn btn-light btn-lg px-5 fw-semibold">
+                Talk to Us
+              </button>
+            </NavLink>
+          </div>
+        </section>
     </div>
   );
 }

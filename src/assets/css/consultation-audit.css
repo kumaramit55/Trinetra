@@ -185,17 +185,7 @@ h2.fw-bold.mb-4.text-center {
   text-align: center;
 }
 
-h2.fw-bold.mb-4.text-center::after {
-  content: '';
-  position: absolute;
-  bottom: -12px;
-  left: 50%;
-  transform: translateX(-50%);
-  width: 80px;
-  height: 4px;
-  background: var(--primary-blue-gradient);
-  border-radius: 2px;
-}
+
 
 /* ===================================================================CTA SECTION */
 

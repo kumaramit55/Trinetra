@@ -2,8 +2,6 @@ import React, { lazy, useCallback } from "react";
 import { useNavigate } from "react-router-dom";
 import AnimatedCounter from "../../Components/elements/animatedCouter/animatedCounter";
 import CardImage from "../../Components/elements/card-Image";
-
-const Partnerns = lazy(() => import("./partners"));
 const Whoweare = lazy(() => import("./who-we-are"));
 const CustomButton = lazy(() => import("../../Components/elements/button"));
 

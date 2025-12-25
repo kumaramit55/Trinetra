@@ -59,11 +59,11 @@ useEffect(() => {
   }, []);
 
   return (
-    <div className="container my-5">
+    <div className="container my-5 px-md-5">
       <h2 className="mb-4 fw-bold text-primary">Job Opportunities</h2>
 
       {/* Filters */}
-      <div className="row g-3 mb-4">
+      <div className="row g-3 mb-4 ">
         <div className="col-md">
           <select
             className="form-select"

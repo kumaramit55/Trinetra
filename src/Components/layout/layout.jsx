@@ -11,7 +11,7 @@ function Layout() {
   <Header />
 </header>
 
-      <main className="layout-main content-with-fixed-header">
+      <main className="layout-main ">
   <Outlet />
 </main>
       <footer className="layout-footer">

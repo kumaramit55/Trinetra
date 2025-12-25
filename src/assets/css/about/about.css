@@ -1,137 +1,354 @@
-.aboutus-container {
-  font-family: system-ui, sans-serif;
-  color: #333;
-  padding: 2rem 1rem;
+/* ===== ROOT COLOR & TYPOGRAPHY TOKENS ===== */
+:root {
+  --primary-blue: #0066cc;
+  --primary-blue-dark: #001a4d;
+  --primary-blue-gradient: linear-gradient(135deg, #0066cc 0%, #0099ff 50%, #00d4ff 100%);
+  --text-primary: #0f1724;
+  --text-muted: #6b7280;
+  --shadow-sm: 0 4px 12px rgba(0, 0, 0, 0.08);
+  --shadow-md: 0 8px 24px rgba(0, 0, 0, 0.12);
+  --shadow-lg: 0 12px 32px rgba(0, 0, 0, 0.15);
+  --radius-sm: 8px;
+  --radius-md: 12px;
+  --radius-lg: 16px;
 }
 
-.aboutus-section {
-  margin-bottom: 3rem;
+/* ===================================================================ABOUT PAGE GENERAL */
+
+.aboutus-page {
+  background: #f9fafb !important;
 }
 
-.aboutus-flex {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  gap: 2rem;
-  flex-wrap: wrap;
+.aboutus-page h2,
+.aboutus-page h3 {
+  font-weight: 800 !important;
+  color: var(--text-primary) !important;
+  letter-spacing: -0.5px;
 }
 
-.aboutus-quote {
-  max-width: 400px;
-  font-size: 1.5rem;
+.aboutus-page h2 {
+  font-size: clamp(1.6rem, 3.5vw, 2.2rem) !important;
+}
+
+.aboutus-page h3 {
+  font-size: 1.4rem !important;
+  margin-bottom: 1.5rem !important;
+}
+
+/* ===================================================================QUOTE SECTION */
+
+.aboutus-page blockquote {
+  border-left: 4px solid var(--primary-blue) !important;
+  padding-left: 28px !important;
+  font-size: 1.35rem !important;
+  line-height: 1.8 !important;
+  font-style: italic !important;
+  color: var(--text-primary) !important;
+  font-weight: 600;
+  letter-spacing: 0.3px;
+  margin: 0 !important;
+  position: relative;
+}
+
+.aboutus-page blockquote::before {
+  content: '"';
+  position: absolute;
+  left: -20px;
+  top: -20px;
+  font-size: 4rem;
+  color: var(--primary-blue);
+  opacity: 0.15;
+  font-family: Georgia, serif;
+}
+
+/* ===================================================================IMAGES */
+
+.aboutus-page .img-fluid.rounded.shadow-lg {
+  border-radius: var(--radius-lg) !important;
+  box-shadow: var(--shadow-md) !important;
+  transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1) !important;
+  object-fit: cover;
+}
+
+.aboutus-page img:hover {
+  transform: scale(1.03);
+  box-shadow: var(--shadow-lg) !important;
+  filter: brightness(1.05);
+}
+
+/* ===================================================================COMPANY STORY SECTION */
+
+.aboutus-page .tagline {
+  font-size: 1.15rem;
   font-weight: 700;
-  line-height: 1.4;
-  border-left: 5px solid #f37021;
-  padding-left: 1rem;
-  font-style: italic;
-  background: #f8f9fa;
-  border-radius: 6px;
+  background: var(--primary-blue-gradient);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  letter-spacing: 0.3px;
+  margin-top: 2rem !important;
+  line-height: 1.6;
 }
 
-.aboutus-img {
-  width: 400px;
-  border-radius: 10px;
-  box-shadow: 0 4px 10px rgba(0,0,0,0.1);
-}
-
-.aboutus-img-large {
-  width: 450px;
-  border-radius: 10px;
-  box-shadow: 0 4px 10px rgba(0,0,0,0.1);
-}
-
-.aboutus-heading {
-  color: #d97706; /* Bootstrap warning-emphasis */
-  font-size: 1.5rem;
-  font-weight: 700;
-  margin-bottom: 1rem;
-}
-
-.aboutus-text {
-  max-width: 600px;
-  font-size: 1.1rem;
+.aboutus-page .fs-5.text-muted {
+  font-size: 1rem !important;
+  line-height: 1.75 !important;
+  color: var(--text-muted) !important;
   font-weight: 500;
-  line-height: 1.5;
+  letter-spacing: 0.2px;
+  margin-bottom: 1.5rem !important;
 }
 
-.aboutus-cert {
+/* ===================================================================VISION & MISSION CARDS */
+
+.aboutus-page .p-5.bg-white.rounded.shadow {
+  background: #ffffff !important;
+  border-radius: var(--radius-lg) !important;
+  box-shadow: var(--shadow-sm) !important;
+  transition: all 0.35s cubic-bezier(0.4, 0, 0.2, 1) !important;
+  border-left: 4px solid var(--primary-blue) !important;
+  padding: 32px 28px !important;
+  position: relative;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+}
+
+.aboutus-page .p-5.bg-white.rounded.shadow::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 3px;
+  background: var(--primary-blue-gradient);
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
+
+.aboutus-page .p-5.bg-white.rounded.shadow:hover {
+  transform: translateY(-8px) !important;
+  box-shadow: var(--shadow-lg) !important;
+}
+
+.aboutus-page .p-5.bg-white.rounded.shadow:hover::before {
+  opacity: 1;
+}
+
+.aboutus-page .p-5.bg-white.rounded.shadow h3 {
+  position: relative;
+  z-index: 2;
+  color: var(--primary-blue) !important;
+  margin-bottom: 1.5rem !important;
+}
+
+.aboutus-page .p-5.bg-white.rounded.shadow p {
+  font-size: 0.95rem !important;
+  line-height: 1.75 !important;
+  color: var(--text-muted) !important;
+  font-weight: 500;
+  letter-spacing: 0.2px;
+  margin: 0 !important;
+  position: relative;
+  z-index: 2;
+}
+
+/* ===================================================================INFO CARDS (Solutions, Industries, Roles) */
+
+.aboutus-page .row.g-4.row-cols-1 {
   margin-top: 3rem;
 }
 
-.aboutus-cert-img {
-  max-width: 300px;
-  border-radius: 10px;
-  box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+.aboutus-page .col {
+  transition: all 0.3s ease;
 }
 
-.aboutus-cert-text {
-  max-width: 600px;
-  font-size: 1rem;
+.aboutus-page .col:hover {
+  transform: translateY(-4px);
+}
+
+/* InfoCard styling */
+[class*="infocard"],
+.aboutus-page .p-4.rounded,
+.aboutus-page .p-4.text-center {
+  border-radius: var(--radius-lg) !important;
+  transition: all 0.35s cubic-bezier(0.4, 0, 0.2, 1) !important;
+  box-shadow: var(--shadow-sm) !important;
+  padding: 24px !important;
+  background: #ffffff !important;
+  border: 1px solid #e5e7eb;
+  overflow: hidden;
+  position: relative;
+}
+
+[class*="infocard"]::before,
+.aboutus-page .p-4.rounded::before,
+.aboutus-page .p-4.text-center::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 3px;
+  background: var(--primary-blue-gradient);
+  transform: scaleX(0);
+  transform-origin: left;
+  transition: transform 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+[class*="infocard"]:hover,
+.aboutus-page .p-4.rounded:hover,
+.aboutus-page .p-4.text-center:hover {
+  transform: translateY(-8px) !important;
+  box-shadow: var(--shadow-lg) !important;
+  border-color: var(--primary-blue) !important;
+}
+
+[class*="infocard"]:hover::before,
+.aboutus-page .p-4.rounded:hover::before,
+.aboutus-page .p-4.text-center:hover::before {
+  transform: scaleX(1);
+}
+
+/* Info card icons */
+[class*="infocard"] svg,
+.aboutus-page .p-4.rounded svg,
+.aboutus-page .p-4.text-center svg {
+  font-size: 2.5rem !important;
+  color: var(--primary-blue) !important;
+  margin-bottom: 1rem !important;
+  transition: all 0.3s ease;
+  position: relative;
+  z-index: 2;
+}
+
+[class*="infocard"]:hover svg,
+.aboutus-page .p-4.rounded:hover svg,
+.aboutus-page .p-4.text-center:hover svg {
+  transform: scale(1.15) rotate(-5deg);
+}
+
+/* Info card titles */
+[class*="infocard"] h5,
+[class*="infocard"] h6,
+.aboutus-page .p-4.rounded h5,
+.aboutus-page .p-4.rounded h6,
+.aboutus-page .p-4.text-center h5,
+.aboutus-page .p-4.text-center h6 {
+  font-weight: 700 !important;
+  color: var(--text-primary) !important;
+  font-size: 1.1rem !important;
+  letter-spacing: 0.3px;
+  margin: 0 !important;
+  position: relative;
+  z-index: 2;
+}
+
+/* Info card descriptions */
+[class*="infocard"] p,
+.aboutus-page .p-4.rounded p,
+.aboutus-page .p-4.text-center p {
+  font-size: 0.95rem !important;
+  line-height: 1.7 !important;
+  color: var(--text-muted) !important;
   font-weight: 500;
-  line-height: 1.6;
+  letter-spacing: 0.2px;
+  margin-top: 0.5rem !important;
+  margin-bottom: 0 !important;
+  position: relative;
+  z-index: 2;
 }
 
-.aboutus-main-title {
-  font-size: 2rem;
-  font-weight: 700;
-  margin-bottom: 1rem;
-}
+/* ===================================================================RESPONSIVE DESIGN */
 
-.aboutus-offerings {
-  display: flex;
-  flex-direction: column;
-  gap: 1rem;
-}
+@media (max-width: 992px) {
+  .aboutus-page h2 {
+    font-size: 1.5rem !important;
+  }
 
-.aboutus-offering-img {
-  width: 400px;
-  height: auto;
-  object-fit: cover;
-  border-radius: 10px;
-  box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+  .aboutus-page h3 {
+    font-size: 1.2rem !important;
+  }
+
+  .aboutus-page blockquote {
+    font-size: 1.1rem !important;
+  }
+
+  .aboutus-page .p-5.bg-white.rounded.shadow {
+    padding: 24px !important;
+  }
 }
 
 @media (max-width: 768px) {
-  .aboutus-quote {
-    font-size: 1.2rem;
-    max-width: 100%;
+  .aboutus-page blockquote {
+    font-size: 1rem !important;
+    padding-left: 20px !important;
   }
 
-  .aboutus-img,
-  .aboutus-img-large,
-  .aboutus-offering-img {
-    width: 100%;
-    max-width: 350px;
+  .aboutus-page blockquote::before {
+    font-size: 2.5rem;
+    left: -15px;
+    top: -15px;
   }
 
-  .aboutus-text,
-  .aboutus-cert-text {
-    max-width: 100%;
+  .aboutus-page .p-5.bg-white.rounded.shadow {
+    padding: 20px !important;
+    text-align: center;
+  }
+
+  .aboutus-page h2,
+  .aboutus-page h3 {
+    font-size: 1.3rem !important;
+  }
+
+  .aboutus-page .tagline {
     font-size: 1rem;
+    margin-top: 1.5rem !important;
+  }
+
+  .aboutus-page .fs-5.text-muted {
+    font-size: 0.95rem !important;
   }
 }
 
+@media (max-width: 480px) {
+  .aboutus-page h2 {
+    font-size: 1.1rem !important;
+  }
 
-.tagline {
-  font-size: 1.25rem; /* Slightly larger for prominence */
-  color: #4a4a4a; /* Soft dark gray for subtle elegance */
-  font-weight: 600; /* Semi-bold for emphasis */
-  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; /* Clean professional font */
-  line-height: 1.6;
-  max-width: 600px; /* Limit width for better readability */
-  margin: 1.5rem auto; /* Center horizontally with margin */
-  text-align: center;
-  letter-spacing: 0.03em; /* Slight letter spacing for clarity */
-  background: linear-gradient(90deg, #002452 0%, #fdd835 100%); /* Gradient text effect */
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-  user-select: none; /* Prevent accidental text selection */
-  transition: color 0.3s ease;
-  cursor: default;
+  .aboutus-page h3 {
+    font-size: 1rem !important;
+  }
+
+  .aboutus-page blockquote {
+    font-size: 0.9rem !important;
+    padding-left: 16px !important;
+    line-height: 1.6 !important;
+  }
+
+  .aboutus-page .p-5.bg-white.rounded.shadow {
+    padding: 16px !important;
+  }
+
+  .aboutus-page .tagline {
+    font-size: 0.9rem;
+  }
 }
 
-.tagline:hover {
-  color: #002452; /* Dark blue on hover for subtle interaction */
-  -webkit-text-fill-color: initial;
-  background: none;
+/* ===================================================================UTILITY CLASSES */
+
+.shadow-sm {
+  box-shadow: var(--shadow-sm) !important;
+}
+
+.shadow-md {
+  box-shadow: var(--shadow-md) !important;
+}
+
+.shadow-lg {
+  box-shadow: var(--shadow-lg) !important;
+}
+
+.rounded {
+  border-radius: var(--radius-md) !important;
 }

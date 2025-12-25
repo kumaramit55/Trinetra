@@ -7,6 +7,7 @@ import {
   FaChartLine,
   FaLaptopCode,
 } from "react-icons/fa";
+import "../../assets/css/contracting.css";
 
 export default function WhiteCollarStaffing() {
   return (

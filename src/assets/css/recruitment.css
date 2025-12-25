@@ -1,0 +1,471 @@
+/* ===== ROOT COLOR & TYPOGRAPHY TOKENS ===== */
+:root {
+  --primary-blue: #0066cc;
+  --primary-blue-dark: #001a4d;
+  --primary-blue-gradient: linear-gradient(135deg, #0066cc 0%, #0099ff 50%, #00d4ff 100%);
+  --hero-blue-gradient: linear-gradient(135deg, #00264d 0%, #003d80 100%);
+  --text-primary: #0f1724;
+  --text-muted: #6b7280;
+  --shadow-sm: 0 4px 12px rgba(0, 0, 0, 0.08);
+  --shadow-md: 0 8px 24px rgba(0, 0, 0, 0.12);
+  --shadow-lg: 0 12px 32px rgba(0, 0, 0, 0.15);
+  --radius-sm: 8px;
+  --radius-md: 12px;
+  --radius-lg: 16px;
+}
+
+/* ===================================================================HERO SECTION */
+
+/* Hero Section */
+section[style*="linear-gradient(135deg, #00264d 0%, #003d80)"] {
+  position: relative !important;
+  overflow: hidden !important;
+}
+
+section[style*="linear-gradient(135deg, #00264d 0%, #003d80)"]::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(180deg, 
+    rgba(255, 255, 255, 0.02) 0%, 
+    transparent 50%, 
+    rgba(0, 0, 0, 0.1) 100%);
+  pointer-events: none;
+  z-index: 1;
+}
+
+section[style*="linear-gradient(135deg, #00264d 0%, #003d80)"] .container {
+  position: relative;
+  z-index: 2;
+}
+
+section[style*="linear-gradient(135deg, #00264d 0%, #003d80)"] h1 {
+  font-weight: 800 !important;
+  line-height: 1.15;
+  letter-spacing: -1px;
+  font-size: clamp(2.5rem, 5vw, 4rem) !important;
+}
+
+section[style*="linear-gradient(135deg, #00264d 0%, #003d80)"] .text-info {
+  background: linear-gradient(90deg, #00d4ff 0%, #0099ff 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  font-weight: 900;
+  display: block;
+}
+
+section[style*="linear-gradient(135deg, #00264d 0%, #003d80)"] p {
+  font-size: 1.05rem;
+  line-height: 1.75;
+  letter-spacing: 0.3px;
+  font-weight: 500;
+}
+
+section[style*="linear-gradient(135deg, #00264d 0%, #003d80)"] .btn-light {
+  background-color: #ffffff !important;
+  color: var(--text-primary) !important;
+  font-weight: 700 !important;
+  padding: 12px 32px !important;
+  border: none !important;
+  letter-spacing: 0.3px;
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1) !important;
+  box-shadow: 0 8px 20px rgba(255, 255, 255, 0.25) !important;
+  border-radius: var(--radius-md) !important;
+}
+
+section[style*="linear-gradient(135deg, #00264d 0%, #003d80)"] .btn-light:hover {
+  background-color: #f0f0f0 !important;
+  transform: translateY(-2px) !important;
+  box-shadow: 0 12px 32px rgba(255, 255, 255, 0.35) !important;
+}
+
+/* ===================================================================SECTION TITLES */
+
+.container h2.fw-bold.mb-3,
+.container h2.fw-bold {
+  font-weight: 800 !important;
+  font-size: clamp(1.6rem, 3.5vw, 2.2rem) !important;
+  color: var(--text-primary) !important;
+  letter-spacing: -0.5px;
+  margin-bottom: 2rem !important;
+  position: relative;
+  display: block;
+}
+
+.container h2.fw-bold.mb-3::after,
+.container h2.fw-bold::after {
+  content: '';
+  position: absolute;
+  bottom: -12px;
+  left: 0;
+  width: 80px;
+  height: 4px;
+  background: var(--primary-blue-gradient);
+  border-radius: 2px;
+}
+
+.container p.fs-5.text-secondary {
+  font-size: 1rem !important;
+  line-height: 1.7 !important;
+  color: var(--text-muted) !important;
+  font-weight: 500;
+  letter-spacing: 0.3px;
+}
+
+/* ===================================================================BENEFIT CARDS */
+
+/* Benefit/Service Cards */
+.container .p-4.border.rounded.shadow-sm {
+  border: 1px solid #e5e7eb !important;
+  border-radius: var(--radius-lg) !important;
+  box-shadow: var(--shadow-sm) !important;
+  transition: all 0.35s cubic-bezier(0.4, 0, 0.2, 1) !important;
+  background: #ffffff !important;
+  position: relative;
+  overflow: hidden;
+  padding: 28px 24px !important;
+  display: flex;
+  flex-direction: column;
+}
+
+.container .p-4.border.rounded.shadow-sm::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 3px;
+  background: var(--primary-blue-gradient);
+  transform: scaleX(0);
+  transform-origin: left;
+  transition: transform 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+  z-index: 1;
+}
+
+.container .p-4.border.rounded.shadow-sm:hover {
+  transform: translateY(-8px) !important;
+  box-shadow: var(--shadow-lg) !important;
+  border-color: var(--primary-blue) !important;
+}
+
+.container .p-4.border.rounded.shadow-sm:hover::before {
+  transform: scaleX(1);
+}
+
+.container .p-4.border.rounded.shadow-sm > * {
+  position: relative;
+  z-index: 2;
+}
+
+/* Card icons */
+.container .p-4.border.rounded.shadow-sm svg {
+  transition: all 0.3s ease;
+  font-size: 2.5rem !important;
+}
+
+.container .p-4.border.rounded.shadow-sm:hover svg {
+  transform: scale(1.1) rotate(5deg);
+}
+
+/* Card title */
+.container .p-4.border.rounded.shadow-sm h5 {
+  font-weight: 700 !important;
+  color: var(--text-primary) !important;
+  font-size: 1.1rem !important;
+  letter-spacing: 0.3px;
+  margin-bottom: 12px !important;
+  line-height: 1.3;
+  margin-top: 16px !important;
+}
+
+/* Card description */
+.container .p-4.border.rounded.shadow-sm p {
+  font-size: 0.95rem !important;
+  line-height: 1.7 !important;
+  color: var(--text-muted) !important;
+  font-weight: 500;
+  letter-spacing: 0.2px;
+  margin: 0 !important;
+  flex-grow: 1;
+}
+
+/* ===================================================================IMAGES */
+
+.container .img-fluid.rounded.shadow {
+  border-radius: var(--radius-lg) !important;
+  box-shadow: var(--shadow-md) !important;
+  transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1) !important;
+  object-fit: cover;
+}
+
+.container img:hover {
+  transform: scale(1.03);
+  box-shadow: var(--shadow-lg) !important;
+  filter: brightness(1.05);
+}
+
+/* ===================================================================LISTS & TYPOGRAPHY */
+
+.container h3 {
+  font-weight: 700 !important;
+  font-size: 1.4rem !important;
+  color: var(--text-primary) !important;
+  letter-spacing: -0.3px;
+  line-height: 1.3;
+  margin-bottom: 1.5rem !important;
+}
+
+.container ol,
+.container ol.fs-5 {
+  line-height: 2 !important;
+  padding-left: 24px !important;
+  font-size: 1rem !important;
+}
+
+.container ol li {
+  margin-bottom: 12px;
+  color: var(--text-primary);
+  font-weight: 500;
+  letter-spacing: 0.2px;
+}
+
+.container ol li strong {
+  color: var(--primary-blue);
+  font-weight: 700;
+}
+
+/* ===================================================================TESTIMONIAL CARDS */
+
+/* Testimonial Section */
+.container section.mb-5 h3 {
+  font-weight: 800 !important;
+  font-size: clamp(1.5rem, 3.5vw, 2rem) !important;
+  margin-bottom: 3rem !important;
+  position: relative;
+  display: inline-block;
+  width: 100%;
+  text-align: center;
+}
+
+.container section.mb-5 h3::after {
+  content: '';
+  position: absolute;
+  bottom: -12px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 80px;
+  height: 4px;
+  background: var(--primary-blue-gradient);
+  border-radius: 2px;
+}
+
+/* Testimonial Cards */
+.container .p-4.bg-light.rounded.shadow-sm {
+  background: #f9fafc !important;
+  border-radius: var(--radius-lg) !important;
+  box-shadow: var(--shadow-sm) !important;
+  transition: all 0.35s cubic-bezier(0.4, 0, 0.2, 1) !important;
+  border: 1px solid #e5e7eb;
+  padding: 28px 24px !important;
+  position: relative;
+}
+
+.container .p-4.bg-light.rounded.shadow-sm::before {
+  content: '❝';
+  position: absolute;
+  top: 12px;
+  right: 16px;
+  font-size: 3rem;
+  color: var(--primary-blue);
+  opacity: 0.2;
+}
+
+.container .p-4.bg-light.rounded.shadow-sm:hover {
+  transform: translateY(-4px) !important;
+  box-shadow: var(--shadow-md) !important;
+  background: #f0f4f8 !important;
+}
+
+.container .p-4.bg-light.rounded.shadow-sm p {
+  font-size: 0.95rem !important;
+  line-height: 1.75 !important;
+  color: var(--text-muted) !important;
+  font-weight: 500;
+  letter-spacing: 0.2px;
+  font-style: italic;
+  margin-bottom: 1rem !important;
+}
+
+.container .p-4.bg-light.rounded.shadow-sm h6 {
+  font-weight: 700 !important;
+  color: var(--text-primary) !important;
+  font-size: 1rem !important;
+  margin-bottom: 4px !important;
+}
+
+.container .p-4.bg-light.rounded.shadow-sm small {
+  color: var(--text-muted) !important;
+  font-size: 0.85rem !important;
+  font-weight: 500;
+}
+
+/* ===================================================================CTA SECTION */
+
+section.bg-primary.text-white {
+  background: linear-gradient(135deg, #001a4d 0%, #002f7a 100%) !important;
+  position: relative;
+  overflow: hidden;
+  padding: 60px 20px !important;
+}
+
+section.bg-primary.text-white::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: radial-gradient(circle at 20% 50%, rgba(255, 255, 255, 0.08), transparent 50%);
+  pointer-events: none;
+}
+
+section.bg-primary.text-white .container {
+  position: relative;
+  z-index: 1;
+}
+
+section.bg-primary.text-white h2 {
+  font-weight: 800 !important;
+  font-size: 2rem !important;
+  letter-spacing: -0.5px;
+  margin-bottom: 1.5rem !important;
+}
+
+section.bg-primary.text-white p {
+  font-size: 1.05rem !important;
+  line-height: 1.75;
+  letter-spacing: 0.3px;
+  font-weight: 500;
+  opacity: 0.95;
+  max-width: 700px;
+  margin: 0 auto 2rem auto !important;
+}
+
+section.bg-primary.text-white .btn-light {
+  background-color: #ffffff !important;
+  color: var(--text-primary) !important;
+  font-weight: 700 !important;
+  padding: 12px 36px !important;
+  border: none !important;
+  letter-spacing: 0.3px;
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1) !important;
+  box-shadow: 0 8px 20px rgba(255, 255, 255, 0.25) !important;
+  border-radius: var(--radius-md) !important;
+}
+
+section.bg-primary.text-white .btn-light:hover {
+  background-color: #f0f0f0 !important;
+  transform: translateY(-2px) !important;
+  box-shadow: 0 12px 32px rgba(255, 255, 255, 0.35) !important;
+}
+
+/* ===================================================================RESPONSIVE DESIGN */
+
+@media (max-width: 992px) {
+  section[style*="linear-gradient(135deg, #00264d 0%, #003d80)"] h1 {
+    font-size: 1.75rem;
+    margin-bottom: 1.5rem;
+  }
+
+  .container h2.fw-bold.mb-3,
+  .container h2.fw-bold {
+    font-size: 1.5rem !important;
+  }
+
+  .container .p-4.border.rounded.shadow-sm {
+    padding: 20px !important;
+  }
+}
+
+@media (max-width: 768px) {
+  section[style*="linear-gradient(135deg, #00264d 0%, #003d80)"] {
+    padding: 80px 0 60px !important;
+  }
+
+  section[style*="linear-gradient(135deg, #00264d 0%, #003d80)"] h1 {
+    font-size: 1.5rem;
+    margin-bottom: 1rem;
+  }
+
+  .container h2.fw-bold.mb-3,
+  .container h2.fw-bold {
+    font-size: 1.3rem !important;
+    margin-bottom: 1.5rem !important;
+  }
+
+  .container h3 {
+    font-size: 1.2rem !important;
+  }
+
+  .container .p-4.border.rounded.shadow-sm {
+    padding: 16px !important;
+  }
+
+  .container ol.fs-5 {
+    font-size: 0.95rem !important;
+  }
+
+  section.bg-primary.text-white h2 {
+    font-size: 1.5rem !important;
+  }
+
+  section.bg-primary.text-white p {
+    font-size: 1rem !important;
+  }
+}
+
+@media (max-width: 480px) {
+  section[style*="linear-gradient(135deg, #00264d 0%, #003d80)"] h1 {
+    font-size: 1.3rem;
+  }
+
+  section[style*="linear-gradient(135deg, #00264d 0%, #003d80)"] .btn-light {
+    width: 100%;
+    padding: 10px 20px !important;
+  }
+
+  .container .p-4.border.rounded.shadow-sm {
+    padding: 12px !important;
+  }
+
+  .container h2.fw-bold.mb-3,
+  .container h2.fw-bold {
+    font-size: 1.1rem !important;
+  }
+
+  .container h2.fw-bold.mb-3::after,
+  .container h2.fw-bold::after {
+    width: 60px;
+  }
+
+  section.bg-primary.text-white .btn-light {
+    width: 100%;
+    padding: 10px 24px !important;
+  }
+}
+
+/* ===================================================================UTILITY CLASSES */
+
+.shadow-sm {
+  box-shadow: var(--shadow-sm) !important;
+}
+
+.shadow-md {
+  box-shadow: var(--shadow-md) !important;
+}
+
+.shadow-lg {
+  box-shadow: var(--shadow-lg) !important;
+}
+
+.rounded {
+  border-radius: var(--radius-md) !important;
+}

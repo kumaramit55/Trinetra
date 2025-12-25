@@ -30,9 +30,12 @@
 
 @media (min-width: 768px) {
   .content-with-fixed-header {
-    padding-top: 50px;
+    padding-top: 80px;
   }
-} /* adjust based on header height */
+}
+
+
+/* adjust based on header height */
 
 /* ===== NAVBAR & LOGO STYLING ===== */
 

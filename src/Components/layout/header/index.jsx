@@ -63,7 +63,7 @@ const Header = () => {
             <li className="nav-item dropdown">
               <button
                 className="nav-link dropdown-toggle btn btn-link"
-                style={{ color: "white", textDecoration: "none" }}
+                style={{ color: "#2C3E50", textDecoration: "none" }}
                 onClick={toggleServices}
                 aria-expanded={isServicesOpen}
               >

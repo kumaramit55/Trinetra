@@ -122,6 +122,16 @@ const Header = () => {
                   </NavLink>
                 </li>
 
+                <li>
+                  <NavLink
+                    className="dropdown-item"
+                    to="/services/liaisoning-registration"
+                    onClick={closeDropdown}
+                  >
+                    Liaisoning & Registration Services
+                  </NavLink>
+                </li>
+
                 
               </ul>
             </li>
@@ -151,3 +161,5 @@ const Header = () => {
 };
 
 export default Header;
+
+

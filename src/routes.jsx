@@ -15,6 +15,7 @@ import Licensing from "./pages/licensing";
 import JobOpportunities from "./pages/jobs";
 import Resources from "./pages/resources";
 import StaffingSolutions from "./pages/contracting";
+import LiaisoningRegistration from "./pages/liaisoning-registration";
 
 const routes = createBrowserRouter([
   {
@@ -28,6 +29,7 @@ const routes = createBrowserRouter([
       { path: "/contracting", element: <StaffingSolutions/> },
       { path: "/consultation-audit", element: <ConsultationAudit /> },
       { path: "job-opportunities", element: <JobOpportunities /> },
+      { path: "services/liaisoning-registration", element: <LiaisoningRegistration /> },
       
       { path: "about-us", element: <AboutUs /> },
       { path: "talk-to-us", element: <TalktoUs /> },

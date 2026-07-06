@@ -1,0 +1,224 @@
+.liaisoning-registration-page {
+  color: #16324f;
+}
+
+.liaisoning-registration-page .hero-section {
+  background: linear-gradient(135deg, #0f3b64 0%, #1f5f9b 100%);
+  color: #fff;
+}
+
+.liaisoning-registration-page .eyebrow {
+  display: inline-block;
+  text-transform: uppercase;
+  letter-spacing: 0.18em;
+  font-size: 0.8rem;
+  font-weight: 700;
+  margin-bottom: 1rem;
+  color: rgba(255,255,255,0.78);
+}
+
+.liaisoning-registration-page .hero-title {
+  font-size: clamp(2.2rem, 5vw, 3.4rem);
+  font-weight: 700;
+  margin-bottom: 1rem;
+}
+
+.liaisoning-registration-page .hero-subtitle {
+  font-size: 1.15rem;
+  font-weight: 600;
+  line-height: 1.7;
+  max-width: 700px;
+  margin-bottom: 1rem;
+}
+
+.liaisoning-registration-page .hero-description {
+  font-size: 1rem;
+  line-height: 1.8;
+  max-width: 700px;
+  margin-bottom: 2rem;
+  color: rgba(255,255,255,0.9);
+}
+
+.liaisoning-registration-page .hero-cta-wrap {
+  margin-top: 1rem;
+  position: relative;
+  z-index: 3;
+}
+
+.liaisoning-registration-page .hero-cta {
+  box-shadow: 0 12px 30px rgba(10, 36, 64, 0.28);
+}
+
+.liaisoning-registration-page .hero-section {
+  padding-top: 4rem;
+  padding-bottom: 4rem;
+}
+
+.liaisoning-registration-page .hero-image {
+  width: 100%;
+  max-height: 420px;
+  object-fit: cover;
+  border-radius: 24px;
+  box-shadow: 0 18px 40px rgba(0, 0, 0, 0.2);
+}
+
+.liaisoning-registration-page .section-heading {
+  font-size: clamp(1.8rem, 3vw, 2.4rem);
+  font-weight: 700;
+  margin-bottom: 1rem;
+  color: #16324f;
+}
+
+.liaisoning-registration-page .section-copy {
+  font-size: 1.02rem;
+  line-height: 1.8;
+  color: #4f6480;
+  margin-bottom: 1rem;
+}
+
+.liaisoning-registration-page .service-card,
+.liaisoning-registration-page .feature-card,
+.liaisoning-registration-page .timeline-card {
+  background: #fff;
+  border: 1px solid #e5ecf4;
+  border-radius: 18px;
+  box-shadow: 0 10px 30px rgba(22, 50, 79, 0.06);
+  padding: 1.5rem;
+}
+
+.liaisoning-registration-page .service-card h3,
+.liaisoning-registration-page .feature-card h3,
+.liaisoning-registration-page .timeline-card h3 {
+  font-size: 1.1rem;
+  font-weight: 700;
+  margin-bottom: 0.7rem;
+  color: #16324f;
+}
+
+.liaisoning-registration-page .service-card p,
+.liaisoning-registration-page .feature-card p,
+.liaisoning-registration-page .timeline-card p,
+.liaisoning-registration-page .support-pill {
+  color: #4f6480;
+  line-height: 1.7;
+  margin-bottom: 0;
+}
+
+.liaisoning-registration-page .service-icon,
+.liaisoning-registration-page .feature-icon {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 52px;
+  height: 52px;
+  border-radius: 50%;
+  background: #e8f2ff;
+  color: #0f5ea8;
+  font-size: 1.3rem;
+  margin-bottom: 1rem;
+}
+
+.liaisoning-registration-page .support-grid h3 {
+  font-size: 1.2rem;
+  font-weight: 700;
+  color: #16324f;
+}
+
+.liaisoning-registration-page .support-pill {
+  background: #f5f9fe;
+  border: 1px solid #dfe9f5;
+  border-radius: 999px;
+  padding: 0.8rem 1rem;
+  text-align: center;
+  font-weight: 600;
+}
+
+.liaisoning-registration-page .timeline-wrapper {
+  display: grid;
+  gap: 1rem;
+  position: relative;
+}
+
+.liaisoning-registration-page .timeline-item {
+  display: grid;
+  grid-template-columns: 72px 1fr;
+  align-items: start;
+  gap: 1rem;
+}
+
+.liaisoning-registration-page .timeline-marker {
+  width: 72px;
+  height: 72px;
+  border-radius: 50%;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  background: #0f5ea8;
+  color: #fff;
+  font-weight: 700;
+  font-size: 1.2rem;
+}
+
+.liaisoning-registration-page .accordion-item {
+  border: 1px solid #e5ecf4;
+  border-radius: 12px;
+  overflow: hidden;
+  margin-bottom: 0.8rem;
+}
+
+.liaisoning-registration-page .accordion-button {
+  font-weight: 600;
+  color: #16324f;
+}
+
+.liaisoning-registration-page .accordion-button:not(.collapsed) {
+  background: #f5f9fe;
+  color: #0f5ea8;
+}
+
+.liaisoning-registration-page .cta-banner {
+  background: linear-gradient(135deg, #16324f 0%, #0f5ea8 100%);
+  color: #fff;
+  border-radius: 24px;
+  padding: 2rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1.5rem;
+  box-shadow: 0 18px 40px rgba(22, 50, 79, 0.18);
+}
+
+.liaisoning-registration-page .cta-banner h2 {
+  font-size: clamp(1.5rem, 2.6vw, 2rem);
+  margin-bottom: 0.75rem;
+}
+
+.liaisoning-registration-page .cta-banner p {
+  max-width: 720px;
+  margin-bottom: 0;
+  color: rgba(255,255,255,0.9);
+  line-height: 1.7;
+}
+
+@media (max-width: 991px) {
+  .liaisoning-registration-page .cta-banner {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+}
+
+@media (max-width: 767px) {
+  .liaisoning-registration-page .hero-section {
+    padding-top: 3rem;
+    padding-bottom: 3rem;
+  }
+
+  .liaisoning-registration-page .timeline-item {
+    grid-template-columns: 1fr;
+  }
+
+  .liaisoning-registration-page .timeline-marker {
+    width: 56px;
+    height: 56px;
+  }
+}

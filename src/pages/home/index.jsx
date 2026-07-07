@@ -51,7 +51,100 @@ function Home() {
         </div>
       </div>
 
-      <Whoweare />
+      <h2 className="section-title custom-h2">Our Services</h2>
+
+      <div className="grid-container">
+        <div className="card">
+          <CardImage
+            src="images/IT STAFF SOLUTION.webp"
+            alt="IT Staffing Solutions"
+            rounded
+            shadow
+            aspectRatio="16/9"
+          />
+          <div className="card-body">
+            <h5 className="card-heading">IT Staffing Solutions</h5>
+            <p className="card-text">
+              Structured access to skilled IT professionals aligned with
+              project requirements, security standards, and delivery timelines.
+            </p>
+            <CustomButton
+              variant="primary"
+              onClick={handleNavigate("it-staffing-solutions")}
+            >
+              Explore IT Staffing
+            </CustomButton>
+          </div>
+        </div>
+
+        <div className="card">
+          <CardImage
+            src="images/PAYROLL-MAGEMENT.webp"
+            alt="Payroll & Operations"
+            rounded
+            shadow
+            aspectRatio="16/9"
+          />
+          <div className="card-body">
+            <h5 className="card-heading">Payroll & Operations</h5>
+            <p className="card-text">
+              End-to-end payroll administration with statutory compliance,
+              reporting accuracy, and operational control.
+            </p>
+            <CustomButton
+              variant="primary"
+              onClick={handleNavigate("payroll-and-operations")}
+            >
+              View Payroll Services
+            </CustomButton>
+          </div>
+        </div>
+
+        <div className="card">
+          <CardImage
+            src="images/RECRUITEMENT.webp"
+            alt="Recruitment Services"
+            rounded
+            shadow
+            aspectRatio="16/9"
+          />
+          <div className="card-body">
+            <h5 className="card-heading">Recruitment Services</h5>
+            <p className="card-text">
+              Role-based recruitment focused on skill suitability,
+              organizational fit, and long-term workforce stability.
+            </p>
+            <CustomButton
+              variant="primary"
+              onClick={handleNavigate("recruitment")}
+            >
+              Explore Recruitment
+            </CustomButton>
+          </div>
+        </div>
+
+        <div className="card">
+          <CardImage
+            src="images/visa support.webp"
+            alt="Liaisoning & Registration Services"
+            rounded
+            shadow
+            aspectRatio="16/9"
+          />
+          <div className="card-body">
+            <h5 className="card-heading">Liaisoning & Registration Services</h5>
+            <p className="card-text">
+              Simplifying statutory registrations, renewals, and government liaisoning.
+            </p>
+            <CustomButton
+              variant="primary"
+              onClick={handleNavigate("services/liaisoning-registration")}
+            >
+              Explore Liaisoning Services
+            </CustomButton>
+          </div>
+        </div>
+      </div>
 
       <div className="counter-container mt-1">
         <AnimatedCounter
@@ -69,87 +162,7 @@ function Home() {
         />
       </div>
 
-      <h2 className="section-title custom-h2">Our Services</h2>
-
-      <div className="grid-container">
-          {/* IT Staffing */}
-          <div className="card">
-            <CardImage
-              src="images/IT STAFF SOLUTION.webp"
-              alt="IT Staffing Solutions"
-              rounded
-              shadow
-              aspectRatio="16/9"
-            />
-            <div className="card-body">
-              <h5 className="card-heading">IT Staffing Solutions</h5>
-              <p className="card-text">
-                Structured access to skilled IT professionals aligned with
-                project requirements, security standards, and delivery
-                timelines.
-              </p>
-
-              <CustomButton
-                variant="primary"
-                onClick={handleNavigate("it-staffing-solutions")}
-              >
-                Explore IT Staffing
-              </CustomButton>
-            </div>
-          </div>
-
-          {/* Payroll */}
-          <div className="card">
-            <CardImage
-              src="images/PAYROLL-MAGEMENT.webp"
-              alt="Payroll & Operations"
-              rounded
-              shadow
-              aspectRatio="16/9"
-            />
-            <div className="card-body">
-              <h5 className="card-heading">Payroll & Operations</h5>
-              <p className="card-text">
-                End-to-end payroll administration with statutory compliance,
-                reporting accuracy, and operational control.
-              </p>
-
-              <CustomButton
-                variant="primary"
-                onClick={handleNavigate("payroll-and-operations")}
-              >
-                View Payroll Services
-              </CustomButton>
-            </div>
-          </div>
-
-          {/* Recruitment */}
-          <div className="card">
-            <CardImage
-              src="images/RECRUITEMENT.webp"
-              alt="Recruitment Services"
-              rounded
-              shadow
-              aspectRatio="16/9"
-            />
-            <div className="card-body">
-              <h5 className="card-heading">Recruitment Services</h5>
-              <p className="card-text">
-                Role-based recruitment focused on skill suitability,
-                organizational fit, and long-term workforce stability.
-              </p>
-
-              <CustomButton
-                variant="primary"
-                onClick={handleNavigate("recruitment")}
-              >
-                Explore Recruitment
-              </CustomButton>
-            </div>
-          </div>
-        </div>
-
-      
+      <Whoweare />
     </>
   );
 }
